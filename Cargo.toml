@@ -1,0 +1,43 @@
+[workspace]
+members = [
+    ".",
+    "crates/blaris-core",
+    "crates/blaris-compress",
+    "crates/blaris-decompress",
+    "crates/blaris-size-check",
+    "crates/blaris-ffi",
+]
+resolver = "2"
+
+[package]
+name = "blaris"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[dependencies]
+blaris-core = { path = "crates/blaris-core" }
+blaris-compress = { path = "crates/blaris-compress" }
+blaris-decompress = { path = "crates/blaris-decompress" }
+clap = { version = "4.4", features = ["derive"] }
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+
+[profile.release.package.blaris-compress]
+opt-level = 3
+
+[profile.release.package.blaris-decompress]
+opt-level = "z"
+
+[profile.release.package.blaris]
+opt-level = 3
+
+[profile.release.package.blaris-size-check]
+opt-level = "z"
+
+[profile.release.package.blaris-ffi]
+opt-level = "z"
