@@ -117,3 +117,76 @@ fn self_referential_match_distance_less_than_length() {
     let data = b"ababababababababab".to_vec();
     roundtrip(&data, &Params::default());
 }
+#[test]
+fn perf_decompression_modes() {
+    use std::time::Instant;
+
+    // Build a reasonably large, semi-repetitive buffer.
+    let mut data = Vec::new();
+    let phrase = b"the quick brown fox jumps over the lazy dog. ";
+    while data.len() < 100_000 {
+        data.extend_from_slice(phrase);
+        data.push((data.len() % 251) as u8);
+    }
+
+    let params = Params::default();
+    let mut compressed = vec![0u8; compress_bound(data.len())];
+    let compressed_len = compress(&data, &mut compressed, &params);
+    compressed.truncate(compressed_len);
+
+    println!(
+        "input: {} bytes, compressed: {} bytes ({:.1}% of original)",
+        data.len(),
+        compressed.len(),
+        100.0 * compressed.len() as f64 / data.len() as f64
+    );
+
+    fn measure(
+        name: &str,
+        compressed: &[u8],
+        original: &[u8],
+        chunk: usize,
+    ) {
+        let mut output = vec![0u8; chunk];
+
+        // Warm-up.
+        let _ = decompress(compressed, &mut output, 0);
+
+        let start = Instant::now();
+
+        let mut offset = 0;
+        while offset < original.len() {
+            let len = chunk.min(original.len() - offset);
+
+            let ok = decompress(compressed, &mut output[..len], offset);
+            assert!(ok, "decompress failed at offset {offset}");
+            assert_eq!(&output[..len], &original[offset..offset + len]);
+
+            offset += chunk;
+        }
+
+        let elapsed = start.elapsed();
+        let throughput =
+            original.len() as f64 / elapsed.as_secs_f64() / (1024.0 * 1024.0);
+
+        println!(
+            "{:<18} {:>8} calls, chunk {:>5} B, {:>8.2} MB/s ({:?})",
+            name,
+            original.len().div_ceil(chunk),
+            chunk,
+            throughput,
+            elapsed
+        );
+    }
+
+    println!();
+
+    // 1. Decode one byte at a time.
+    measure("byte-by-byte", &compressed, &data, 1);
+
+    // 2. Decode 100-byte chunks.
+    measure("100-byte chunks", &compressed, &data, 100);
+
+    // 3. Decode the entire file in one call.
+    measure("whole file", &compressed, &data, data.len());
+}

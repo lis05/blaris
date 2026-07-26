@@ -16,7 +16,7 @@ The blaris decompressor satisfies the following constraints:
 2. The decompressor requires O(1) working memory (currently below ~100 bytes
    on 32-bit platforms).
 3. The decompressor implementation fits in less than 1 KiB of code memory
-   (currently approximately 700 bytes).
+   (currently approximately 800 bytes).
 4. Memory usage and algorithmic complexity are independent of the compression
    window size.
 

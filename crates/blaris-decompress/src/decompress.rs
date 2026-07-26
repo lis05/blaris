@@ -1,5 +1,19 @@
 use blaris_core::params::Params;
 
+const ALIGN_POSITION: u8 = 1 << 0;
+const ALIGN_LITERALS: u8 = 1 << 1;
+const ALIGN_DISTANCES: u8 = 1 << 2;
+const ALIGN_ALL: u8 = ALIGN_POSITION | ALIGN_LITERALS | ALIGN_DISTANCES;
+
+struct State {
+    pub current_control_offset: usize,
+    pub current_literal_offset: usize,
+    pub current_distance_offset_bits: usize,
+    pub controls_len: usize,
+    pub current_position: usize,
+    pub alignment_flags: u8,
+}
+
 pub fn read_u32_at_bit_offset(buf: &[u8], global_bit_offset: usize, num_bits: usize) -> u32 {
     if num_bits == 0 {
         return 0;
@@ -21,111 +35,164 @@ pub fn read_u32_at_bit_offset(buf: &[u8], global_bit_offset: usize, num_bits: us
     (shifted & mask) as u32
 }
 
-fn decompress_byte(
-    from: &[u8],
-    mut offset: usize,
-    params: &Params,
-    mut current_control_offset: usize,
-    mut current_literal_offset: usize,
-    mut current_distance_offset_bits: usize,
-    controls_len: usize,
-) -> Option<u8> {
-    assert!(current_control_offset == 0);
+#[inline]
+fn decompress_byte(from: &[u8], mut offset: usize, params: &Params, state: &mut State) -> u8 {
+    debug_assert_eq!(state.alignment_flags, ALIGN_ALL);
 
-    let mut current_position: usize = 0;
-    let mut position_aligned = true;
-    let mut literals_aligned = true;
-    let mut distances_aligned = true;
+    let save_current_control_offset: usize;
+    let save_current_literal_offset: usize;
+    let save_current_distances_offset_bits: usize;
+    let save_current_position: usize;
 
     loop {
-        if current_control_offset >= controls_len {
-            return None;
-        }
+        debug_assert!(state.current_control_offset < state.controls_len);
 
-        let c = from[current_control_offset];
+        let c = from[state.current_control_offset];
 
         let literals_count = params.literals_from_control(c);
         if literals_count != 0 {
-            if !literals_aligned {
-                current_literal_offset -= literals_count;
-                literals_aligned = true;
-            }
-
-            if !position_aligned {
-                current_position -= literals_count;
-                position_aligned = true;
-            }
-
-            if current_position <= offset && offset < current_position + literals_count {
-                let offset_within_block = offset - current_position;
-                return from
-                    .get(current_literal_offset + offset_within_block)
-                    .copied();
+            if state.current_position <= offset && offset < state.current_position + literals_count
+            {
+                let offset_within_block = offset - state.current_position;
+                return from[state.current_literal_offset + offset_within_block];
             } else {
-                if offset >= current_position {
-                    current_control_offset += 1;
-                    current_position += literals_count;
-                    current_literal_offset += literals_count;
+                if offset >= state.current_position {
+                    state.current_control_offset += 1;
+                    state.current_position += literals_count;
+                    state.current_literal_offset += literals_count;
                 } else {
-                    if current_control_offset == 0 {
-                        return None;
-                    }
-                    current_control_offset -= 1;
-                    position_aligned = false;
-                    literals_aligned = false;
-                    distances_aligned = false;
+                    debug_assert!(state.current_control_offset > 0);
+
+                    save_current_control_offset = state.current_control_offset;
+                    save_current_literal_offset = state.current_literal_offset;
+                    save_current_distances_offset_bits = state.current_distance_offset_bits;
+                    save_current_position = state.current_position;
+
+                    state.current_control_offset -= 1;
+                    state.alignment_flags = 0;
+                    break;
                 }
             }
         } else {
             let (length, distance_bits) = params.match_from_control(c);
-            if length == 0 {
-                return None;
-            }
+            debug_assert!(length > 0);
 
-            if !distances_aligned {
-                current_distance_offset_bits -= distance_bits;
-                distances_aligned = true;
-            }
-
-            if !position_aligned {
-                current_position -= length;
-                position_aligned = true;
-            }
-
-            if current_position <= offset && offset < current_position + length {
-                if current_control_offset == 0 {
-                    return None;
-                }
+            if state.current_position <= offset && offset < state.current_position + length {
+                debug_assert!(state.current_control_offset > 0);
 
                 let distance =
-                    read_u32_at_bit_offset(from, current_distance_offset_bits, distance_bits) + 1;
+                    read_u32_at_bit_offset(from, state.current_distance_offset_bits, distance_bits)
+                        + 1;
 
-                if (distance as usize) > offset {
-                    return None;
-                }
+                debug_assert!((distance as usize) <= offset);
 
                 offset -= distance as usize;
 
-                if offset >= current_position {
+                if offset >= state.current_position {
+                    continue;
+                }
+                save_current_control_offset = state.current_control_offset;
+                save_current_literal_offset = state.current_literal_offset;
+                save_current_distances_offset_bits = state.current_distance_offset_bits;
+                save_current_position = state.current_position;
+
+                state.current_control_offset -= 1;
+                state.alignment_flags = 0;
+                break;
+            } else if offset >= state.current_position {
+                state.current_control_offset += 1;
+                state.current_position += length;
+                state.current_distance_offset_bits += distance_bits;
+            } else {
+                debug_assert!(state.current_control_offset > 0);
+
+                save_current_control_offset = state.current_control_offset;
+                save_current_literal_offset = state.current_literal_offset;
+                save_current_distances_offset_bits = state.current_distance_offset_bits;
+                save_current_position = state.current_position;
+
+                state.current_control_offset -= 1;
+                state.alignment_flags = 0;
+                break;
+            }
+        }
+    }
+
+    loop {
+        debug_assert!(state.current_control_offset < state.controls_len);
+
+        let c = from[state.current_control_offset];
+
+        let literals_count = params.literals_from_control(c);
+        if literals_count != 0 {
+            if (state.alignment_flags & ALIGN_LITERALS) == 0 {
+                state.current_literal_offset -= literals_count;
+                state.alignment_flags |= ALIGN_LITERALS;
+            }
+
+            if (state.alignment_flags & ALIGN_POSITION) == 0 {
+                state.current_position -= literals_count;
+                state.alignment_flags |= ALIGN_POSITION;
+            }
+
+            if state.current_position <= offset && offset < state.current_position + literals_count
+            {
+                let offset_within_block = offset - state.current_position;
+                let res = from[state.current_literal_offset + offset_within_block];
+
+                *state = State {
+                    current_control_offset: save_current_control_offset,
+                    current_literal_offset: save_current_literal_offset,
+                    current_distance_offset_bits: save_current_distances_offset_bits,
+                    controls_len: state.controls_len,
+                    current_position: save_current_position,
+                    alignment_flags: ALIGN_ALL,
+                };
+                return res;
+            } else {
+                debug_assert!(offset < state.current_position);
+                debug_assert!(state.current_control_offset > 0);
+
+                state.current_control_offset -= 1;
+                state.alignment_flags = 0;
+            }
+        } else {
+            let (length, distance_bits) = params.match_from_control(c);
+            debug_assert!(length > 0);
+
+            if (state.alignment_flags & ALIGN_DISTANCES) == 0 {
+                state.current_distance_offset_bits -= distance_bits;
+                state.alignment_flags |= ALIGN_DISTANCES;
+            }
+
+            if (state.alignment_flags & ALIGN_POSITION) == 0 {
+                state.current_position -= length;
+                state.alignment_flags |= ALIGN_POSITION;
+            }
+
+            if state.current_position <= offset && offset < state.current_position + length {
+                debug_assert!(state.current_control_offset > 0);
+
+                let distance =
+                    read_u32_at_bit_offset(from, state.current_distance_offset_bits, distance_bits)
+                        + 1;
+
+                debug_assert!((distance as usize) <= offset);
+
+                offset -= distance as usize;
+
+                if offset >= state.current_position {
                     continue;
                 }
 
-                current_control_offset -= 1;
-                position_aligned = false;
-                literals_aligned = false;
-                distances_aligned = false;
-            } else if offset >= current_position {
-                current_control_offset += 1;
-                current_position += length;
-                current_distance_offset_bits += distance_bits;
+                state.current_control_offset -= 1;
+                state.alignment_flags = 0;
             } else {
-                if current_control_offset == 0 {
-                    return None;
-                }
-                current_control_offset -= 1;
-                position_aligned = false;
-                literals_aligned = false;
-                distances_aligned = false;
+                debug_assert!(offset < state.current_position);
+                debug_assert!(state.current_control_offset > 0);
+
+                state.current_control_offset -= 1;
+                state.alignment_flags = 0;
             }
         }
     }
@@ -155,19 +222,17 @@ pub fn decompress(mut from: &[u8], to: &mut [u8], offset: usize) -> bool {
     let literals_offset = literals_offset as usize;
     let distances_offset = distances_offset as usize;
 
+    let mut state = State {
+        current_control_offset: 0,
+        current_literal_offset: literals_offset,
+        current_distance_offset_bits: distances_offset * 8,
+        controls_len: literals_offset,
+        current_position: 0,
+        alignment_flags: ALIGN_ALL,
+    };
+
     for i in 0..to.len() {
-        to[i] = match decompress_byte(
-            from,
-            offset + i,
-            &params,
-            0,
-            literals_offset,
-            distances_offset * 8,
-            literals_offset,
-        ) {
-            Some(x) => x,
-            None => return false,
-        }
+        to[i] = decompress_byte(from, offset + i, &params, &mut state);
     }
 
     true
