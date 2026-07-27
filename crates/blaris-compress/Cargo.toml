@@ -8,4 +8,3 @@ crate-type = ["rlib"]
 
 [dependencies]
 blaris-core = { path = "../blaris-core" }
-rayon = "1"
