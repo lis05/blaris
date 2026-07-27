@@ -6,7 +6,6 @@ use std::process;
 use std::time::Instant;
 
 use blaris_compress::compress::{compress, compress_bound};
-use blaris_core::params::Params;
 use blaris_decompress::decompress::decompress;
 
 #[derive(Parser)]
@@ -64,10 +63,9 @@ fn main() -> io::Result<()> {
             let mut in_data = Vec::new();
             in_file.read_to_end(&mut in_data)?;
 
-            let params = Params::default();
             let mut out_data = vec![0; compress_bound(in_data.len())];
 
-            let compressed_size = compress(&in_data, &mut out_data, &params);
+            let compressed_size = compress(&in_data, &mut out_data);
             out_data.truncate(compressed_size);
 
             let mut out_file = File::create(&output)?;
@@ -107,11 +105,10 @@ fn main() -> io::Result<()> {
             let mut original_data = Vec::new();
             in_file.read_to_end(&mut original_data)?;
 
-            let params = Params::default();
             let mut compressed_data = vec![0; compress_bound(original_data.len())];
 
             let compress_start = Instant::now();
-            let compressed_size = compress(&original_data, &mut compressed_data, &params);
+            let compressed_size = compress(&original_data, &mut compressed_data);
             let compress_duration = compress_start.elapsed();
 
             compressed_data.truncate(compressed_size);

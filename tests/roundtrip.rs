@@ -1,10 +1,9 @@
 use blaris_compress::compress::{compress, compress_bound};
-use blaris_core::params::Params;
 use blaris_decompress::decompress::decompress;
 
-fn roundtrip(data: &[u8], params: &Params) {
+fn roundtrip(data: &[u8]) {
     let mut compressed = vec![0u8; compress_bound(data.len())];
-    let compressed_len = compress(data, &mut compressed, params);
+    let compressed_len = compress(data, &mut compressed);
     compressed.truncate(compressed_len);
 
     let mut output = vec![0u8; data.len()];
@@ -24,42 +23,39 @@ fn roundtrip(data: &[u8], params: &Params) {
 
 #[test]
 fn empty_input() {
-    roundtrip(&[], &Params::default());
+    roundtrip(&[]);
 }
 
 #[test]
 fn single_byte() {
-    roundtrip(&[42], &Params::default());
+    roundtrip(&[42]);
 }
 
 #[test]
 fn no_repeats_all_literals() {
-    roundtrip(b"abcdefghijklmnop", &Params::default());
+    roundtrip(b"abcdefghijklmnop");
 }
 
 #[test]
 fn simple_repeat() {
-    roundtrip(b"abcabcabcabc", &Params::default());
+    roundtrip(b"abcabcabcabc");
 }
 
 #[test]
 fn long_run_of_same_byte() {
-    roundtrip(&[b'x'; 200], &Params::default());
+    roundtrip(&[b'x'; 200]);
 }
 
 #[test]
 fn mixed_literals_and_matches() {
-    roundtrip(
-        b"the quick brown fox jumps over the lazy dog. the quick brown fox is quick.",
-        &Params::default(),
-    );
+    roundtrip(b"the quick brown fox jumps over the lazy dog. the quick brown fox is quick.");
 }
 
 #[test]
 fn near_max_literal_run() {
     // max_literals defaults to 16; push a run just past that boundary
     let data: Vec<u8> = (0..40).map(|i| (i * 37 % 251) as u8).collect();
-    roundtrip(&data, &Params::default());
+    roundtrip(&data);
 }
 
 #[test]
@@ -72,32 +68,21 @@ fn distance_boundaries() {
             data.extend_from_slice(&pattern);
         }
     }
-    roundtrip(&data, &Params::default());
+    roundtrip(&data);
 }
 
 #[test]
 fn repeated_across_full_buffer() {
     let data = b"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA".to_vec();
-    roundtrip(&data, &Params::default());
-}
-
-#[test]
-fn custom_params_small_literals() {
-    let params = Params {
-        max_literals: 4,
-        max_length: 8,
-        max_distance_bits: 10,
-    };
-    roundtrip(b"hello world, hello world, hello again!", &params);
+    roundtrip(&data);
 }
 
 #[test]
 fn partial_decompress_with_offset() {
     // Decompress only a slice of the original data starting mid-buffer
     let data = b"the quick brown fox jumps over the lazy dog";
-    let params = Params::default();
     let mut compressed = vec![0u8; compress_bound(data.len())];
-    let compressed_len = compress(data, &mut compressed, &params);
+    let compressed_len = compress(data, &mut compressed);
     compressed.truncate(compressed_len);
 
     let start = 10;
@@ -115,7 +100,7 @@ fn self_referential_match_distance_less_than_length() {
     // is smaller than its length, requiring the match to reference
     // into itself rather than an earlier block.
     let data = b"ababababababababab".to_vec();
-    roundtrip(&data, &Params::default());
+    roundtrip(&data);
 }
 #[test]
 fn perf_decompression_modes() {
@@ -129,9 +114,8 @@ fn perf_decompression_modes() {
         data.push((data.len() % 251) as u8);
     }
 
-    let params = Params::default();
     let mut compressed = vec![0u8; compress_bound(data.len())];
-    let compressed_len = compress(&data, &mut compressed, &params);
+    let compressed_len = compress(&data, &mut compressed);
     compressed.truncate(compressed_len);
 
     println!(
@@ -141,12 +125,7 @@ fn perf_decompression_modes() {
         100.0 * compressed.len() as f64 / data.len() as f64
     );
 
-    fn measure(
-        name: &str,
-        compressed: &[u8],
-        original: &[u8],
-        chunk: usize,
-    ) {
+    fn measure(name: &str, compressed: &[u8], original: &[u8], chunk: usize) {
         let mut output = vec![0u8; chunk];
 
         // Warm-up.
@@ -166,8 +145,7 @@ fn perf_decompression_modes() {
         }
 
         let elapsed = start.elapsed();
-        let throughput =
-            original.len() as f64 / elapsed.as_secs_f64() / (1024.0 * 1024.0);
+        let throughput = original.len() as f64 / elapsed.as_secs_f64() / (1024.0 * 1024.0);
 
         println!(
             "{:<18} {:>8} calls, chunk {:>5} B, {:>8.2} MB/s ({:?})",

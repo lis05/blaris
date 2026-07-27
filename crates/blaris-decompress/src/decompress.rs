@@ -1,4 +1,4 @@
-use blaris_core::params::Params;
+use blaris_core::params;
 
 const ALIGN_POSITION: u8 = 1 << 0;
 const ALIGN_LITERALS: u8 = 1 << 1;
@@ -36,7 +36,7 @@ pub fn read_u32_at_bit_offset(buf: &[u8], global_bit_offset: usize, num_bits: us
 }
 
 #[inline]
-fn decompress_byte(from: &[u8], mut offset: usize, params: &Params, state: &mut State) -> u8 {
+fn decompress_byte(from: &[u8], mut offset: usize, state: &mut State) -> u8 {
     debug_assert_eq!(state.alignment_flags, ALIGN_ALL);
 
     let save_current_control_offset: usize;
@@ -49,7 +49,7 @@ fn decompress_byte(from: &[u8], mut offset: usize, params: &Params, state: &mut 
 
         let c = from[state.current_control_offset];
 
-        let literals_count = params.literals_from_control(c);
+        let literals_count = params::literals_from_control(c);
         if literals_count != 0 {
             if state.current_position <= offset && offset < state.current_position + literals_count
             {
@@ -74,7 +74,7 @@ fn decompress_byte(from: &[u8], mut offset: usize, params: &Params, state: &mut 
                 }
             }
         } else {
-            let (length, distance_bits) = params.match_from_control(c);
+            let (length, distance_bits) = params::match_from_control(c);
             debug_assert!(length > 0);
 
             if state.current_position <= offset && offset < state.current_position + length {
@@ -123,7 +123,7 @@ fn decompress_byte(from: &[u8], mut offset: usize, params: &Params, state: &mut 
 
         let c = from[state.current_control_offset];
 
-        let literals_count = params.literals_from_control(c);
+        let literals_count = params::literals_from_control(c);
         if literals_count != 0 {
             if (state.alignment_flags & ALIGN_LITERALS) == 0 {
                 state.current_literal_offset -= literals_count;
@@ -157,7 +157,7 @@ fn decompress_byte(from: &[u8], mut offset: usize, params: &Params, state: &mut 
                 state.alignment_flags = 0;
             }
         } else {
-            let (length, distance_bits) = params.match_from_control(c);
+            let (length, distance_bits) = params::match_from_control(c);
             debug_assert!(length > 0);
 
             if (state.alignment_flags & ALIGN_DISTANCES) == 0 {
@@ -199,14 +199,6 @@ fn decompress_byte(from: &[u8], mut offset: usize, params: &Params, state: &mut 
 }
 
 pub fn decompress(mut from: &[u8], to: &mut [u8], offset: usize) -> bool {
-    let mut params = Params::default();
-
-    if !params.read_from(from) || !params.are_valid() {
-        return false;
-    }
-
-    from = &from[Params::LENGTH..];
-
     if from.len() < 4 {
         return false;
     }
@@ -232,7 +224,7 @@ pub fn decompress(mut from: &[u8], to: &mut [u8], offset: usize) -> bool {
     };
 
     for i in 0..to.len() {
-        to[i] = decompress_byte(from, offset + i, &params, &mut state);
+        to[i] = decompress_byte(from, offset + i, &mut state);
     }
 
     true
