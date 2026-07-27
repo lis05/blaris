@@ -6,6 +6,7 @@ members = [
     "crates/blaris-decompress",
     "crates/blaris-size-check",
     "crates/blaris-ffi",
+    "crates/blaris-benchmark",
 ]
 resolver = "2"
 

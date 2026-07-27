@@ -1,0 +1,9 @@
+[package]
+name = "blaris-benchmark"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+blaris-compress = { path = "../blaris-compress" }
+blaris-decompress = { path = "../blaris-decompress" }
+embedded-heatshrink = "0.1"

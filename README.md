@@ -93,112 +93,56 @@ Current format parameters:
 
 Comparison with `heatshrink`:
 
-## 8KB FILE
+```
+### File: zgrep (8199 bytes)
+
+Decoder                     Comp ms       Size    Ratio      1B ms     64B ms    4KiB ms      Full ms          Memory
+---------------------- ------------ ---------- -------- ---------- ---------- ---------- ------------ ---------------
+Blaris                     8.044 ms       3841    46.85%   0.002 ms   0.036 ms   2.489 ms     5.189 ms          <100 B
+Heatshrink (W=6)           0.136 ms       6272    76.50%   0.020 ms   0.019 ms   0.065 ms     0.045 ms           ~64 B
+Heatshrink (W=7)           0.140 ms       5347    65.22%   0.018 ms   0.018 ms   0.031 ms     0.037 ms          ~128 B
+Heatshrink (W=8)           0.158 ms       4764    58.10%   0.017 ms   0.017 ms   0.029 ms     0.034 ms          ~256 B
+Heatshrink (W=10)          0.239 ms       4112    50.15%   0.018 ms   0.017 ms   0.028 ms     0.032 ms         ~1024 B
+Heatshrink (W=12)          0.518 ms       3890    47.44%   0.016 ms   0.016 ms   0.017 ms     0.030 ms         ~4096 B
+Heatshrink (W=14)          0.623 ms       4105    50.07%   0.029 ms   0.029 ms   0.029 ms     0.029 ms        ~16384 B
+
+### File: whereis (31256 bytes)
+
+Decoder                     Comp ms       Size    Ratio      1B ms     64B ms    4KiB ms      Full ms          Memory
+---------------------- ------------ ---------- -------- ---------- ---------- ---------- ------------ ---------------
+Blaris                   208.252 ms      12477    39.92%   0.007 ms   0.177 ms  13.328 ms   102.227 ms          <100 B
+Heatshrink (W=6)           0.326 ms      13912    44.51%   0.081 ms   0.047 ms   0.061 ms     0.124 ms           ~64 B
+Heatshrink (W=7)           0.366 ms      13231    42.33%   0.047 ms   0.046 ms   0.058 ms     0.104 ms          ~128 B
+Heatshrink (W=8)           0.458 ms      12737    40.75%   0.046 ms   0.044 ms   0.057 ms     0.099 ms          ~256 B
+Heatshrink (W=10)          0.978 ms      12556    40.17%   0.047 ms   0.046 ms   0.059 ms     0.101 ms         ~1024 B
+Heatshrink (W=12)          2.940 ms      13040    41.72%   0.051 ms   0.050 ms   0.062 ms     0.098 ms         ~4096 B
+Heatshrink (W=14)          9.687 ms      13754    44.00%   0.054 ms   0.053 ms   0.054 ms     0.108 ms        ~16384 B
+
+### File: zip (216232 bytes)
+
+Decoder                     Comp ms       Size    Ratio      1B ms     64B ms    4KiB ms      Full ms          Memory
+---------------------- ------------ ---------- -------- ---------- ---------- ---------- ------------ ---------------
+Blaris                  2390.053 ms     112422    51.99%   0.040 ms   0.385 ms  25.771 ms  1717.393 ms          <100 B
+Heatshrink (W=6)           4.437 ms     146042    67.54%   0.541 ms   0.539 ms   0.565 ms     1.280 ms           ~64 B
+Heatshrink (W=7)           3.037 ms     135470    62.65%   0.528 ms   0.528 ms   0.547 ms     1.226 ms          ~128 B
+Heatshrink (W=8)           4.939 ms     128004    59.20%   0.522 ms   0.519 ms   0.540 ms     1.198 ms          ~256 B
+Heatshrink (W=10)          7.492 ms     120554    55.75%   0.531 ms   0.531 ms   0.548 ms     1.204 ms         ~1024 B
+Heatshrink (W=12)         16.696 ms     117561    54.37%   0.488 ms   0.487 ms   0.507 ms     1.080 ms         ~4096 B
+Heatshrink (W=14)         46.450 ms     116888    54.06%   0.505 ms   0.501 ms   0.576 ms     1.091 ms        ~16384 B
+
+### File: xterm (919544 bytes)
+
+Decoder                     Comp ms       Size    Ratio      1B ms     64B ms    4KiB ms      Full ms          Memory
+---------------------- ------------ ---------- -------- ---------- ---------- ---------- ------------ ---------------
+Blaris                 19664.206 ms     444113    48.30%   0.203 ms   2.101 ms 119.383 ms 28075.781 ms          <100 B
+Heatshrink (W=6)          11.755 ms     542472    58.99%   2.083 ms   2.074 ms   2.111 ms     4.727 ms           ~64 B
+Heatshrink (W=7)          12.635 ms     515328    56.04%   2.051 ms   1.998 ms   2.108 ms     4.943 ms          ~128 B
+Heatshrink (W=8)          12.735 ms     488320    53.10%   2.020 ms   1.978 ms   1.969 ms     4.408 ms          ~256 B
+Heatshrink (W=10)         22.902 ms     465368    50.61%   2.091 ms   2.119 ms   2.044 ms     4.540 ms         ~1024 B
+Heatshrink (W=12)         53.014 ms     463419    50.40%   1.833 ms   1.820 ms   1.903 ms     4.259 ms         ~4096 B
+Heatshrink (W=14)        155.783 ms     467001    50.79%   1.838 ms   1.840 ms   1.858 ms     4.111 ms        ~16384 B
 
 ```
-######## 8KB FILE ##################################################
-=== Ratio + full compress/decompress time ===
-config              orig(B)    comp(B)   ratio% compress(ms) decompress(ms)
-heatshrink-w5          8199       6984    85.18 11.461530000  7.698114000
-heatshrink-w7          8199       5347    65.21  8.556099000  8.255805000
-heatshrink-w9          8199       4380    53.42  9.058155000  8.170303000
-heatshrink-w11         8199       4022    49.05  9.194812000  8.274630000
-heatshrink-w13         8199       3977    48.50  9.594294000  8.749513000
-heatshrink-w14         8199       4105    50.06  9.409366000  7.813141000
-blaris                 8199       3841    46.84 101.876146000 22.720760000
-```
-
----
-
-## 100KB FILE
-
-```
-######## 100KB FILE ##################################################
-=== Ratio + full compress/decompress time ===
-config              orig(B)    comp(B)   ratio% compress(ms) decompress(ms)
-heatshrink-w5        101392      69347    68.39 51.930376000 11.220196000
-heatshrink-w7        101392      59094    58.28 13.392155000  9.983828000
-heatshrink-w9        101392      54494    53.74 14.787272000 10.272732000
-heatshrink-w11       101392      52432    51.71 23.251559000  9.648837000
-heatshrink-w13       101392      51735    51.02 41.887347000  9.845698000
-heatshrink-w14       101392      52329    51.61 68.189059000 10.456428000
-blaris               101392      50014    49.32 3653.949563000 748.796778000
-```
-
----
-
-## 900KB FILE
-
-```
-######## 900KB FILE ##################################################
-=== Ratio + full compress/decompress time ===
-config              orig(B)    comp(B)   ratio% compress(ms) decompress(ms)
-heatshrink-w5        919544     586966    63.83 52.819390000 36.713185000
-heatshrink-w7        919544     515328    56.04 52.930148000 29.625089000
-heatshrink-w9        919544     473006    51.43 63.914211000 30.631785000
-heatshrink-w11       919544     466305    50.71 109.307988000 28.764529000
-heatshrink-w13       919544     464187    50.48 242.627247000 29.269319000
-heatshrink-w14       919544     467001    50.78 420.678948000 28.186560000
-blaris               919544     444113    48.29 31551.668247000 34797.788427000
-```
-
----
-
-# Random extraction benchmark
-
-One of the design goals of blaris is direct extraction of arbitrary output
-ranges without decoding the entire file.
-
-The current CLI benchmark has an important limitation:
-**The CLI first reads the entire compressed file into memory before performing
-the extraction.**
-
-Because of this, extraction measurements near the beginning of the file can be
-affected by input loading time.
-For example, extracting data at 1% offset may appear slower because the CLI
-still has to read the complete compressed input first.
-
-On embedded systems, where compressed data is already stored in ROM or flash,
-this overhead does not exist.
-
-```
-=== Chunk extraction time (128 bytes) at various offsets ===
-```
-
-```
-######## 8KB FILE ##################################################
-
-offset%    offset(B)    hs-w5(ms)        hs-w7(ms)        hs-w9(ms)        hs-w11(ms)       hs-w13(ms)       hs-w14(ms)       blaris(ms)  
-1%         81           14.540327000     13.820191000     13.830030000     14.817589000     13.468198000     14.222739000     8.389456000 
-25%        2049         14.113253000     13.675469000     14.618184000     14.164259000     13.580469000     14.458873000     7.947634000 
-50%        4099         15.789569000     13.756972000     14.744561000     13.809259000     14.333007000     13.888269000     8.678570000 
-75%        6149         15.439219000     14.834691000     13.054600000     15.390798000     15.946965000     14.550707000     8.607105000 
-99%        8071         14.184257000     13.895804000     14.670793000     13.634421000     13.375895000     14.031700000     8.461271000 
-```
-
-```
-######## 100KB FILE ##################################################
-
-offset%    offset(B)    hs-w5(ms)        hs-w7(ms)        hs-w9(ms)        hs-w11(ms)       hs-w13(ms)       hs-w14(ms)       blaris(ms)  
-1%         1013         11.026921000     9.576261000      9.958991000      10.677243000     11.980297000     10.429127000     5.016816000 
-25%        25348        10.489019000     9.706987000      10.403558000     10.001291000     9.399959000      10.610287000     5.792787000 
-50%        50696        10.930180000     12.973487000     10.595539000     10.793693000     8.889687000      10.635785000     7.073268000 
-75%        76044        10.081061000     10.724612000     9.706706000      12.222112000     11.811118000     9.882327000     5.305981000 
-99%        100378       12.836499000     11.656768000     10.386416000     11.109421000     9.533570000      10.640287000     9.342891000 
-```
-
-```
-######## 900KB FILE ##################################################
-
-offset%    offset(B)    hs-w5(ms)        hs-w7(ms)        hs-w9(ms)        hs-w11(ms)       hs-w13(ms)       hs-w14(ms)       blaris(ms)  
-1%         9195         20.943273000     20.693963000     21.655544000     20.389721000     21.369174000     19.129587000     6.519515000 
-25%        229886       25.552150000     22.317710000     20.364153000     20.587823000     17.645143000     20.315360000     8.406338000 
-50%        459772       22.641210000     21.154410000     19.978566000     21.998530000     20.365014000     19.989768000     16.732004000
-75%        689658       22.589031000     21.771322000     21.157115000     18.913492000     22.080825000     19.272426000     8.578622000
-99%        910348       22.497950000     21.135225000     19.334493000     21.342104000     21.219174000     19.398093000     12.281003000
-```
-
----
 
 # Compression
 
@@ -212,7 +156,6 @@ Generated tokens are separated into three streams:
 The parser is optimal and based on a modified version of the lzmpo encoder.
 The current implementation prioritizes compression ratio over encoding speed and
 is intentionally slow.
-It uses multiple threads, but the current implementation is not optimized.
 
 ---
 
