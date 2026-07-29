@@ -6,4 +6,4 @@ edition = "2024"
 [dependencies]
 blaris-compress = { path = "../blaris-compress" }
 blaris-decompress = { path = "../blaris-decompress" }
-embedded-heatshrink = "0.1"
+heatshrink-lib = "1.0"

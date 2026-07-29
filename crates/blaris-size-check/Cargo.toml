@@ -14,3 +14,7 @@ path = "src/bin/blaris.rs"
 [[bin]]
 name = "heatshrink"
 path = "src/bin/heatshrink.rs"
+
+[profile.release]
+strip = false
+debug = true

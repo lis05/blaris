@@ -2,10 +2,9 @@ use std::fs;
 use std::path::{Path, PathBuf};
 use std::time::{Duration, Instant};
 
-use embedded_heatshrink::{
-    HSDFinishRes, HSDPollRes, HSDSinkRes, HSEFinishRes, HSEPollRes, HSESinkRes, HeatshrinkDecoder,
-    HeatshrinkEncoder,
-};
+use heatshrink::decoder::HeatshrinkDecoder;
+use heatshrink::encoder::HeatshrinkEncoder;
+use heatshrink::{Finish, Poll};
 
 /// Positions (as % of file length) at which we extract a small window.
 const POSITIONS_PCT: &[usize] = &[1, 20, 40, 60, 80, 100];
@@ -13,6 +12,14 @@ const POSITIONS_PCT: &[usize] = &[1, 20, 40, 60, 80, 100];
 const EXTRACT_LEN: usize = 32;
 /// Number of repeated decompressions per position, averaged.
 const RUNS: usize = 20;
+/// Local I/O staging buffer for sink/poll loops. Not part of either
+/// decoder's real memory footprint — just how much we hand to `poll()`
+/// per call.
+const SCRATCH_SIZE: usize = 256;
+/// heatshrink-lib's decoder streaming input buffer size. Kept fixed across
+/// all window sizes (matches the library's own default) so that `mem_str`
+/// below isolates the effect of the window size specifically.
+const DECODER_I: usize = 32;
 
 // Column widths, shared between header and rows so nothing can drift out of alignment.
 const W_NAME: usize = 10;
@@ -22,12 +29,6 @@ const W_RATIO: usize = 7;
 const W_POS: usize = 9;
 const W_MEM: usize = 9;
 
-#[derive(Debug, Clone)]
-enum TargetConfig {
-    Blaris,
-    Heatshrink { window_bits: u8, lookahead_bits: u8 },
-}
-
 fn format_ms(d: Duration) -> String {
     format!("{:.2}ms", d.as_secs_f64() * 1000.0)
 }
@@ -36,37 +37,11 @@ fn format_us(d: Duration) -> String {
     format!("{:.1}us", d.as_secs_f64() * 1_000_000.0)
 }
 
-impl TargetConfig {
-    fn name(&self) -> String {
-        match self {
-            TargetConfig::Blaris => "Blaris".to_string(),
-            TargetConfig::Heatshrink { window_bits, .. } => format!("HS(W={})", window_bits),
-        }
-    }
-
-    /// Estimated real memory footprint.
-    ///
-    /// Heatshrink's decoder needs both an input buffer *and* a window/history
-    /// buffer, each sized `1 << window_bits`. So real usage is ~2x the window
-    /// size, not just the window size itself. To target a given memory
-    /// budget `X`, configure the window so that `window_size == X / 2`.
-    fn estimated_memory_bytes(&self) -> usize {
-        match self {
-            TargetConfig::Blaris => 64, // O(1), just a handful of state vars
-            TargetConfig::Heatshrink { window_bits, .. } => {
-                let window_size = 1usize << window_bits;
-                window_size * 2
-            }
-        }
-    }
-
-    fn estimated_memory_str(&self) -> String {
-        let bytes = self.estimated_memory_bytes();
-        if bytes < 1024 {
-            format!("~{}B", bytes)
-        } else {
-            format!("~{:.1}KiB", bytes as f64 / 1024.0)
-        }
+fn mem_str(bytes: usize) -> String {
+    if bytes < 1024 {
+        format!("~{}B", bytes)
+    } else {
+        format!("~{:.1}KiB", bytes as f64 / 1024.0)
     }
 }
 
@@ -79,6 +54,8 @@ struct Row {
     extract_means: Vec<Duration>, // one per POSITIONS_PCT entry, same order
     mem_str: String,
 }
+
+// ---------- Blaris ----------
 
 fn blaris_compress_vec(input: &[u8]) -> Vec<u8> {
     let mut out = vec![0u8; blaris_compress::compress::compress_bound(input.len())];
@@ -93,168 +70,7 @@ fn blaris_decompress_range_vec(compressed: &[u8], offset: usize, len: usize) -> 
     out
 }
 
-fn heatshrink_compress(input: &[u8], window_bits: u8, lookahead_bits: u8) -> Vec<u8> {
-    let mut encoder =
-        HeatshrinkEncoder::new(window_bits, lookahead_bits).expect("valid heatshrink params");
-
-    let mut output = Vec::new();
-    let mut scratch = vec![0u8; 1usize << window_bits];
-
-    let mut in_pos = 0;
-
-    while in_pos < input.len() {
-        if let HSESinkRes::Ok(n) = encoder.sink(&input[in_pos..]) {
-            in_pos += n;
-        }
-
-        loop {
-            match encoder.poll(&mut scratch) {
-                HSEPollRes::Empty(sz) => {
-                    output.extend_from_slice(&scratch[..sz]);
-                    break;
-                }
-                HSEPollRes::More(sz) => {
-                    output.extend_from_slice(&scratch[..sz]);
-                }
-                _ => break,
-            }
-        }
-    }
-
-    loop {
-        match encoder.finish() {
-            HSEFinishRes::Done => break,
-            HSEFinishRes::More => {}
-            _ => break,
-        }
-
-        loop {
-            match encoder.poll(&mut scratch) {
-                HSEPollRes::Empty(sz) => {
-                    output.extend_from_slice(&scratch[..sz]);
-                    break;
-                }
-                HSEPollRes::More(sz) => {
-                    output.extend_from_slice(&scratch[..sz]);
-                }
-                _ => break,
-            }
-        }
-    }
-
-    output
-}
-
-/// Decompress a `len`-byte window starting at `offset` from `compressed`.
-///
-/// Heatshrink has no structural random access: it must stream-decode from
-/// the start and discard bytes before `offset`. This function reflects that
-/// honestly rather than trying to "seek".
-fn heatshrink_decompress_range(
-    compressed: &[u8],
-    window_bits: u8,
-    lookahead_bits: u8,
-    offset: usize,
-    len: usize,
-) -> Vec<u8> {
-    let input_buffer_size = 1u16 << window_bits;
-
-    let mut decoder = HeatshrinkDecoder::new(input_buffer_size, window_bits, lookahead_bits)
-        .expect("valid heatshrink params");
-
-    let mut target_buf = vec![0u8; len];
-    let mut scratch = vec![0u8; 1usize << window_bits];
-
-    let mut in_pos = 0;
-    let mut decompressed_bytes_so_far = 0;
-    let target_end = offset + len;
-
-    'outer: while in_pos < compressed.len() {
-        let mut sunk = 0;
-
-        if let HSDSinkRes::Ok(n) = decoder.sink(&compressed[in_pos..]) {
-            sunk = n;
-            in_pos += n;
-        }
-
-        loop {
-            match decoder.poll(&mut scratch) {
-                HSDPollRes::Empty(sz) | HSDPollRes::More(sz) => {
-                    if sz > 0 {
-                        let chunk_start = decompressed_bytes_so_far;
-                        let chunk_end = chunk_start + sz;
-
-                        if chunk_end > offset && chunk_start < target_end {
-                            let overlap_start = chunk_start.max(offset);
-                            let overlap_end = chunk_end.min(target_end);
-
-                            let src_start = overlap_start - chunk_start;
-                            let src_end = overlap_end - chunk_start;
-
-                            let dst_start = overlap_start - offset;
-                            let dst_end = overlap_end - offset;
-
-                            target_buf[dst_start..dst_end]
-                                .copy_from_slice(&scratch[src_start..src_end]);
-                        }
-
-                        decompressed_bytes_so_far += sz;
-
-                        if decompressed_bytes_so_far >= target_end {
-                            break 'outer;
-                        }
-                    }
-
-                    if sunk == 0 {
-                        break;
-                    }
-
-                    break;
-                }
-                _ => break 'outer,
-            }
-        }
-    }
-
-    target_buf
-}
-
-fn compress_data(target: &TargetConfig, input: &[u8]) -> (Vec<u8>, Duration) {
-    let start = Instant::now();
-
-    let compressed = match target {
-        TargetConfig::Blaris => blaris_compress_vec(input),
-        TargetConfig::Heatshrink {
-            window_bits,
-            lookahead_bits,
-        } => heatshrink_compress(input, *window_bits, *lookahead_bits),
-    };
-
-    (compressed, start.elapsed())
-}
-
-fn decompress_range(
-    target: &TargetConfig,
-    compressed: &[u8],
-    offset: usize,
-    len: usize,
-) -> Vec<u8> {
-    match target {
-        TargetConfig::Blaris => blaris_decompress_range_vec(compressed, offset, len),
-        TargetConfig::Heatshrink {
-            window_bits,
-            lookahead_bits,
-        } => heatshrink_decompress_range(compressed, *window_bits, *lookahead_bits, offset, len),
-    }
-}
-
-/// Mean extraction time of `EXTRACT_LEN` bytes at position `pct`%, over `RUNS` runs.
-fn measure_extract_mean(
-    target: &TargetConfig,
-    compressed: &[u8],
-    file_len: usize,
-    pct: usize,
-) -> Duration {
+fn measure_blaris_extract_mean(compressed: &[u8], file_len: usize, pct: usize) -> Duration {
     if file_len == 0 {
         return Duration::ZERO;
     }
@@ -264,18 +80,249 @@ fn measure_extract_mean(
     let offset = raw_offset.min(file_len - len);
 
     // Warm-up (not measured).
-    let out = decompress_range(target, compressed, offset, len);
+    let out = blaris_decompress_range_vec(compressed, offset, len);
     std::hint::black_box(out);
 
     let mut total = Duration::ZERO;
     for _ in 0..RUNS {
         let start = Instant::now();
-        let out = decompress_range(target, compressed, offset, len);
+        let out = blaris_decompress_range_vec(compressed, offset, len);
         total += start.elapsed();
         std::hint::black_box(out);
     }
 
     total / (RUNS as u32)
+}
+
+fn blaris_row(raw_data: &[u8], file_len: usize) -> Row {
+    let start = Instant::now();
+    let compressed = blaris_compress_vec(raw_data);
+    let comp_dur = start.elapsed();
+
+    let comp_size = compressed.len();
+    let ratio = (comp_size as f64 / file_len.max(1) as f64) * 100.0;
+
+    let extract_means = POSITIONS_PCT
+        .iter()
+        .map(|&pct| measure_blaris_extract_mean(&compressed, file_len, pct))
+        .collect();
+
+    Row {
+        name: "Blaris".to_string(),
+        comp_dur,
+        comp_size,
+        ratio,
+        extract_means,
+        mem_str: mem_str(64), // O(1) state, no window/buffers to speak of
+    }
+}
+
+// ---------- heatshrink-lib (no_std, no alloc, const-generic) ----------
+
+/// Byte count carried by either `Poll` variant, regardless of which one.
+fn poll_bytes(p: Poll) -> (usize, bool) {
+    match p {
+        Poll::More(n) => (n, false),  // more output remains after this
+        Poll::Empty(n) => (n, true),  // drained for now
+    }
+}
+
+fn heatshrink_compress<const W: usize, const L: usize, const BUF: usize>(input: &[u8]) -> Vec<u8> {
+    let mut encoder = HeatshrinkEncoder::<W, L, BUF>::new();
+    let mut output = Vec::new();
+    let mut scratch = [0u8; SCRATCH_SIZE];
+
+    let mut drain = |encoder: &mut HeatshrinkEncoder<W, L, BUF>, output: &mut Vec<u8>| {
+        loop {
+            match encoder.poll(&mut scratch) {
+                Ok(p) => {
+                    let (n, empty) = poll_bytes(p);
+                    if n > 0 {
+                        output.extend_from_slice(&scratch[..n]);
+                    }
+                    if empty {
+                        break;
+                    }
+                }
+                Err(_) => break,
+            }
+        }
+    };
+
+    let mut in_pos = 0;
+    while in_pos < input.len() {
+        let consumed = match encoder.sink(&input[in_pos..]) {
+            Ok(n) => n,
+            Err(_) => break,
+        };
+        in_pos += consumed;
+
+        drain(&mut encoder, &mut output);
+
+        if consumed == 0 {
+            break;
+        }
+    }
+
+    loop {
+        match encoder.finish() {
+            Finish::Done => break,
+            Finish::More => drain(&mut encoder, &mut output),
+        }
+    }
+
+    output
+}
+
+/// Decompress a `len`-byte window starting at `offset` from `compressed`.
+///
+/// heatshrink has no structural random access: it must stream-decode from
+/// the start and discard bytes before `offset`. This reflects that
+/// honestly rather than trying to "seek".
+fn heatshrink_decompress_range<const W: usize, const L: usize, const I: usize, const WIN: usize>(
+    compressed: &[u8],
+    offset: usize,
+    len: usize,
+) -> Vec<u8> {
+    let mut decoder = HeatshrinkDecoder::<W, L, I, WIN>::new();
+    let mut target_buf = vec![0u8; len];
+    let mut scratch = [0u8; SCRATCH_SIZE];
+
+    let mut decompressed_bytes_so_far: usize = 0;
+    let target_end = offset + len;
+
+    // Copies `produced` freshly-decoded bytes (sitting in `scratch[..produced]`)
+    // into `target_buf` wherever they overlap [offset, target_end). Returns
+    // true once target_end has been reached.
+    let mut consume_produced = |produced: usize, scratch: &[u8], count: &mut usize| -> bool {
+        if produced > 0 {
+            let chunk_start = *count;
+            let chunk_end = chunk_start + produced;
+
+            if chunk_end > offset && chunk_start < target_end {
+                let overlap_start = chunk_start.max(offset);
+                let overlap_end = chunk_end.min(target_end);
+
+                let src_start = overlap_start - chunk_start;
+                let src_end = overlap_end - chunk_start;
+                let dst_start = overlap_start - offset;
+                let dst_end = overlap_end - offset;
+
+                target_buf[dst_start..dst_end].copy_from_slice(&scratch[src_start..src_end]);
+            }
+
+            *count += produced;
+        }
+
+        *count >= target_end
+    };
+
+    let mut in_pos = 0;
+    'outer: while in_pos < compressed.len() {
+        let consumed = match decoder.sink(&compressed[in_pos..]) {
+            Ok(n) => n,
+            Err(_) => break,
+        };
+        in_pos += consumed;
+
+        loop {
+            match decoder.poll(&mut scratch) {
+                Ok(p) => {
+                    let (n, empty) = poll_bytes(p);
+                    if consume_produced(n, &scratch, &mut decompressed_bytes_so_far) {
+                        break 'outer;
+                    }
+                    if empty {
+                        break;
+                    }
+                }
+                Err(_) => break 'outer,
+            }
+        }
+
+        if consumed == 0 {
+            break;
+        }
+    }
+
+    // All input has been sunk; flush whatever's still buffered internally.
+    if decompressed_bytes_so_far < target_end {
+        'flush: loop {
+            match decoder.finish() {
+                Finish::Done => break 'flush,
+                Finish::More => match decoder.poll(&mut scratch) {
+                    Ok(p) => {
+                        let (n, empty) = poll_bytes(p);
+                        if consume_produced(n, &scratch, &mut decompressed_bytes_so_far) {
+                            break 'flush;
+                        }
+                        if empty && n == 0 {
+                            break 'flush;
+                        }
+                    }
+                    Err(_) => break 'flush,
+                },
+            }
+        }
+    }
+
+    target_buf
+}
+
+/// Builds one Row for a fixed (W, L, BUF, WIN) combination.
+///
+/// `mem_str` reflects DECODER_I + WIN (the embedded-relevant footprint —
+/// blaris only decompresses on-device; encoding happens on the host and
+/// isn't part of the memory budget comparison).
+macro_rules! heatshrink_row {
+    ($raw_data:expr, $file_len:expr, $w:literal, $l:literal, $buf:literal, $win:literal) => {{
+        let start = Instant::now();
+        let compressed = heatshrink_compress::<$w, $l, $buf>($raw_data);
+        let comp_dur = start.elapsed();
+
+        let comp_size = compressed.len();
+        let ratio = (comp_size as f64 / ($file_len as f64).max(1.0)) * 100.0;
+
+        let extract_means: Vec<Duration> = POSITIONS_PCT
+            .iter()
+            .map(|&pct| {
+                if $file_len == 0 {
+                    return Duration::ZERO;
+                }
+
+                let len = EXTRACT_LEN.min($file_len);
+                let raw_offset = ($file_len * pct) / 100;
+                let offset = raw_offset.min($file_len - len);
+
+                // Warm-up.
+                let out =
+                    heatshrink_decompress_range::<$w, $l, DECODER_I, $win>(&compressed, offset, len);
+                std::hint::black_box(out);
+
+                let mut total = Duration::ZERO;
+                for _ in 0..RUNS {
+                    let t0 = Instant::now();
+                    let out = heatshrink_decompress_range::<$w, $l, DECODER_I, $win>(
+                        &compressed,
+                        offset,
+                        len,
+                    );
+                    total += t0.elapsed();
+                    std::hint::black_box(out);
+                }
+                total / (RUNS as u32)
+            })
+            .collect();
+
+        Row {
+            name: format!("HS(W={})", $w),
+            comp_dur,
+            comp_size,
+            ratio,
+            extract_means,
+            mem_str: mem_str(DECODER_I + $win),
+        }
+    }};
 }
 
 fn print_header() {
@@ -328,35 +375,26 @@ fn print_row(row: &Row) {
     println!("{:>w_mem$}", row.mem_str, w_mem = W_MEM);
 }
 
-fn benchmark_file(file_path: &Path, targets: &[TargetConfig]) {
+fn benchmark_file(file_path: &Path) {
     let file_name = file_path.file_name().unwrap().to_string_lossy();
     let raw_data = fs::read(file_path).expect("failed to read test file");
     let file_len = raw_data.len();
 
     println!("\n{file_name}  ({file_len} B)");
 
-    let mut rows: Vec<Row> = targets
-        .iter()
-        .map(|target| {
-            let (compressed, comp_dur) = compress_data(target, &raw_data);
-            let comp_size = compressed.len();
-            let ratio = (comp_size as f64 / file_len.max(1) as f64) * 100.0;
+    let mut rows = vec![blaris_row(&raw_data, file_len)];
 
-            let extract_means = POSITIONS_PCT
-                .iter()
-                .map(|&pct| measure_extract_mean(target, &compressed, file_len, pct))
-                .collect();
-
-            Row {
-                name: target.name(),
-                comp_dur,
-                comp_size,
-                ratio,
-                extract_means,
-                mem_str: target.estimated_memory_str(),
-            }
-        })
-        .collect();
+    // W=6..14, L=4 fixed, BUF=2<<W, WIN=1<<W (heatshrink-lib's required
+    // relationship between the window bits and its buffer sizes).
+    rows.push(heatshrink_row!(&raw_data, file_len, 6, 4, 128, 64));
+    rows.push(heatshrink_row!(&raw_data, file_len, 7, 4, 256, 128));
+    rows.push(heatshrink_row!(&raw_data, file_len, 8, 4, 512, 256));
+    rows.push(heatshrink_row!(&raw_data, file_len, 9, 4, 1024, 512));
+    rows.push(heatshrink_row!(&raw_data, file_len, 10, 4, 2048, 1024));
+    rows.push(heatshrink_row!(&raw_data, file_len, 11, 4, 4096, 2048));
+    rows.push(heatshrink_row!(&raw_data, file_len, 12, 4, 8192, 4096));
+    rows.push(heatshrink_row!(&raw_data, file_len, 13, 4, 16384, 8192));
+    rows.push(heatshrink_row!(&raw_data, file_len, 14, 4, 32768, 16384));
 
     rows.sort_by(|a, b| a.ratio.partial_cmp(&b.ratio).unwrap());
 
@@ -379,48 +417,6 @@ fn main() {
         std::process::exit(1);
     }
 
-    // Heatshrink window_bits chosen so that estimated_memory_bytes()
-    // (== 2x window) lands on round-ish targets, from 128B up to 32KiB.
-    let targets = vec![
-        TargetConfig::Blaris,
-        TargetConfig::Heatshrink {
-            window_bits: 6,
-            lookahead_bits: 4,
-        }, // ~128B
-        TargetConfig::Heatshrink {
-            window_bits: 7,
-            lookahead_bits: 4,
-        }, // ~256B
-        TargetConfig::Heatshrink {
-            window_bits: 8,
-            lookahead_bits: 4,
-        }, // ~512B
-        TargetConfig::Heatshrink {
-            window_bits: 9,
-            lookahead_bits: 4,
-        }, // ~1KiB
-        TargetConfig::Heatshrink {
-            window_bits: 10,
-            lookahead_bits: 4,
-        }, // ~2KiB
-        TargetConfig::Heatshrink {
-            window_bits: 11,
-            lookahead_bits: 4,
-        }, // ~4KiB
-        TargetConfig::Heatshrink {
-            window_bits: 12,
-            lookahead_bits: 4,
-        }, // ~8KiB
-        TargetConfig::Heatshrink {
-            window_bits: 13,
-            lookahead_bits: 4,
-        }, // ~16KiB
-        TargetConfig::Heatshrink {
-            window_bits: 14,
-            lookahead_bits: 4,
-        }, // ~32KiB
-    ];
-
     let mut files: Vec<PathBuf> = fs::read_dir(&test_dir)
         .expect("unable to read test directory")
         .filter_map(|entry| entry.ok())
@@ -436,6 +432,6 @@ fn main() {
     }
 
     for file in &files {
-        benchmark_file(file, &targets);
+        benchmark_file(file);
     }
 }
