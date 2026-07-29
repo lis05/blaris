@@ -101,6 +101,7 @@ name = "blaris-size-check"
 version = "0.1.0"
 dependencies = [
  "blaris-decompress",
+ "heatshrink-lib",
 ]
 
 [[package]]
@@ -154,6 +155,12 @@ name = "embedded-heatshrink"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ae6a665026572afe1cea2ab7ad3eb527a2ffb4bb21b7844982278ab5a4de9cb1"
+
+[[package]]
+name = "heatshrink-lib"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "801436f3e1065124c04d5235d1621dc3dd2f1b1cb9f4848f91727e0945221de0"
 
 [[package]]
 name = "heck"

@@ -27,18 +27,4 @@ lto = true
 codegen-units = 1
 panic = "abort"
 strip = true
-
-[profile.release.package.blaris-compress]
 opt-level = 3
-
-[profile.release.package.blaris-decompress]
-opt-level = "z"
-
-[profile.release.package.blaris]
-opt-level = 3
-
-[profile.release.package.blaris-size-check]
-opt-level = "z"
-
-[profile.release.package.blaris-ffi]
-opt-level = "z"

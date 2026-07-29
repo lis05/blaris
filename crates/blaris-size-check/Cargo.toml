@@ -5,3 +5,12 @@ edition = "2024"
 
 [dependencies]
 blaris-decompress = { path = "../blaris-decompress" }
+heatshrink-lib = "1.0"
+
+[[bin]]
+name = "blaris"
+path = "src/bin/blaris.rs"
+
+[[bin]]
+name = "heatshrink"
+path = "src/bin/heatshrink.rs"
