@@ -63,15 +63,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "blaris-benchmark"
-version = "0.1.0"
-dependencies = [
- "blaris-compress",
- "blaris-decompress",
- "heatshrink-lib",
-]
-
-[[package]]
 name = "blaris-compress"
 version = "0.1.0"
 dependencies = [
@@ -94,14 +85,6 @@ name = "blaris-ffi"
 version = "0.1.0"
 dependencies = [
  "blaris-decompress",
-]
-
-[[package]]
-name = "blaris-size-check"
-version = "0.1.0"
-dependencies = [
- "blaris-decompress",
- "heatshrink-lib",
 ]
 
 [[package]]
@@ -149,12 +132,6 @@ name = "colorchoice"
 version = "1.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1d07550c9036bf2ae0c684c4297d503f838287c83c53686d05370d0e139ae570"
-
-[[package]]
-name = "heatshrink-lib"
-version = "1.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "801436f3e1065124c04d5235d1621dc3dd2f1b1cb9f4848f91727e0945221de0"
 
 [[package]]
 name = "heck"

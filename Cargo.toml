@@ -4,9 +4,7 @@ members = [
     "crates/blaris-core",
     "crates/blaris-compress",
     "crates/blaris-decompress",
-    "crates/blaris-size-check",
     "crates/blaris-ffi",
-    "crates/blaris-benchmark",
 ]
 resolver = "2"
 
@@ -21,6 +19,9 @@ blaris-core = { path = "crates/blaris-core" }
 blaris-compress = { path = "crates/blaris-compress" }
 blaris-decompress = { path = "crates/blaris-decompress" }
 clap = { version = "4.4", features = ["derive"] }
+
+[profile.dev]
+panic = "abort"
 
 [profile.release]
 lto = true
