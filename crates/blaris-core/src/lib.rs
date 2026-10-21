@@ -166,7 +166,8 @@ impl Checkpoint {
 
         let cps = header.checkpoints;
         let n = cps.len();
-        if n > 0 {
+        // TODO: best_dist > fraction of total length
+        if n > 0 && best_dist > 64 {
             let mut left = 0;
             let mut right = n;
             while left < right {
