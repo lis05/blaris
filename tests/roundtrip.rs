@@ -1,5 +1,5 @@
 use blaris_compress::compress::{compress, compress_bound};
-use blaris_decompress::decompress::decompress;
+use blaris_decompress::decompress::{decompress, decompress_with_state, initial_state, State};
 
 fn roundtrip(data: &[u8]) {
     let mut compressed = vec![0u8; compress_bound(data.len())];
@@ -101,6 +101,41 @@ fn self_referential_match_distance_less_than_length() {
     // into itself rather than an earlier block.
     let data = b"ababababababababab".to_vec();
     roundtrip(&data);
+}
+
+#[test]
+fn roundtrip_with_state() {
+    let data = b"the quick brown fox jumps over the lazy dog. the quick brown fox is quick.";
+    let mut compressed = vec![0u8; compress_bound(data.len())];
+    let compressed_len = compress(data, &mut compressed);
+    compressed.truncate(compressed_len);
+
+    let mut state: State = initial_state(&compressed);
+    assert_eq!(state.payload_offset, 8);
+
+    // Byte-by-byte decompression using state
+    let mut byte_output = vec![0u8; data.len()];
+    for i in 0..data.len() {
+        let ok = decompress_with_state(&compressed, &mut byte_output[i..i + 1], i, &mut state);
+        assert!(ok);
+    }
+    assert_eq!(byte_output, data);
+
+    // Chunked decompression reusing the state
+    let mut chunk_output = vec![0u8; data.len()];
+    let mut offset = 0;
+    while offset < data.len() {
+        let len = 7.min(data.len() - offset);
+        let ok = decompress_with_state(
+            &compressed,
+            &mut chunk_output[offset..offset + len],
+            offset,
+            &mut state,
+        );
+        assert!(ok);
+        offset += len;
+    }
+    assert_eq!(chunk_output, data);
 }
 #[test]
 fn perf_decompression_modes() {

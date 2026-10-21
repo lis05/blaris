@@ -5,13 +5,14 @@ const ALIGN_LITERALS: u8 = 1 << 1;
 const ALIGN_DISTANCES: u8 = 1 << 2;
 const ALIGN_ALL: u8 = ALIGN_POSITION | ALIGN_LITERALS | ALIGN_DISTANCES;
 
-struct State {
+pub struct State {
     pub current_control_offset: usize,
     pub current_literal_offset: usize,
     pub current_distance_offset_bits: usize,
     pub controls_len: usize,
     pub current_position: usize,
     pub alignment_flags: u8,
+    pub payload_offset: usize,
 }
 
 pub fn read_u32_at_bit_offset(buf: &[u8], global_bit_offset: usize, num_bits: usize) -> u32 {
@@ -147,6 +148,7 @@ fn decompress_byte(from: &[u8], mut offset: usize, state: &mut State) -> u8 {
                     controls_len: state.controls_len,
                     current_position: save_current_position,
                     alignment_flags: ALIGN_ALL,
+                    payload_offset: state.payload_offset,
                 };
                 return res;
             } else {
@@ -198,36 +200,46 @@ fn decompress_byte(from: &[u8], mut offset: usize, state: &mut State) -> u8 {
     }
 }
 
-pub fn decompress(mut from: &[u8], to: &mut [u8], offset: usize) -> bool {
-    if from.len() < 4 {
-        return false;
-    }
-    let literals_offset = u32::from_le_bytes(from[..4].try_into().unwrap());
-    from = &from[4..];
+pub fn initial_state(from: &[u8]) -> State {
+    assert!(from.len() >= 8, "buffer too small for blaris header");
+    let literals_offset = u32::from_le_bytes(from[0..4].try_into().unwrap()) as usize;
+    let distances_offset = u32::from_le_bytes(from[4..8].try_into().unwrap()) as usize;
 
-    if from.len() < 4 {
-        return false;
-    }
-    let distances_offset = u32::from_le_bytes(from[..4].try_into().unwrap());
-    from = &from[4..];
-
-    let literals_offset = literals_offset as usize;
-    let distances_offset = distances_offset as usize;
-
-    let mut state = State {
+    State {
         current_control_offset: 0,
         current_literal_offset: literals_offset,
         current_distance_offset_bits: distances_offset * 8,
         controls_len: literals_offset,
         current_position: 0,
         alignment_flags: ALIGN_ALL,
-    };
+        payload_offset: 8,
+    }
+}
+
+pub fn decompress_with_state(
+    from: &[u8],
+    to: &mut [u8],
+    offset: usize,
+    state: &mut State,
+) -> bool {
+    if from.len() < state.payload_offset {
+        return false;
+    }
+    let payload = &from[state.payload_offset..];
 
     for i in 0..to.len() {
-        to[i] = decompress_byte(from, offset + i, &mut state);
+        to[i] = decompress_byte(payload, offset + i, state);
     }
 
     true
+}
+
+pub fn decompress(from: &[u8], to: &mut [u8], offset: usize) -> bool {
+    if from.len() < 8 {
+        return false;
+    }
+    let mut state = initial_state(from);
+    decompress_with_state(from, to, offset, &mut state)
 }
 
 /// C-compatible entry point for decompression.
@@ -252,4 +264,32 @@ pub unsafe extern "C" fn blaris_decompress(
     let to = unsafe { core::slice::from_raw_parts_mut(to_ptr, to_len) };
 
     decompress(from, to, offset)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_initial_state_properties() {
+        let mut buf = [0u8; 8];
+        buf[0..4].copy_from_slice(&12u32.to_le_bytes());
+        buf[4..8].copy_from_slice(&24u32.to_le_bytes());
+
+        let state = initial_state(&buf);
+        assert_eq!(state.current_control_offset, 0);
+        assert_eq!(state.current_literal_offset, 12);
+        assert_eq!(state.current_distance_offset_bits, 24 * 8);
+        assert_eq!(state.controls_len, 12);
+        assert_eq!(state.current_position, 0);
+        assert_eq!(state.alignment_flags, ALIGN_ALL);
+        assert_eq!(state.payload_offset, 8);
+    }
+
+    #[test]
+    #[should_panic]
+    fn test_initial_state_too_short() {
+        let buf = [0u8; 7];
+        initial_state(&buf);
+    }
 }
