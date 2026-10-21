@@ -26,6 +26,7 @@ pub fn control_from_match(length: usize, distance_bits: usize) -> Option<u8> {
     Some(c as u8)
 }
 
+#[inline(always)]
 pub fn literals_from_control(c: u8) -> usize {
     if (c as usize) < MAX_LITERALS {
         (c as usize) + 1
@@ -34,14 +35,12 @@ pub fn literals_from_control(c: u8) -> usize {
     }
 }
 
+#[inline(always)]
 pub fn match_from_control(c: u8) -> (usize, usize) {
     let c = c as usize;
-
-    if MAX_LITERALS <= c && c < MAX_LITERALS + MAX_LENGTH * MAX_DISTANCE_BITS {
-        (
-            (c - MAX_LITERALS) / MAX_DISTANCE_BITS + 1,
-            (c - MAX_LITERALS) % MAX_DISTANCE_BITS + 1,
-        )
+    if c >= MAX_LITERALS {
+        let diff = c - MAX_LITERALS;
+        (diff / MAX_DISTANCE_BITS + 1, diff % MAX_DISTANCE_BITS + 1)
     } else {
         (0, 0)
     }

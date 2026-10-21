@@ -1,7 +1,7 @@
-use blaris_core::params;
+use blaris_core::{params, Checkpoint, Header};
 
-pub fn compress_bound(len: usize) -> usize {
-    return len * 2 + 16;
+pub fn compress_bound(len: usize, num_checkpoints: u32) -> usize {
+    len * 2 + Header::SIZE + (num_checkpoints as usize) * Checkpoint::SIZE + 16
 }
 
 fn strmatch(a: &[u8], b: &[u8], limit: usize) -> usize {
@@ -56,8 +56,8 @@ pub fn write_u32_at_bit_offset(
     }
 }
 
-pub fn compress(from: &[u8], mut to: &mut [u8]) -> usize {
-    assert!(to.len() >= compress_bound(from.len()));
+pub fn compress(from: &[u8], to: &mut [u8], num_checkpoints: u32) -> usize {
+    assert!(to.len() >= compress_bound(from.len(), num_checkpoints));
 
     let max_literals: usize = params::MAX_LITERALS;
     let max_length: usize = params::MAX_LENGTH;
@@ -196,28 +196,97 @@ pub fn compress(from: &[u8], mut to: &mut [u8]) -> usize {
     literals.reverse();
     distances.reverse();
 
-    let (before, after) = to.split_at_mut(4);
-    before.copy_from_slice(&(controls.len() as u32).to_le_bytes());
-    to = after;
+    // 1. Calculate evenly-spread checkpoints
+    let mut checkpoints = std::vec::Vec::with_capacity(num_checkpoints as usize);
+    if num_checkpoints > 0 {
+        let step = if n > 0 {
+            (n as f64) / (num_checkpoints as f64)
+        } else {
+            0.0
+        };
+        let mut cur = Checkpoint::default();
+        let mut next_target = 0usize;
 
-    let (before, after) = to.split_at_mut(4);
-    before.copy_from_slice(&((controls.len() + literals.len()) as u32).to_le_bytes());
-    to = after;
+        for &c in &controls {
+            let target_pos = (next_target as f64 * step) as u32;
+            while cur.position >= target_pos && next_target < num_checkpoints as usize {
+                checkpoints.push(cur);
+                next_target += 1;
+            }
 
-    let (before, after) = to.split_at_mut(controls.len());
-    before.copy_from_slice(&controls);
-    to = after;
+            let num_literals = params::literals_from_control(c);
+            if num_literals != 0 {
+                cur.literal += num_literals as u32;
+                cur.position += num_literals as u32;
+            } else {
+                let (length, distance_bits) = params::match_from_control(c);
+                cur.distance_bit += distance_bits as u32;
+                cur.position += length as u32;
+            }
+            cur.control += 1;
+        }
 
-    let (before, after) = to.split_at_mut(literals.len());
-    before.copy_from_slice(&literals);
-    to = after;
-
-    let mut bits_written: usize = 0;
-    for distance in distances {
-        let bits = bits_of((distance - 1) as usize);
-        write_u32_at_bit_offset(to, bits_written, bits as usize, distance - 1);
-        bits_written += bits as usize;
+        while next_target < num_checkpoints as usize {
+            checkpoints.push(cur);
+            next_target += 1;
+        }
     }
 
-    8 + controls.len() + literals.len() + (bits_written + 7) / 8
+    // 2. Compute stream offsets and layout
+    let controls_offset = Header::SIZE as u32;
+    let literals_offset = controls_offset + controls.len() as u32;
+    let distances_offset = literals_offset + literals.len() as u32;
+
+    let mut bits_written: usize = 0;
+    for &distance in &distances {
+        bits_written += bits_of((distance - 1) as usize) as usize;
+    }
+    let distances_bytes = bits_written.div_ceil(8);
+    let distances_end = distances_offset + distances_bytes as u32;
+
+    // Checkpoints must be aligned to 4 bytes
+    let padding = (4 - (distances_end % 4)) % 4;
+    let checkpoints_offset = distances_end + padding;
+
+    // 3. Create header and store it
+    let header = Header {
+        controls_offset,
+        literals_offset,
+        distances_offset,
+        checkpoints_offset,
+        num_checkpoints: checkpoints.len() as u32,
+        controls: &controls,
+        literals: &literals,
+        distances: &[],
+        checkpoints: &checkpoints,
+    };
+    header.store(&mut to[..Header::SIZE]);
+
+    // 4. Write controls & literals
+    to[controls_offset as usize..literals_offset as usize].copy_from_slice(&controls);
+    to[literals_offset as usize..distances_offset as usize].copy_from_slice(&literals);
+
+    // 5. Write bit-packed distances
+    let distances_slice = &mut to[distances_offset as usize..distances_end as usize];
+    distances_slice.fill(0);
+    let mut bit_offset: usize = 0;
+    for distance in distances {
+        let bits = bits_of((distance - 1) as usize) as usize;
+        write_u32_at_bit_offset(distances_slice, bit_offset, bits, distance - 1);
+        bit_offset += bits;
+    }
+
+    // Zero padding between distances and checkpoints
+    if padding > 0 {
+        to[distances_end as usize..checkpoints_offset as usize].fill(0);
+    }
+
+    // 6. Write checkpoints
+    let mut cp_dest = checkpoints_offset as usize;
+    for cp in &checkpoints {
+        cp.store(&mut to[cp_dest..cp_dest + Checkpoint::SIZE]);
+        cp_dest += Checkpoint::SIZE;
+    }
+
+    checkpoints_offset as usize + checkpoints.len() * Checkpoint::SIZE
 }

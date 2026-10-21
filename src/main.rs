@@ -27,6 +27,10 @@ enum Commands {
         /// Output file path
         #[arg(short, long)]
         output: PathBuf,
+
+        /// Number of checkpoints to generate
+        #[arg(short = 'c', long, default_value_t = 16)]
+        checkpoints: u32,
     },
     /// Decompress a segment of a file
     Decompress {
@@ -51,6 +55,10 @@ enum Commands {
         /// Input file path to test
         #[arg(short, long)]
         input: PathBuf,
+
+        /// Number of checkpoints to generate
+        #[arg(short = 'c', long, default_value_t = 16)]
+        checkpoints: u32,
     },
 }
 
@@ -58,14 +66,18 @@ fn main() -> io::Result<()> {
     let cli = Cli::parse();
 
     match cli.command {
-        Commands::Compress { input, output } => {
+        Commands::Compress {
+            input,
+            output,
+            checkpoints,
+        } => {
             let mut in_file = File::open(&input)?;
             let mut in_data = Vec::new();
             in_file.read_to_end(&mut in_data)?;
 
-            let mut out_data = vec![0; compress_bound(in_data.len())];
+            let mut out_data = vec![0; compress_bound(in_data.len(), checkpoints)];
 
-            let compressed_size = compress(&in_data, &mut out_data);
+            let compressed_size = compress(&in_data, &mut out_data, checkpoints);
             out_data.truncate(compressed_size);
 
             let mut out_file = File::create(&output)?;
@@ -100,15 +112,15 @@ fn main() -> io::Result<()> {
                 handle.write_all(&out_data)?;
             }
         }
-        Commands::Check { input } => {
+        Commands::Check { input, checkpoints } => {
             let mut in_file = File::open(&input)?;
             let mut original_data = Vec::new();
             in_file.read_to_end(&mut original_data)?;
 
-            let mut compressed_data = vec![0; compress_bound(original_data.len())];
+            let mut compressed_data = vec![0; compress_bound(original_data.len(), checkpoints)];
 
             let compress_start = Instant::now();
-            let compressed_size = compress(&original_data, &mut compressed_data);
+            let compressed_size = compress(&original_data, &mut compressed_data, checkpoints);
             let compress_duration = compress_start.elapsed();
 
             compressed_data.truncate(compressed_size);
@@ -148,7 +160,7 @@ fn main() -> io::Result<()> {
             println!("{:<19}{:.2}%", "Space saved:", saved);
             println!("{:<19}{:?}", "Compress time:", compress_duration);
             println!("{:<19}{:?}", "Decompress time:", decompress_duration);
-            println!("{:<19}{}", "Round-trip:", "OK (bytes match)");
+            println!("{:<19}OK (bytes match)", "Round-trip:");
         }
     }
 

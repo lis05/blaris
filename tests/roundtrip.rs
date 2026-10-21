@@ -1,9 +1,15 @@
 use blaris_compress::compress::{compress, compress_bound};
-use blaris_decompress::decompress::{decompress, decompress_with_state, initial_state, State};
+use blaris_core::Checkpoint;
+use blaris_decompress::decompress::{decompress, decompress_with_checkpoint};
 
 fn roundtrip(data: &[u8]) {
-    let mut compressed = vec![0u8; compress_bound(data.len())];
-    let compressed_len = compress(data, &mut compressed);
+    roundtrip_with_checkpoints(data, 16);
+    roundtrip_with_checkpoints(data, 0);
+}
+
+fn roundtrip_with_checkpoints(data: &[u8], num_checkpoints: u32) {
+    let mut compressed = vec![0u8; compress_bound(data.len(), num_checkpoints)];
+    let compressed_len = compress(data, &mut compressed, num_checkpoints);
     compressed.truncate(compressed_len);
 
     let mut output = vec![0u8; data.len()];
@@ -81,8 +87,8 @@ fn repeated_across_full_buffer() {
 fn partial_decompress_with_offset() {
     // Decompress only a slice of the original data starting mid-buffer
     let data = b"the quick brown fox jumps over the lazy dog";
-    let mut compressed = vec![0u8; compress_bound(data.len())];
-    let compressed_len = compress(data, &mut compressed);
+    let mut compressed = vec![0u8; compress_bound(data.len(), 8)];
+    let compressed_len = compress(data, &mut compressed, 8);
     compressed.truncate(compressed_len);
 
     let start = 10;
@@ -104,39 +110,44 @@ fn self_referential_match_distance_less_than_length() {
 }
 
 #[test]
-fn roundtrip_with_state() {
+fn roundtrip_with_checkpoint() {
     let data = b"the quick brown fox jumps over the lazy dog. the quick brown fox is quick.";
-    let mut compressed = vec![0u8; compress_bound(data.len())];
-    let compressed_len = compress(data, &mut compressed);
+    let mut compressed = vec![0u8; compress_bound(data.len(), 8)];
+    let compressed_len = compress(data, &mut compressed, 8);
     compressed.truncate(compressed_len);
 
-    let mut state: State = initial_state(&compressed);
-    assert_eq!(state.payload_offset, 8);
+    let mut checkpoint = Checkpoint::default();
 
-    // Byte-by-byte decompression using state
+    // Byte-by-byte decompression using checkpoint
     let mut byte_output = vec![0u8; data.len()];
     for i in 0..data.len() {
-        let ok = decompress_with_state(&compressed, &mut byte_output[i..i + 1], i, &mut state);
+        let ok = decompress_with_checkpoint(
+            &compressed,
+            &mut byte_output[i..i + 1],
+            i,
+            &mut checkpoint,
+        );
         assert!(ok);
     }
     assert_eq!(byte_output, data);
 
-    // Chunked decompression reusing the state
+    // Chunked decompression reusing the checkpoint
     let mut chunk_output = vec![0u8; data.len()];
     let mut offset = 0;
     while offset < data.len() {
         let len = 7.min(data.len() - offset);
-        let ok = decompress_with_state(
+        let ok = decompress_with_checkpoint(
             &compressed,
             &mut chunk_output[offset..offset + len],
             offset,
-            &mut state,
+            &mut checkpoint,
         );
         assert!(ok);
         offset += len;
     }
     assert_eq!(chunk_output, data);
 }
+
 #[test]
 fn perf_decompression_modes() {
     use std::time::Instant;
@@ -149,8 +160,8 @@ fn perf_decompression_modes() {
         data.push((data.len() % 251) as u8);
     }
 
-    let mut compressed = vec![0u8; compress_bound(data.len())];
-    let compressed_len = compress(&data, &mut compressed);
+    let mut compressed = vec![0u8; compress_bound(data.len(), 64)];
+    let compressed_len = compress(&data, &mut compressed, 64);
     compressed.truncate(compressed_len);
 
     println!(
