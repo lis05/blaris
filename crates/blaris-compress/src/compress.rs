@@ -208,8 +208,9 @@ pub fn compress(from: &[u8], to: &mut [u8], num_checkpoints: u32) -> usize {
         let mut next_target = 0usize;
 
         for &c in &controls {
-            let target_pos = (next_target as f64 * step) as u32;
-            while cur.position >= target_pos && next_target < num_checkpoints as usize {
+            while next_target < num_checkpoints as usize
+                && cur.position >= (next_target as f64 * step) as u32
+            {
                 checkpoints.push(cur);
                 next_target += 1;
             }
