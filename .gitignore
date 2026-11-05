@@ -1,0 +1,8 @@
+bench/build
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.out
+blaris-arxiv.tar.gz
+paper
