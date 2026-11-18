@@ -2,6 +2,8 @@
 
 **Windowless Random-Access LZSS for Constrained Microcontrollers**
 
+[![arXiv](https://img.shields.io/badge/arXiv-2611.22900-b31b1b.svg)](https://arxiv.org/abs/2611.22900)
+
 `blaris` is a windowless LZSS decompressor designed for deeply constrained microcontrollers where RAM budgets are too tight for sliding-window codecs like `heatshrink` or `tamp`. By resolving back-references directly in the compressed payload via bidirectional streams and compact power-of-two checkpoints, `blaris` achieves compression ratios comparable to high-window `heatshrink` and `tamp` configurations (which require `> 1.2 KiB` of RAM) while using only **548–784 B of Flash** and **104–112 B of total RAM**.
 
 For random access to small slices, `blaris` is up to orders of magnitude faster than ratio-matched, block-indexed streaming decoders, though streaming codecs become faster on larger sequential reads (`>= 128 B`) when speed is the priority and sufficient RAM is available.
