@@ -8,7 +8,7 @@ import numpy as np
 
 VISUAL_DIR = Path(__file__).resolve().parent
 BENCH_DIR = VISUAL_DIR.parent
-DEFAULT_RESULTS_JSON = BENCH_DIR / "results.json"
+DEFAULT_RESULTS_JSON = BENCH_DIR / "results-rv32emu.json"
 HARNESS_C = BENCH_DIR / "harness.c"
 
 # Discrete RAM tiers (in bytes):
@@ -88,7 +88,7 @@ def add_ram_colorbar(fig, ax):
 
 def load_records(results_path: Path, dataset: str, slice_idx: int) -> list[dict]:
     """
-    Load records from results.json for a specific dataset (or 'ALL') and slice_idx (0..8).
+    Load records from results JSON for a specific dataset (or 'ALL') and slice_idx (0..8).
     Computes enriched fields:
       - ratio_pct: compression ratio in % (lower is better)
       - throughput: decompression throughput in Bytes / 1k cycles (higher is better)

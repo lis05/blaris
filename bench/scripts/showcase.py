@@ -56,7 +56,7 @@ def main():
     parser.add_argument("codec", help="Decompressor name (e.g. blaris, heatshrink)")
     parser.add_argument("dataset", help="Dataset filename (e.g. FreeRTOSConfig.h, or ALL)")
     parser.add_argument("slice", type=int, choices=range(0, 9), metavar="SLICE_0_TO_8", help="Slice index 0..8 (size = 2^slice bytes)")
-    parser.add_argument("--results", type=Path, default=DEFAULT_RESULTS_JSON, help="Path to results.json")
+    parser.add_argument("--results", type=Path, default=DEFAULT_RESULTS_JSON, help="Path to results JSON (default: bench/results-rv32emu.json)")
     parser.add_argument("-o", "--output", type=Path, default=None, help="Output PNG path")
     parser.add_argument("--no-show", action="store_true", help="Do not open interactive window")
     args = parser.parse_args()

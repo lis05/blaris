@@ -5,8 +5,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../../src/blaris-compress.c"
-
 int compress_file(const char *filename, const char *output) {
     if (!filename || !output) {
         return -1;

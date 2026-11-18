@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-summary.py - Memory and Flash footprint analysis from results.json.
+summary.py - Memory and Flash footprint analysis from results-rv32emu.json.
 
-Analyzes bench/results.json and prints:
+Analyzes bench/results-rv32emu.json and prints:
 - Min / Max Flash (.text) usage (both pure and with-adapter)
 - Min / Max RAM usage (peak_stack + bss + data)
 - Detailed breakdown of Stack, BSS, and Data
@@ -19,6 +19,9 @@ from collections import defaultdict
 from pathlib import Path
 
 
+DEFAULT_RESULTS_JSON = Path(__file__).resolve().parent.parent / "results-rv32emu.json"
+
+
 def format_bytes(n: int) -> str:
     if n >= 1024 * 1024:
         return f"{n / (1024 * 1024):.2f} MiB ({n} B)"
@@ -29,13 +32,13 @@ def format_bytes(n: int) -> str:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Analyze Flash and RAM footprints from results.json"
+        description="Analyze Flash and RAM footprints from results JSON"
     )
     parser.add_argument(
         "--results",
         type=Path,
-        default=Path("results.json"),
-        help="Path to results.json (default: results.json)",
+        default=DEFAULT_RESULTS_JSON,
+        help="Path to results JSON (default: bench/results-rv32emu.json)",
     )
     parser.add_argument(
         "--detailed",

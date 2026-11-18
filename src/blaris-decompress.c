@@ -3,6 +3,18 @@
 
 #include <blaris.h>
 
+/*
+ * Enable using output buffer to resolve bytes referencing it.
+ *
+ * With this feature, the decoder will be able to use the provided buffer to resolve
+ * bytes which point to bytes already resolved. If enabled, full-file decompression
+ * will be possible in O(n) time instead of O(n^2), and larger slices may decode
+ * faster. However, the flash size will slightly increase.
+ */
+#ifndef BLARIS_ENABLE_BUFFER_RESOLVER
+#    define BLARIS_ENABLE_BUFFER_RESOLVER 1
+#endif
+
 void blaris_init(const uint32_t* data, struct Decoder* dec) {
     const struct Header* header = (const struct Header*)data;
     const uint8_t*       data_bytes = (const uint8_t*)data;
@@ -62,9 +74,9 @@ static void move_forward_match(struct Checkpoint* cp, uint8_t length,
 /* Extracts bit_count bits from the stream. */
 static uint32_t extract_bits(const uint32_t* data, uint32_t bit_offset,
                              uint8_t bit_count) {
-    const uint16_t* ptr = (const uint16_t*)data + (bit_offset >> 4); // align to 2
-                                                                     // bytes
-    uint32_t        raw = (uint32_t)ptr[0] | ((uint32_t)ptr[1] << 16);
+    const uint16_t* ptr = (const uint16_t*)data + (bit_offset >> 4);  // align to 2
+                                                                      // bytes
+    uint32_t raw = (uint32_t)ptr[0] | ((uint32_t)ptr[1] << 16);
     return (raw >> (bit_offset & 15)) & ((1u << bit_count) - 1);
 }
 
@@ -107,7 +119,7 @@ static void change_checkpoint(const struct Decoder* dec, struct Checkpoint* cp,
         pos > cp->position ? pos - cp->position : cp->position - pos;
 
     // If we're close enough, return.
-    if (current_distance < 32) {
+    if (current_distance < BLARIS_CLOSE_WALK_DISTANCE) {
         return;
     }
 
@@ -126,7 +138,7 @@ static void change_checkpoint(const struct Decoder* dec, struct Checkpoint* cp,
 
     uint32_t chosen_pos = (chosen_index << BLARIS_CHECKPOINTS_SPREAD_LOG);
     uint32_t approx_dist = pos > chosen_pos ? pos - chosen_pos : chosen_pos - pos;
-    if (approx_dist + 32 >= current_distance) {
+    if (approx_dist + BLARIS_CLOSE_WALK_DISTANCE >= current_distance) {
         return;
     }
     get_checkpoint(dec, chosen_index, cp);
@@ -174,16 +186,20 @@ static uint8_t move_to(const struct Decoder* dec, struct Checkpoint* cp,
     }
 }
 
-/* Sets checkpoint to point into a literals run that includes the given position.
- *
- * Returns offset within the literals run of cp. Sets window to how many bytes
- * can be copied from this token.
+/* Resolves the source pointer for a run starting at pos, updating window to
+ * how many bytes can be copied from it.
  */
-static uint32_t find_literals(const struct Decoder* dec, struct Checkpoint* cp,
-                              uint32_t pos, uint32_t* window) {
+#if BLARIS_ENABLE_BUFFER_RESOLVER
+static const uint8_t* find_literals(uint8_t control, const struct Decoder* dec,
+                                    struct Checkpoint* cp, uint32_t pos,
+                                    uint32_t* window, const uint8_t* base_buf,
+                                    uint32_t base_offset) {
+#else
+static const uint8_t* find_literals(uint8_t control, const struct Decoder* dec,
+                                    struct Checkpoint* cp, uint32_t pos,
+                                    uint32_t* window) {
+#endif
     while (1) {
-        uint8_t control = move_to(dec, cp, pos);
-
         // If we moved inside of a literal run token, return.
         if (control <= CONTROL_LITERAL_BOUND) {
             uint8_t  literals_count = control + 1;
@@ -194,7 +210,7 @@ static uint32_t find_literals(const struct Decoder* dec, struct Checkpoint* cp,
                 *window = literals_count - offset;
             }
 
-            return offset;
+            return dec->literals_ptr + cp->literal + offset;
         } else {
             // Otherwise, this is a match token.
             uint8_t  length = CONTROL_TO_MATCH_LENGTH(control);
@@ -210,10 +226,16 @@ static uint32_t find_literals(const struct Decoder* dec, struct Checkpoint* cp,
                 *window = remaining;
             }
             pos -= distance;
+#if BLARIS_ENABLE_BUFFER_RESOLVER
+            if (pos >= base_offset) {
+                return base_buf + (pos - base_offset);
+            }
+#endif
 #if BLARIS_CHECKPOINTS_SPREAD_LOG > 0
             change_checkpoint(dec, cp, pos);
 #endif
         }
+        control = move_to(dec, cp, pos);
     }
 }
 
@@ -224,20 +246,29 @@ void blaris_decompress(const struct Decoder* dec, uint32_t offset, uint8_t* buff
     change_checkpoint(dec, cp, offset);
 #endif
 
+#if BLARIS_ENABLE_BUFFER_RESOLVER
+    const uint8_t* base_buf = buffer;
+    uint32_t       base_offset = offset;
+#endif
     struct Checkpoint resolver;
 
     int32_t remaining = count;
     while (remaining > 0) {
-        move_to(dec, cp, offset);
+        uint8_t control = move_to(dec, cp, offset);
         resolver = *cp;
 
-        // Find next token with literals.
+        // Find next token with literals (or already-decoded bytes in buffer).
         uint32_t window = remaining;
-        uint32_t run_offset = find_literals(dec, &resolver, offset, &window);
+#if BLARIS_ENABLE_BUFFER_RESOLVER
+        const uint8_t* src = find_literals(control, dec, &resolver, offset, &window,
+                                           base_buf, base_offset);
+#else
+        const uint8_t* src = find_literals(control, dec, &resolver, offset, &window);
+#endif
 
         // Copy the bytes.
         for (uint32_t i = 0; i < window; i++) {
-            buffer[i] = dec->literals_ptr[resolver.literal + run_offset + i];
+            buffer[i] = src[i];
         }
 
         remaining -= window;

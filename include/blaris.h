@@ -5,8 +5,13 @@
 #define BLARIS_H
 // The only include
 #include <stdint.h>
+#include "config.h"
 
 /* ============================ Configuration ============================ */
+/*
+ * This is common configuration for both encoder and decoder. Encoder-only config
+ * can be found it its respective source file.
+ */
 
 /*
  * How many bytes will be used to store offsets within streams.
@@ -56,13 +61,11 @@
 #endif
 
 /*
- * Toggle chain flattening.
- *
- * Setting this value to 0 will increase compression ratio, but slow down
- * decompression.
+ * Distance threshold below which the decoder walks directly instead of switching
+ * to a closer checkpoint.
  */
-#ifndef BLARIS_FLATTEN_CHAINS
-#    define BLARIS_FLATTEN_CHAINS 1
+#ifndef BLARIS_CLOSE_WALK_DISTANCE
+#    define BLARIS_CLOSE_WALK_DISTANCE 32
 #endif
 
 /* ============================ End of configuration ============================ */

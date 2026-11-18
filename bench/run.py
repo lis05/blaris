@@ -1,4 +1,5 @@
 import argparse
+import fnmatch
 import glob
 import json
 import os
@@ -14,14 +15,15 @@ from config import (
     BENCH_DIR,
     BUILD_DIR,
 )
-import blaris
+import blaris_optimal
+import blaris_greedymaxhops
 import heatshrink
 import tamp
 import harness
 import harness_esp32c3fn4
 
 DATA_DIR = BENCH_DIR / "data"
-RESULTS_JSON = BENCH_DIR / "results.json"
+RESULTS_JSON = BENCH_DIR / "results-rv32emu.json"
 
 
 def extract_size_report(binary):
@@ -30,7 +32,7 @@ def extract_size_report(binary):
     return {"text": res[0], "data": res[1], "bss": res[2]}
 
 
-def run(max_workers=None, dataset_limit=None, device="rv32emu", module_filter=None, config_limit=None, config_filter=None, dataset_filter=None, exclude_filter=None, skip_completed=False):
+def run(max_workers=None, dataset_limit=None, device="rv32emu", module_filter=None, config_limit=None, config_filter=None, dataset_filter=None, exclude_filter=None, update=False):
     h = harness
     if device == "esp32":
         h = harness_esp32c3fn4
@@ -59,23 +61,34 @@ def run(max_workers=None, dataset_limit=None, device="rv32emu", module_filter=No
 
     results = []
 
-    def get_existing_map():
+    def load_existing_map():
         existing_map = {}
         if results_json.exists():
             try:
                 with open(results_json) as f:
                     for r in json.load(f):
                         existing_map[(r["config_name"], r["dataset"])] = r
-            except Exception:
-                pass
+            except Exception as exc:
+                print(f"Warning: failed to load existing {results_json}: {exc}")
         return existing_map
 
+    results_lock = threading.Lock()
+    results_map = load_existing_map()
+
     def save_results(items):
-        existing_map = get_existing_map()
-        for r in items:
-            existing_map[(r["config_name"], r["dataset"])] = r
-        with open(results_json, "w") as f:
-            json.dump(list(existing_map.values()), f, indent=2)
+        with results_lock:
+            changed = False
+            for r in items:
+                key = (r["config_name"], r["dataset"])
+                if update or key not in results_map or results_map[key].get("status") != "PASS":
+                    results_map[key] = r
+                    changed = True
+            if not changed:
+                return
+            tmp_path = results_json.with_suffix(".json.tmp")
+            with open(tmp_path, "w") as f:
+                json.dump(list(results_map.values()), f, indent=2)
+            os.replace(tmp_path, results_json)
 
     def run_module(mod, name):
         if module_filter and name != module_filter:
@@ -84,8 +97,15 @@ def run(max_workers=None, dataset_limit=None, device="rv32emu", module_filter=No
         mod_results = []
         mod_configs = mod.build_all(max_workers=max_workers)
         if config_filter:
-            patterns = [p.strip() for p in config_filter.split(",")]
-            mod_configs = [c for c in mod_configs if any(p in c[0] for p in patterns)]
+            patterns = [p.strip() for p in config_filter.split(",") if p.strip()]
+            mod_configs = [
+                c
+                for c in mod_configs
+                if any(
+                    fnmatch.fnmatchcase(c[0], p) if any(ch in p for ch in "*?[") else p in c[0]
+                    for p in patterns
+                )
+            ]
         if config_limit is not None:
             mod_configs = mod_configs[:config_limit]
 
@@ -105,20 +125,25 @@ def run(max_workers=None, dataset_limit=None, device="rv32emu", module_filter=No
             for datafile in dataset_files
         ]
         total = len(tasks)
+        compressed = 0
+        started = 0
         done = 0
         passed = 0
         failed = 0
         lock = threading.Lock()
 
         def worker(task):
-            nonlocal done, passed, failed
+            nonlocal compressed, started, done, passed, failed
             (pretty, test_dir, pure, with_adapter, config), datafile = task
             subtest_name = f"dataset_{datafile.name}"
 
-            if skip_completed:
-                existing_entry = get_existing_map().get((pretty, datafile.name))
+            if not update:
+                with results_lock:
+                    existing_entry = results_map.get((pretty, datafile.name))
                 if existing_entry and existing_entry.get("status") == "PASS":
                     with lock:
+                        compressed += 1
+                        started += 1
                         done += 1
                         passed += 1
                         mod_results.append(existing_entry)
@@ -134,11 +159,16 @@ def run(max_workers=None, dataset_limit=None, device="rv32emu", module_filter=No
 
             compressed_path = mod.compress(subtest_dir, config)
             compressed_payload_size = compressed_path.stat().st_size
+            with lock:
+                compressed += 1
+                print(f"[{compressed}/{total}] Compressed {datafile.name} with {pretty}", flush=True)
 
             h.build_with_payload(subtest_dir)
             h.link(subtest_dir)
 
-            print(f"[{done+1}/{total}] Running {pretty} on {subtest_name}...", flush=True)
+            with lock:
+                started += 1
+                print(f"[{started}/{total}] Running {pretty} on {subtest_name}...", flush=True)
             peak_stack, cycles, checksums = h.run(subtest_dir)
             expected_checksums = h.verify(subtest_dir)
             status = "PASS" if checksums == expected_checksums else "FAIL"
@@ -189,7 +219,8 @@ def run(max_workers=None, dataset_limit=None, device="rv32emu", module_filter=No
 
     results.extend(run_module(tamp, "tamp"))
     results.extend(run_module(heatshrink, "heatshrink"))
-    results.extend(run_module(blaris, "blaris"))
+    results.extend(run_module(blaris_optimal, "blaris_optimal"))
+    results.extend(run_module(blaris_greedymaxhops, "blaris_greedymaxhops"))
 
     save_results(results)
 
@@ -210,11 +241,11 @@ if __name__ == "__main__":
     parser.add_argument("--dataset", default=None, help="Filter to specific dataset file (e.g. blink or test.dtb)")
     parser.add_argument("-j", "--jobs", type=int, default=None, help="Max parallel worker threads")
     parser.add_argument("--device", default="rv32emu", choices=["rv32emu", "esp32"], help="Device to run on")
-    parser.add_argument("--module", default=None, help="Limit to specific module (e.g. blaris)")
-    parser.add_argument("--config", default=None, help="Filter to specific configuration name (e.g. blaris_o2_a0_s6_f0)")
+    parser.add_argument("--module", default=None, help="Limit to specific module (e.g. blaris_optimal)")
+    parser.add_argument("--config", default=None, help="Filter configurations by substring or glob pattern (e.g. blaris_greedymaxhop* or s8_f0)")
     parser.add_argument("--config-limit", type=int, default=None, help="Limit number of configurations per module")
     parser.add_argument("--exclude", default=None, help="Filter to exclude specific dataset files (e.g. add,fence)")
-    parser.add_argument("--skip-completed", action="store_true", help="Skip runs already present and passing in results JSON")
+    parser.add_argument("--update", action="store_true", help="Re-run and overwrite existing entries in results JSON with matching (config_name, dataset)")
     args = parser.parse_args()
     run(
         max_workers=args.jobs,
@@ -225,5 +256,5 @@ if __name__ == "__main__":
         config_filter=args.config,
         dataset_filter=args.dataset,
         exclude_filter=args.exclude,
-        skip_completed=args.skip_completed,
+        update=args.update,
     )

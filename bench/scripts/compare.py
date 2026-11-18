@@ -33,6 +33,19 @@ from common import (
 )
 
 
+HIGHLIGHT_LEVELS = {
+    "blaris_optimal_o2_a0_s0_f0_r1": "L9",
+    "blaris_optimal_o2_a0_s10_f0_r1": "L8",
+    "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1": "L7",
+    "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1": "L6",
+    "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1": "L5",
+    "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1": "L4",
+    "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1": "L3",
+    "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1": "L2",
+    "blaris_greedymaxhops_o2_a2_s6_p16_h8_c384_l64_r1": "L1",
+}
+
+
 def get_codec_marker(codec: str, idx: int) -> str:
     if codec in CODEC_MARKERS:
         return CODEC_MARKERS[codec]
@@ -41,25 +54,26 @@ def get_codec_marker(codec: str, idx: int) -> str:
 
 def print_pareto_summary(dataset: str, slice_idx: int, all_records: list[dict], overall_frontier: list[dict]):
     slice_bytes = 1 << slice_idx
-    print("=" * 98)
+    print("=" * 118)
     print(
         f"OVERALL PARETO FRONTIER — Dataset: {dataset} | "
         f"Slice: 2^{slice_idx} = {slice_bytes} B ({len(overall_frontier)} / {len(all_records)} configs)"
     )
-    print("=" * 98)
+    print("=" * 118)
     header = (
-        f"{'#':>2}  {'Codec':<12}  {'Configuration':<28}  {'Ratio (%)':>10}  {'Comp (B)':>9}  "
+        f"{'#':>2}  {'Lvl':<4}  {'Codec':<20}  {'Configuration':<48}  {'Ratio (%)':>10}  {'Comp (B)':>9}  "
         f"{'Throughput (B/kcyc)':>20}  {'RAM (B)':>8}  {'RAM Tier':<12}"
     )
     print(header)
-    print("-" * 98)
+    print("-" * 118)
     for idx, r in enumerate(overall_frontier, start=1):
+        lvl = HIGHLIGHT_LEVELS.get(r["config_name"], "")
         print(
-            f"{idx:>2}  {r['decompressor']:<12}  {r['config_name']:<28}  {r['ratio_pct']:>9.2f}%  "
+            f"{idx:>2}  {lvl:<4}  {r['decompressor']:<20}  {r['config_name']:<48}  {r['ratio_pct']:>9.2f}%  "
             f"{r['compressed_size']:>9,}  {r['throughput']:>20.4f}  "
             f"{r['total_ram']:>8,}  {r['ram_label']:<12}"
         )
-    print("=" * 98)
+    print("=" * 118)
 
 
 def populate_compare_axes(fig, ax, all_records: list[dict], dataset: str, slice_idx: int):
@@ -147,6 +161,56 @@ def populate_compare_axes(fig, ax, all_records: list[dict], dataset: str, slice_
             label=f"Pareto Frontier ({len(overall_frontier)} optima)",
         )
     )
+
+    # 3. Highlight selected level configurations (L1..L10)
+    highlighted = [r for r in all_records if r["config_name"] in HIGHLIGHT_LEVELS]
+    if highlighted:
+        highlighted.sort(key=lambda r: int(HIGHLIGHT_LEVELS[r["config_name"]][1:]))
+        hx = [r["ratio_pct"] for r in highlighted]
+        hy = [r["throughput"] for r in highlighted]
+        hsc = ax.scatter(
+            hx,
+            hy,
+            c="#facc15",
+            marker="*",
+            s=230,
+            edgecolors="#0f172a",
+            linewidths=1.1,
+            zorder=8,
+        )
+        scatter_groups.insert(0, (hsc, highlighted))
+        for r in highlighted:
+            lvl = HIGHLIGHT_LEVELS[r["config_name"]]
+            ax.annotate(
+                lvl,
+                xy=(r["ratio_pct"], r["throughput"]),
+                xytext=(6, 6),
+                textcoords="offset points",
+                fontsize=8.5,
+                fontweight="bold",
+                color="#0f172a",
+                bbox=dict(
+                    boxstyle="round,pad=0.15",
+                    fc="#fef08a",
+                    ec="#ca8a04",
+                    lw=0.85,
+                    alpha=0.92,
+                ),
+                zorder=9,
+            )
+        legend_handles.append(
+            Line2D(
+                [0],
+                [0],
+                marker="*",
+                color="none",
+                markerfacecolor="#facc15",
+                markeredgecolor="#0f172a",
+                markeredgewidth=1.0,
+                markersize=12,
+                label=f"Levels L1–L9 ({len(highlighted)} configs)",
+            )
+        )
 
     # Uncompressed 100% reference line if near range
     all_xs = [r["ratio_pct"] for r in all_records]
@@ -334,7 +398,7 @@ def main():
         action="store_true",
         help="Open multi-graph window with movable tabs / dockable split zones for all slices and/or datasets",
     )
-    parser.add_argument("--results", type=Path, default=DEFAULT_RESULTS_JSON, help="Path to results.json")
+    parser.add_argument("--results", type=Path, default=DEFAULT_RESULTS_JSON, help="Path to results JSON (default: bench/results-rv32emu.json)")
     parser.add_argument("-o", "--output", type=Path, default=None, help="Output PNG path")
     parser.add_argument("--no-show", action="store_true", help="Do not open interactive window")
     args = parser.parse_args()

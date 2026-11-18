@@ -14,21 +14,22 @@ from config import (
 )
 
 BLARIS_INCLUDE = TOP_DIR / "include"
+BLARIS_COMPRESS = TOP_DIR / "src" / "blaris-compress-optimal.c"
 BLARIS_DECOMPRESS = TOP_DIR / "src" / "blaris-decompress.c"
 ADAPTERS_DIR = BENCH_DIR / "adapters"
 BLARIS_ADAPTER = ADAPTERS_DIR / "blaris.c"
 HOST_DIR = BENCH_DIR / "host"
 BLARIS_HOST_COMPRESS = HOST_DIR / "blaris.c"
 
-
 def build(
     stream_offset_size,
     distance_align_log,
     checkpoints_spread_log,
     flatten_chains,
+    buffer_resolver,
 ):
-    params = f"o{stream_offset_size}_a{distance_align_log}_s{checkpoints_spread_log}_f{flatten_chains}"
-    test_dir = BUILD_DIR / f"blaris_{params}"
+    params = f"o{stream_offset_size}_a{distance_align_log}_s{checkpoints_spread_log}_f{flatten_chains}_r{buffer_resolver}"
+    test_dir = BUILD_DIR / f"blaris_optimal_{params}"
     test_dir.mkdir(parents=True, exist_ok=True)
 
     pure_build = test_dir / "pure.o"
@@ -40,6 +41,7 @@ def build(
         f"-DBLARIS_DISTANCE_ALIGN_LOG={distance_align_log}",
         f"-DBLARIS_CHECKPOINTS_SPREAD_LOG={checkpoints_spread_log}",
         f"-DBLARIS_FLATTEN_CHAINS={flatten_chains}",
+        f"-DBLARIS_ENABLE_BUFFER_RESOLVER={buffer_resolver}",
     ]
 
     subprocess.run(
@@ -115,6 +117,7 @@ def build(
             f"-I{BLARIS_INCLUDE}",
             f"-I{HOST_DIR}",
             BLARIS_HOST_COMPRESS,
+            BLARIS_COMPRESS,
             "-o",
             compressor_exe,
         ],
@@ -139,6 +142,7 @@ def compress(subtest_dir, config=None, compressor_exe=None):
                 f"-I{BLARIS_INCLUDE}",
                 f"-I{HOST_DIR}",
                 BLARIS_HOST_COMPRESS,
+                BLARIS_COMPRESS,
                 "-o",
                 compressor_exe,
             ],
@@ -161,10 +165,11 @@ def compress(subtest_dir, config=None, compressor_exe=None):
 
 
 def build_all(max_workers=None):
-    stream_offset_size = [2, 3, 4]
-    distance_align_log = [0, 1, 2]
-    checkpoints_spread_log = [0, 6, 8, 10, 12, 14]
+    stream_offset_size = [2]
+    distance_align_log = [0, 2]
+    checkpoints_spread_log = [0, 6, 8, 10]
     flatten_chains = [0, 1]
+    buffer_resolver = [0, 1]
 
     combinations = list(
         itertools.product(
@@ -172,6 +177,7 @@ def build_all(max_workers=None):
             distance_align_log,
             checkpoints_spread_log,
             flatten_chains,
+            buffer_resolver,
         )
     )
     total = len(combinations)

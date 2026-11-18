@@ -4,5 +4,5 @@ __pycache__/
 *.aux
 *.log
 *.out
-blaris-arxiv.tar.gz
+blaris*.tar.gz
 paper
