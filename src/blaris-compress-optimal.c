@@ -20,6 +20,7 @@ int blaris_compress(const uint8_t* data, size_t length, uint8_t* buffer,
         return -1;
     }
 
+    size_t*   table = malloc(65536 * sizeof(size_t));
     size_t*   chain = malloc((length + 1) * sizeof(size_t));
     uint32_t* dp_cost = malloc((length + 1) * sizeof(uint32_t));
     size_t*   dp_from = malloc((length + 1) * sizeof(size_t));
@@ -28,8 +29,9 @@ int blaris_compress(const uint8_t* data, size_t length, uint8_t* buffer,
     uint8_t*  literals = malloc(length + 1);
     uint32_t* distances = malloc((length + 1) * sizeof(uint32_t));
 
-    if (!chain || !dp_cost || !dp_from || !dp_distance || !controls || !literals ||
-        !distances) {
+    if (!table || !chain || !dp_cost || !dp_from || !dp_distance || !controls ||
+        !literals || !distances) {
+        free(table);
         free(chain);
         free(dp_cost);
         free(dp_from);
@@ -40,21 +42,20 @@ int blaris_compress(const uint8_t* data, size_t length, uint8_t* buffer,
         return -1;
     }
 
-    // Build byte-value hash chains.
-    size_t table[256];
-    for (size_t i = 0; i < 256; i++) {
-        table[i] = (size_t)-1;
-    }
+    // Build 2-byte hash chains.
+    memset(table, 0xFF, 65536 * sizeof(size_t));
     for (size_t i = 0; i <= length; i++) {
         chain[i] = (size_t)-1;
         dp_cost[i] = (uint32_t)-1;
         dp_from[i] = (size_t)-1;
         dp_distance[i] = (uint32_t)-1;
     }
-    for (size_t i = 0; i < length; i++) {
-        chain[i] = table[data[i]];
-        table[data[i]] = i;
+    for (size_t i = 0; i + 1 < length; i++) {
+        uint16_t key = (uint16_t)data[i] | ((uint16_t)data[i + 1] << 8);
+        chain[i] = table[key];
+        table[key] = i;
     }
+    free(table);
 
     // Dynamic programming optimal parsing.
     dp_cost[0] = 0;
