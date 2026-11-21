@@ -80,13 +80,15 @@ int blaris_compress(const uint8_t* data, size_t length, uint8_t* buffer,
         return -1;
     }
 
+    size_t*   table = malloc(65536 * sizeof(size_t));
     size_t*   chain = malloc((length + 1) * sizeof(size_t));
     size_t*   hops = malloc((length + 1) * sizeof(size_t));
     uint8_t*  controls = malloc(length + 1);
     uint8_t*  literals = malloc(length + 1);
     uint32_t* distances = malloc((length + 1) * sizeof(uint32_t));
 
-    if (!chain || !hops || !controls || !literals || !distances) {
+    if (!table || !chain || !hops || !controls || !literals || !distances) {
+        free(table);
         free(chain);
         free(hops);
         free(controls);
@@ -95,16 +97,18 @@ int blaris_compress(const uint8_t* data, size_t length, uint8_t* buffer,
         return -1;
     }
 
-    // Build byte-value hash chains.
-    size_t table[256];
-    for (size_t i = 0; i < 256; i++) {
-        table[i] = (size_t)-1;
+    // Build 2-byte hash chains.
+    memset(table, 0xFF, 65536 * sizeof(size_t));
+    for (size_t i = 0; i + 1 < length; i++) {
+        uint16_t key = (uint16_t)data[i] | ((uint16_t)data[i + 1] << 8);
+        chain[i] = table[key];
+        table[key] = i;
     }
-    for (size_t i = 0; i < length; i++) {
-        chain[i] = table[data[i]];
-        table[data[i]] = i;
+    if (length > 0) {
+        chain[length - 1] = (size_t)-1;
     }
     chain[length] = (size_t)-1;
+    free(table);
 
     size_t   MAX_PRICE = (size_t)-1;
     uint32_t align_mask = (1u << BLARIS_DISTANCE_ALIGN_LOG) - 1;

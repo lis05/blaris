@@ -7,6 +7,8 @@
 #include <stdint.h>
 #include "config.h"
 
+#define BLARIS_VERSION "v1.1.1"
+
 /* ============================ Configuration ============================ */
 /*
  * This is common configuration for both encoder and decoder. Encoder-only config
