@@ -233,7 +233,7 @@ def generate_markdown(results_path: str) -> str:
                     lines.append("| | | | | |")
 
                 lines.append(
-                    f"| **`{g['level']}` (`{g['config_name']}`)** | **{g['ratio_str']}** | "
+                    f"| **`{g['level']}`** | **{g['ratio_str']}** | "
                     f"**{g['cyc_str']}** | **{g['vs_str']}** | **{g['ram_str']}** |"
                 )
 

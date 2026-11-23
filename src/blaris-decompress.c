@@ -37,42 +37,8 @@ void blaris_init(const uint32_t* data, struct Decoder* dec) {
     dec->distances_ptr = (const uint32_t*)(data_bytes + header->distances_offset);
 }
 
-/* Moves the checkpoint forward when it is pointing to a literals run. */
-static void move_forward_literals(struct Checkpoint* cp, uint32_t literals_count) {
-    cp->position += literals_count;
-    cp->control++;
-    cp->literal += literals_count;
-}
-
-/* Moves the checkpoint backward. */
-static void move_backward(const struct Decoder* dec, struct Checkpoint* cp) {
-    cp->control--;
-
-    uint8_t control = dec->controls_ptr[cp->control];
-
-    if (control <= CONTROL_LITERAL_BOUND) {
-        uint8_t literals_count = control + 1;
-        // This token is a literals run.
-        cp->position -= literals_count;
-        cp->literal -= literals_count;
-    } else {
-        // This token is a match.
-        uint8_t length = CONTROL_TO_MATCH_LENGTH(control);
-        uint8_t distance_bits = CONTROL_TO_MATCH_DISTANCE_BITS(control);
-        cp->position -= length;
-        cp->distance_bit -= distance_bits;
-    }
-}
-
-static void move_forward_match(struct Checkpoint* cp, uint8_t length,
-                               uint8_t distance_bits) {
-    cp->position += length;
-    cp->control++;
-    cp->distance_bit += distance_bits;
-}
-
 /* Extracts bit_count bits from the stream. */
-static uint32_t extract_bits(const uint32_t* data, uint32_t bit_offset,
+static inline uint32_t extract_bits(const uint32_t* data, uint32_t bit_offset,
                              uint8_t bit_count) {
     const uint16_t* ptr = (const uint16_t*)data + (bit_offset >> 4);  // align to 2
                                                                       // bytes
@@ -84,16 +50,16 @@ static uint32_t extract_bits(const uint32_t* data, uint32_t bit_offset,
 #define MULT_9(x) (((x) << 3) + x)
 
 #if BLARIS_CHECKPOINTS_SPREAD_LOG > 0
-static void get_checkpoint(const struct Decoder* dec, uint32_t index,
+static inline void get_checkpoint(const struct Decoder* dec, uint32_t index,
                            struct Checkpoint* cp) {
     uint8_t meta = dec->metas_ptr[index];
 
-    cp->position = (index << BLARIS_CHECKPOINTS_SPREAD_LOG) + (meta & 0xF);
+    cp->position = (index << BLARIS_CHECKPOINTS_SPREAD_LOG) + (meta & 0x1F);
 #    if BLARIS_STREAM_OFFSET_SIZE == 4 || BLARIS_STREAM_OFFSET_SIZE == 2
     index = MULT_3(index);
     cp->control = dec->offsets_ptr[index];
     cp->literal = dec->offsets_ptr[index + 1];
-    cp->distance_bit = (dec->offsets_ptr[index + 2] << 3) + ((meta >> 4) & 0x7);
+    cp->distance_bit = (dec->offsets_ptr[index + 2] << 3) + (meta >> 5);
 #    else
     index = MULT_9(index);
     cp->control = (uint32_t)dec->offsets_ptr[index] +
@@ -106,7 +72,7 @@ static void get_checkpoint(const struct Decoder* dec, uint32_t index,
                          ((uint32_t)dec->offsets_ptr[index + 7] << 8) +
                          ((uint32_t)dec->offsets_ptr[index + 8] << 16))
                         << 3) +
-                       ((meta >> 4) & 0x7);
+                       (meta >> 5);
 #    endif
 }
 #endif
@@ -151,37 +117,54 @@ static void change_checkpoint(const struct Decoder* dec, struct Checkpoint* cp,
  */
 static uint8_t move_to(const struct Decoder* dec, struct Checkpoint* cp,
                        uint32_t pos) {
+    struct Checkpoint checkp = *cp;
+
     // If the desired pos is to the left of cp.
-    while (pos < cp->position) {
-        move_backward(dec, cp);
+    while (pos < checkp.position) {
+        checkp.control--;
+        uint8_t c = dec->controls_ptr[checkp.control];
+        if (c <= CONTROL_LITERAL_BOUND) {
+            uint8_t literals_count = TOKEN_LENGTHS[c];
+            // This token is a literals run.
+            checkp.position -= literals_count;
+            checkp.literal -= literals_count;
+        } else {
+            // This token is a match.
+            uint8_t length = CONTROL_TO_MATCH_LENGTH(c);
+            uint8_t distance_bits = CONTROL_TO_MATCH_DISTANCE_BITS(c);
+            checkp.position -= length;
+            checkp.distance_bit -= distance_bits;
+        }
     }
 
     while (1) {
         // We are either inside the desired token, or to the left of it.
-
-        uint8_t control = dec->controls_ptr[cp->control];
+        uint8_t c = dec->controls_ptr[checkp.control];
         // If this is a literal run token.
-        if (control <= CONTROL_LITERAL_BOUND) {
-            uint8_t literals_count = control + 1;
+        if (c <= CONTROL_LITERAL_BOUND) {
+            uint8_t literals_count = TOKEN_LENGTHS[c];
             // If pos is inside this token, return.
-            if (pos < cp->position + literals_count) {
-                return control;
-            } else {
-                // Otherwise, wrong token, move to the right.
-                move_forward_literals(cp, literals_count);
+            if (pos < checkp.position + literals_count) {
+                *cp = checkp;
+                return c;
             }
+            // Otherwise, wrong token, move to the right.
+            checkp.position += literals_count;
+            checkp.control++;
+            checkp.literal += literals_count;
         } else {
             // Otherwise, this is a match token.
-            uint8_t length = CONTROL_TO_MATCH_LENGTH(control);
-
+            uint8_t length = CONTROL_TO_MATCH_LENGTH(c);
             // If pos is inside this token, return.
-            if (pos < cp->position + length) {
-                return control;
-            } else {
-                // Otherwise, wrong token, move to the right.
-                uint8_t distance_bits = CONTROL_TO_MATCH_DISTANCE_BITS(control);
-                move_forward_match(cp, length, distance_bits);
+            if (pos < checkp.position + length) {
+                *cp = checkp;
+                return c;
             }
+            // Otherwise, wrong token, move to the right.
+            uint8_t distance_bits = CONTROL_TO_MATCH_DISTANCE_BITS(c);
+            checkp.position += length;
+            checkp.control++;
+            checkp.distance_bit += distance_bits;
         }
     }
 }
@@ -202,7 +185,7 @@ static const uint8_t* find_literals(uint8_t control, const struct Decoder* dec,
     while (1) {
         // If we moved inside of a literal run token, return.
         if (control <= CONTROL_LITERAL_BOUND) {
-            uint8_t  literals_count = control + 1;
+            uint8_t  literals_count = TOKEN_LENGTHS[control];
             uint32_t offset = pos - cp->position;
 
             // Update window with this token's remaining length.
@@ -216,8 +199,8 @@ static const uint8_t* find_literals(uint8_t control, const struct Decoder* dec,
             uint8_t  length = CONTROL_TO_MATCH_LENGTH(control);
             uint8_t  distance_bits = CONTROL_TO_MATCH_DISTANCE_BITS(control);
             uint32_t distance =
-                (extract_bits(dec->distances_ptr, cp->distance_bit, distance_bits) +
-                 1)
+                ((1u << distance_bits) |
+                 extract_bits(dec->distances_ptr, cp->distance_bit, distance_bits))
                 << BLARIS_DISTANCE_ALIGN_LOG;
 
             // Update window with this token's remaining length.

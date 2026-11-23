@@ -7,13 +7,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_LITERALS 16
+#define MAX_LITERALS 32
 #define MIN_LENGTH 2
-#define MAX_LENGTH 16
-#define MAX_DISTANCE_BITS 16
-#define MAX_DISTANCE ((1u << MAX_DISTANCE_BITS) << BLARIS_DISTANCE_ALIGN_LOG)
+#define MAX_LENGTH 32
+#define MAX_DISTANCE_BITS 15
+#define MAX_DISTANCE ((size_t)((1u << 16) - 1) << BLARIS_DISTANCE_ALIGN_LOG)
 
-#define DISTANCE_BITS(d) (ILOG2((((d) >> BLARIS_DISTANCE_ALIGN_LOG) - 1) | 1) + 1)
+#define DISTANCE_BITS(d) ILOG2((d) >> BLARIS_DISTANCE_ALIGN_LOG)
 #define COST_OF_LITERALS(count) (8 + ((count) << 3))
 #define COST_OF_MATCH(distance) (8 + DISTANCE_BITS(distance))
 
@@ -101,6 +101,7 @@ static void pack_tokens(size_t input_len, uint8_t* output, size_t* output_len,
                         const uint8_t* controls, size_t controls_len,
                         const uint8_t* literals, size_t literals_len,
                         const uint32_t* distances, size_t distances_len) {
+    (void)input_len;
     // Calculate checkpoints and write them after the header.
     uint32_t offsets_offset = sizeof(struct Header);
     uint32_t metas_offset = offsets_offset;
@@ -135,7 +136,7 @@ static void pack_tokens(size_t input_len, uint8_t* output, size_t* output_len,
             }
             cur.control++;
 
-            // Pick the first token boundary at or right of target (offset 0..15).
+            // Pick the first token boundary at or right of target (offset 0..31).
             while (target_idx < num_targets && target <= cur.position) {
                 struct Checkpoint chosen = (prev.position >= target) ? prev : cur;
 
@@ -147,9 +148,9 @@ static void pack_tokens(size_t input_len, uint8_t* output, size_t* output_len,
                 write_stream_offset(off_ptr + 2 * BLARIS_STREAM_OFFSET_SIZE,
                                     chosen.distance_bit >> 3);
 
-                uint8_t pos_delta = (uint8_t)(chosen.position - target) & 0xF;
+                uint8_t pos_delta = (uint8_t)(chosen.position - target) & 0x1F;
                 uint8_t bit_rem = (uint8_t)(chosen.distance_bit & 0x7);
-                metas_dst[target_idx] = pos_delta | (bit_rem << 4);
+                metas_dst[target_idx] = pos_delta | (bit_rem << 5);
 
                 target_idx++;
                 target += step;
@@ -192,10 +193,13 @@ static void pack_tokens(size_t input_len, uint8_t* output, size_t* output_len,
 
     size_t bit_offset = 0;
     for (size_t i = 0; i < distances_len; i++) {
-        uint8_t  bits = (uint8_t)DISTANCE_BITS(distances[i]);
-        uint32_t stored = (distances[i] >> BLARIS_DISTANCE_ALIGN_LOG) - 1;
-        write_bits(output + distances_offset, bit_offset, bits, stored);
-        bit_offset += bits;
+        uint8_t bits = (uint8_t)DISTANCE_BITS(distances[i]);
+        if (bits > 0) {
+            uint32_t stored =
+                (distances[i] >> BLARIS_DISTANCE_ALIGN_LOG) & ((1u << bits) - 1);
+            write_bits(output + distances_offset, bit_offset, bits, stored);
+            bit_offset += bits;
+        }
     }
 
     *output_len = total_size;

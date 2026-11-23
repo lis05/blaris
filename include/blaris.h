@@ -7,7 +7,7 @@
 #include <stdint.h>
 #include "config.h"
 
-#define BLARIS_VERSION "v1.1.1"
+#define BLARIS_VERSION "v2.0.0"
 
 /* ============================ Configuration ============================ */
 /*
@@ -96,13 +96,13 @@
  * distance_offset) triplets, where each value is BLARIS_STREAM_OFFSET_SIZE bytes
  * wide. These store where the encoder was in the compressed payload during the
  * checkpoint's creation. Distance offset identifies the byte, and together with
- * meta's bits 4..6 they identify the first bit of the distance.
+ * meta's bits 5..7 they identify the first bit of the distance.
  *
- * Meta is a 1-byte stream where the first 4 bits identify how far to the right the
- * checkpoint is from its intended position checkpoint_index <<
- * BLARIS_CHECKPOINTS_SPREAD_LOG. The next 3 bits are the bit offset within the byte
- * offset stored in distance_offset where the first bit of the distance of the
- * checkpoint begins.
+ * Meta is a 1-byte stream where the first 5 bits (bits 0..4) identify how far to
+ * the right the checkpoint is from its intended position checkpoint_index <<
+ * BLARIS_CHECKPOINTS_SPREAD_LOG (0..31). The next 3 bits (bits 5..7) are the bit
+ * offset within the byte offset stored in distance_offset where the first bit of
+ * the distance of the checkpoint begins.
  *
  * N checkpoints take exactly N * (1 + 3 * BLARIS_STREAM_OFFSET_SIZE) bytes of space.
  * For a file of size L, there will be exactly N = 2 + (L - 1) >>
@@ -110,22 +110,47 @@
  *
  * 3. Controls
  * Controls are a 1-byte stream where each control defines whether the token is a
- * match or a literals run.
+ * match or a literals run. Token lengths are indexed from TOKEN_LENGTHS[16] =
+ * {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 20, 24, 32}.
  *
- * A literal run can have length between 1 and 16, and is encoded as control value 0
- * through 15.
+ * A literal run has length TOKEN_LENGTHS[c] (1..32) and is encoded as control
+ * value 0 through 15.
  *
- * A match consists of two properties: length and number of bits in distance. Match
- * length is between 2 and 16, and distance bits is within 1 and 16, which yields 240
- * unique combinations, encoded as values 16 through 255. The formula is
- * 16 + (distance_bits - 1) + ((match_length - 2) << 4).
+ * A match consists of two properties: length and number of explicit distance bits.
+ * Match length is TOKEN_LENGTHS[c >> 4] (2..32), and explicit distance_bits is
+ * c & 0xF (0..15), yielding 240 unique combinations encoded as values 16..255.
  *
  * 4. Literals
  * Literals are 1-byte stream made of all literal runs.
  *
  * 5. Distances
- * Distances are a bit-packed stream of distance bits.
+ * Distances are a bit-packed stream of the lower distance_bits explicit bits of
+ * each aligned distance, with an implicit leading 1 bit:
+ * distance = ((1 << distance_bits) | explicit_bits) << BLARIS_DISTANCE_ALIGN_LOG.
  */
+
+/* control -> length */
+#if defined(__GNUC__) || defined(__clang__)
+__attribute__((unused))
+#endif
+static const uint8_t TOKEN_LENGTHS[16] = {
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 20, 24, 32
+};
+
+/* length -> control */
+#ifdef BLARIS_COMPRESS
+static const uint8_t INVERTED_TOKEN_LENGTHS[33] = {
+    255, 0, 1, 2,
+    3, 4, 5, 6,
+    7, 8, 9, 255,
+    10, 255, 11, 255,
+    12, 255, 255, 255,
+    13, 255, 255, 255,
+    14, 255, 255, 255,
+    255, 255, 255, 255,
+    15
+};
+#endif
 
 struct Header {
     uint32_t metas_offset;
@@ -161,15 +186,15 @@ struct Checkpoint {
 
 #define ILOG2(num) (8 * sizeof(uint32_t) - 1 - __builtin_clz((uint32_t)(num)))
 
-#define LITERALS_TO_CONTROL(count) ((count) - 1)
-#define MATCH_TO_CONTROL(length, distance)                             \
-    (16 + ILOG2((((distance) >> BLARIS_DISTANCE_ALIGN_LOG) - 1) | 1) + \
-     (((length) - 2) << 4))
+#define LITERALS_TO_CONTROL(count) (INVERTED_TOKEN_LENGTHS[count])
+#define MATCH_TO_CONTROL(length, distance)                  \
+    (ILOG2((distance) >> BLARIS_DISTANCE_ALIGN_LOG) +       \
+     ((INVERTED_TOKEN_LENGTHS[length]) << 4))
 
 #define CONTROL_LITERAL_BOUND 15
-#define CONTROL_IS_LITERALS(c) ((c) > 15 ? 0 : (c) + 1)
-#define CONTROL_TO_MATCH_LENGTH(c) (((c) >> 4) + 1)
-#define CONTROL_TO_MATCH_DISTANCE_BITS(c) (((c) & 0xF) + 1)
+#define CONTROL_IS_LITERALS(c) ((c) > 15 ? 0 : TOKEN_LENGTHS[c])
+#define CONTROL_TO_MATCH_LENGTH(c) (TOKEN_LENGTHS[(c) >> 4])
+#define CONTROL_TO_MATCH_DISTANCE_BITS(c) ((c) & 0xF)
 
 /* Initialize decoder.
  *

@@ -1,4 +1,5 @@
 bench/build
+perf/build
 __pycache__/
 *.pyc
 *.aux

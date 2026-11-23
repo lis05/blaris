@@ -1,0 +1,96 @@
+name: RV32IMC Performance
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  perf:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install RV32IMC toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y clang lld llvm
+
+      - name: Cache rv32emu
+        id: cache-rv32emu
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/bin/rv32emu
+          key: rv32emu-${{ runner.os }}-v1
+
+      - name: Build rv32emu
+        if: steps.cache-rv32emu.outputs.cache-hit != 'true'
+        run: |
+          git clone --depth 1 https://github.com/sysprog21/rv32emu.git /tmp/rv32emu
+          make -C /tmp/rv32emu defconfig
+          make -C /tmp/rv32emu ENABLE_SDL=0 -j"$(nproc)"
+          mkdir -p ~/.local/bin
+          cp /tmp/rv32emu/build/rv32emu ~/.local/bin/rv32emu
+          chmod +x ~/.local/bin/rv32emu
+          rm -rf /tmp/rv32emu
+
+      - name: Add rv32emu to PATH
+        run: echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Run perf benchmark on HEAD
+        run: |
+          python3 perf/perf.py --save /tmp/perf-new.json --markdown | tee /tmp/perf-new.md
+
+      - name: Compare against previous commit
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          if [ -n "$BEFORE_SHA" ] && [ "$BEFORE_SHA" != "0000000000000000000000000000000000000000" ] && git cat-file -e "${BEFORE_SHA}^{commit}" 2>/dev/null; then
+            BASE_SHA="$BEFORE_SHA"
+          elif git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
+            BASE_SHA="$(git rev-parse HEAD~1)"
+          else
+            BASE_SHA=""
+          fi
+
+          if [ -n "$BASE_SHA" ]; then
+            git worktree add --detach /tmp/blaris-prev "$BASE_SHA"
+            rm -rf /tmp/blaris-prev/perf
+            cp -a perf /tmp/blaris-prev/perf
+            rm -rf /tmp/blaris-prev/perf/build
+            python3 /tmp/blaris-prev/perf/perf.py --save /tmp/perf-prev.json >/dev/null
+            git worktree remove --force /tmp/blaris-prev
+            python3 perf/perf.py --compare /tmp/perf-prev.json /tmp/perf-new.json --markdown | tee /tmp/perf-diff.md
+          else
+            echo "No previous commit available for comparison."
+          fi
+
+      - name: Publish job summary
+        run: |
+          {
+            echo "## Blaris RV32IMC Performance"
+            echo ""
+            if [ -f /tmp/perf-diff.md ]; then
+              cat /tmp/perf-diff.md
+              echo ""
+              echo "<details>"
+              echo "<summary>Full HEAD results</summary>"
+              echo ""
+              cat /tmp/perf-new.md
+              echo ""
+              echo "</details>"
+            else
+              cat /tmp/perf-new.md
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload perf JSON artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: perf-${{ github.sha }}
+          path: /tmp/perf-new.json

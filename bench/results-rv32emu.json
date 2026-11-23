@@ -86944,19 +86944,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "ch32v003_bootloader.bin",
     "uncompressed_size": 1920,
-    "compressed_size": 1776,
-    "compression_ratio": 0.925,
-    "peak_stack": 84,
+    "compressed_size": 1742,
+    "compression_ratio": 0.9072916666666667,
+    "peak_stack": 88,
     "cycles": [
-      2682647,
-      2918162,
-      3270055,
-      3795360,
-      4917092,
-      7327383,
-      11215747,
-      18066633,
-      28074097
+      1958759,
+      2100129,
+      2296286,
+      2592074,
+      3254922,
+      4535563,
+      6870022,
+      10718579,
+      16482251
     ],
     "checksums": [
       3337172648,
@@ -86971,12 +86971,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -86986,19 +86986,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "ch32v30x_blink.bin",
     "uncompressed_size": 1064,
-    "compressed_size": 696,
-    "compression_ratio": 0.6541353383458647,
-    "peak_stack": 84,
+    "compressed_size": 672,
+    "compression_ratio": 0.631578947368421,
+    "peak_stack": 88,
     "cycles": [
-      1660417,
-      2095120,
-      3114440,
-      3308439,
-      3575546,
-      4582170,
-      6039714,
-      8666023,
-      12699142
+      1257746,
+      1750922,
+      2830253,
+      3013839,
+      3166545,
+      4191452,
+      5468542,
+      8747843,
+      13837549
     ],
     "checksums": [
       1598959537,
@@ -87013,12 +87013,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87028,19 +87028,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "cp.html.gz",
     "uncompressed_size": 7960,
-    "compressed_size": 8487,
-    "compression_ratio": 1.0662060301507537,
-    "peak_stack": 84,
+    "compressed_size": 8241,
+    "compression_ratio": 1.0353015075376883,
+    "peak_stack": 88,
     "cycles": [
-      3888561,
-      4042153,
-      3936671,
-      3984632,
-      4183082,
-      4197543,
-      4556965,
-      5010322,
-      6309664
+      1670717,
+      1738210,
+      1702629,
+      1737432,
+      1844373,
+      1910897,
+      2177182,
+      2589967,
+      3589876
     ],
     "checksums": [
       3442673072,
@@ -87055,12 +87055,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87154,19 +87154,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "data-package.json",
     "uncompressed_size": 4320,
-    "compressed_size": 1120,
-    "compression_ratio": 0.25925925925925924,
-    "peak_stack": 84,
+    "compressed_size": 960,
+    "compression_ratio": 0.2222222222222222,
+    "peak_stack": 88,
     "cycles": [
-      8608833,
-      10961399,
-      16502634,
-      27133774,
-      47408254,
-      90563876,
-      172028835,
-      308018573,
-      416965424
+      5593909,
+      7115412,
+      10817143,
+      17409101,
+      30657271,
+      58146773,
+      111615997,
+      201013421,
+      285817415
     ],
     "checksums": [
       2509278550,
@@ -87181,12 +87181,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87238,19 +87238,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "hifive-unleashed.dts",
     "uncompressed_size": 2290,
-    "compressed_size": 1110,
-    "compression_ratio": 0.4847161572052402,
-    "peak_stack": 84,
+    "compressed_size": 1036,
+    "compression_ratio": 0.4524017467248908,
+    "peak_stack": 88,
     "cycles": [
-      5049932,
-      6453860,
-      8606647,
-      13254376,
-      20338593,
-      38490566,
-      65191864,
-      113240798,
-      151960059
+      3713521,
+      4941863,
+      6826620,
+      10822179,
+      17468780,
+      33136432,
+      56141415,
+      98995450,
+      133859590
     ],
     "checksums": [
       2872329334,
@@ -87265,12 +87265,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87280,19 +87280,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "grammar.lsp",
     "uncompressed_size": 3721,
-    "compressed_size": 1527,
-    "compression_ratio": 0.41037355549583443,
-    "peak_stack": 84,
+    "compressed_size": 1440,
+    "compression_ratio": 0.38699274388605215,
+    "peak_stack": 88,
     "cycles": [
-      7688675,
-      9720292,
-      14025877,
-      21949955,
-      36221407,
-      67199293,
-      113967222,
-      190246768,
-      278927121
+      5561071,
+      7094519,
+      10102305,
+      15802645,
+      26098541,
+      48280686,
+      81913831,
+      137077227,
+      198506621
     ],
     "checksums": [
       2186991957,
@@ -87307,12 +87307,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87322,19 +87322,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "fields.c",
     "uncompressed_size": 11150,
-    "compressed_size": 3786,
-    "compression_ratio": 0.33955156950672644,
-    "peak_stack": 84,
+    "compressed_size": 3471,
+    "compression_ratio": 0.31130044843049326,
+    "peak_stack": 88,
     "cycles": [
-      27409356,
-      34193834,
-      52135661,
-      82983847,
-      137803255,
-      262656485,
-      472864026,
-      826453326,
-      1454607844
+      18918782,
+      23587784,
+      36153728,
+      57255136,
+      95820291,
+      181347093,
+      329709532,
+      576791005,
+      1015573963
     ],
     "checksums": [
       1427954421,
@@ -87349,12 +87349,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87448,19 +87448,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "fvp_base_gicv3.dtb",
     "uncompressed_size": 10908,
-    "compressed_size": 3352,
-    "compression_ratio": 0.3072973964063073,
-    "peak_stack": 84,
+    "compressed_size": 3138,
+    "compression_ratio": 0.2876787678767877,
+    "peak_stack": 88,
     "cycles": [
-      22397515,
-      29819633,
-      43410795,
-      73439557,
-      135867714,
-      248625258,
-      428218840,
-      802502850,
-      1160048333
+      15353372,
+      20543629,
+      29418448,
+      50178636,
+      92074665,
+      168634139,
+      289301845,
+      540457206,
+      775978229
     ],
     "checksums": [
       2288577686,
@@ -87475,12 +87475,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87490,19 +87490,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "cp.html",
     "uncompressed_size": 24603,
-    "compressed_size": 9959,
-    "compression_ratio": 0.404788033979596,
-    "peak_stack": 84,
+    "compressed_size": 9186,
+    "compression_ratio": 0.3733691013291062,
+    "peak_stack": 88,
     "cycles": [
-      65905970,
-      83857342,
-      122923079,
-      198546355,
-      350162723,
-      644476499,
-      1241463512,
-      2309937005,
-      4105525302
+      45102907,
+      55004784,
+      78975546,
+      123148126,
+      211916905,
+      386430364,
+      734649252,
+      1364396246,
+      2505289735
     ],
     "checksums": [
       2940965195,
@@ -87517,12 +87517,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87532,19 +87532,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "rv32i_add.bin",
     "uncompressed_size": 8708,
-    "compressed_size": 1368,
-    "compression_ratio": 0.15709692237023426,
-    "peak_stack": 84,
+    "compressed_size": 1052,
+    "compression_ratio": 0.1208084519981626,
+    "peak_stack": 88,
     "cycles": [
-      165026037,
-      166278780,
-      168210364,
-      165883125,
-      169305923,
-      181105052,
-      188127683,
-      197900227,
-      191847466
+      196995102,
+      199312691,
+      204035979,
+      201243856,
+      203234162,
+      233293100,
+      255772928,
+      362722962,
+      366330092
     ],
     "checksums": [
       1270319384,
@@ -87559,12 +87559,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87616,19 +87616,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "rv32i_fence_i.bin",
     "uncompressed_size": 4232,
-    "compressed_size": 453,
-    "compression_ratio": 0.10704158790170132,
-    "peak_stack": 84,
+    "compressed_size": 291,
+    "compression_ratio": 0.06876181474480152,
+    "peak_stack": 88,
     "cycles": [
-      87806017,
-      88483570,
-      87339098,
-      86688825,
-      87359675,
-      88998769,
-      86286627,
-      86748046,
-      85144385
+      105369394,
+      106177789,
+      104775355,
+      103978415,
+      104765059,
+      106718676,
+      103303221,
+      103612966,
+      101102005
     ],
     "checksums": [
       1468463971,
@@ -87643,12 +87643,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87658,19 +87658,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "test.dtb",
     "uncompressed_size": 1805,
-    "compressed_size": 607,
-    "compression_ratio": 0.3362880886426593,
-    "peak_stack": 84,
+    "compressed_size": 570,
+    "compression_ratio": 0.3157894736842105,
+    "peak_stack": 88,
     "cycles": [
-      4550251,
-      6280269,
-      10345155,
-      17466910,
-      30841205,
-      56254839,
-      109655991,
-      198832083,
-      310012904
+      3283853,
+      4627131,
+      7740722,
+      13494537,
+      24112591,
+      44464447,
+      87039651,
+      158717943,
+      255949669
     ],
     "checksums": [
       4225417803,
@@ -87685,12 +87685,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87700,19 +87700,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "FreeRTOSConfig.h",
     "uncompressed_size": 36522,
-    "compressed_size": 11947,
-    "compression_ratio": 0.32711790153879855,
-    "peak_stack": 84,
+    "compressed_size": 10725,
+    "compression_ratio": 0.29365861672416627,
+    "peak_stack": 88,
     "cycles": [
-      90273181,
-      115494770,
-      175413301,
-      281197737,
-      491143221,
-      926462885,
-      1774234526,
-      3059997294,
-      5798582289
+      58670716,
+      76113485,
+      115111548,
+      188508649,
+      328944997,
+      622080268,
+      1194431548,
+      2090243394,
+      3967882027
     ],
     "checksums": [
       3891982175,
@@ -87727,12 +87727,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87742,19 +87742,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "hifive_setup.bin",
     "uncompressed_size": 25296,
-    "compressed_size": 10813,
-    "compression_ratio": 0.42745888678051863,
-    "peak_stack": 84,
+    "compressed_size": 10111,
+    "compression_ratio": 0.39970746363061355,
+    "peak_stack": 88,
     "cycles": [
-      44806030,
-      53648810,
-      72726066,
-      99526475,
-      178388205,
-      309209627,
-      572161322,
-      1040368880,
-      1751004198
+      31425936,
+      37398866,
+      51145137,
+      70126193,
+      124198634,
+      214275134,
+      404592909,
+      742605442,
+      1261265870
     ],
     "checksums": [
       2385256829,
@@ -87769,12 +87769,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87784,19 +87784,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "xargs.1",
     "uncompressed_size": 4227,
-    "compressed_size": 2146,
-    "compression_ratio": 0.5076886680861131,
-    "peak_stack": 84,
+    "compressed_size": 2052,
+    "compression_ratio": 0.4854506742370476,
+    "peak_stack": 88,
     "cycles": [
-      12646419,
-      15317755,
-      22060403,
-      34851667,
-      56348589,
-      103779041,
-      192242163,
-      334347979,
-      618163732
+      9453799,
+      11437941,
+      16350867,
+      25821891,
+      41410696,
+      76662721,
+      143352254,
+      248205971,
+      456465860
     ],
     "checksums": [
       2910828474,
@@ -87811,12 +87811,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87868,19 +87868,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "wled_settings_wifi.htm",
     "uncompressed_size": 13011,
-    "compressed_size": 5480,
-    "compression_ratio": 0.4211820767043271,
-    "peak_stack": 84,
+    "compressed_size": 5147,
+    "compression_ratio": 0.39558834832065176,
+    "peak_stack": 88,
     "cycles": [
-      32649282,
-      42531210,
-      59192502,
-      95962157,
-      164458224,
-      292867141,
-      517286682,
-      920643501,
-      1510781439
+      23288064,
+      30198305,
+      41252178,
+      67631195,
+      114963101,
+      204724635,
+      364373194,
+      641764867,
+      1060774219
     ],
     "checksums": [
       1117725627,
@@ -87895,12 +87895,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87910,19 +87910,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "wled_index.htm",
     "uncompressed_size": 19395,
-    "compressed_size": 6564,
-    "compression_ratio": 0.33843774168600155,
-    "peak_stack": 84,
+    "compressed_size": 5851,
+    "compression_ratio": 0.30167568961072444,
+    "peak_stack": 88,
     "cycles": [
-      36074444,
-      44282329,
-      63457494,
-      99240797,
-      172356822,
-      304588717,
-      570344918,
-      1022666606,
-      1811156461
+      23362485,
+      29115306,
+      42099413,
+      66206199,
+      115701782,
+      205939942,
+      389126194,
+      700556076,
+      1253973087
     ],
     "checksums": [
       1321955046,
@@ -87937,12 +87937,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87952,19 +87952,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "speed_7578.csv",
     "uncompressed_size": 25928,
-    "compressed_size": 5320,
-    "compression_ratio": 0.20518358531317496,
-    "peak_stack": 84,
+    "compressed_size": 4836,
+    "compression_ratio": 0.1865165072508485,
+    "peak_stack": 88,
     "cycles": [
-      50377072,
-      67686268,
-      95586849,
-      159098946,
-      274717454,
-      484316816,
-      773878706,
-      1273754036,
-      2119573770
+      32572518,
+      43451238,
+      61600673,
+      102949562,
+      176426457,
+      314796276,
+      506639072,
+      852713777,
+      1440469735
     ],
     "checksums": [
       3602514344,
@@ -87979,12 +87979,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -87994,19 +87994,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "zynq7000s.dtb",
     "uncompressed_size": 15583,
-    "compressed_size": 4954,
-    "compression_ratio": 0.3179105435410383,
-    "peak_stack": 84,
+    "compressed_size": 4545,
+    "compression_ratio": 0.29166399281268046,
+    "peak_stack": 88,
     "cycles": [
-      31733280,
-      41336176,
-      61325253,
-      104358098,
-      186797443,
-      349466123,
-      648983743,
-      1198642806,
-      2076117387
+      20916183,
+      26882974,
+      38971666,
+      65304676,
+      115683360,
+      215033994,
+      399984329,
+      738693128,
+      1300546420
     ],
     "checksums": [
       2895971482,
@@ -88021,12 +88021,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -88918,19 +88918,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "wled_settings_leds.htm",
     "uncompressed_size": 67173,
-    "compressed_size": 23071,
-    "compression_ratio": 0.3434564482753487,
-    "peak_stack": 84,
+    "compressed_size": 21176,
+    "compression_ratio": 0.31524570884134995,
+    "peak_stack": 88,
     "cycles": [
-      165880384,
-      220205409,
-      324980950,
-      533609683,
-      924971073,
-      1791640696,
-      3308360823,
-      6121350678,
-      11045681410
+      111523840,
+      146476441,
+      215668369,
+      351958933,
+      607296578,
+      1164731041,
+      2155038867,
+      4045198966,
+      7288808785
     ],
     "checksums": [
       1667554633,
@@ -88945,12 +88945,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -89338,19 +89338,19 @@
     "config_name": "blaris_optimal_o2_a0_s0_f0_r1",
     "dataset": "zcu102_arm.dtb",
     "uncompressed_size": 66838,
-    "compressed_size": 15480,
-    "compression_ratio": 0.2316047757263832,
-    "peak_stack": 84,
+    "compressed_size": 13000,
+    "compression_ratio": 0.19450013465393937,
+    "peak_stack": 88,
     "cycles": [
-      119492148,
-      172164782,
-      256632261,
-      470673880,
-      850648617,
-      1565614179,
-      3005415938,
-      5347993030,
-      8817261445
+      72291150,
+      102364696,
+      150308836,
+      269313602,
+      485711136,
+      890092307,
+      1695479327,
+      3068666828,
+      5146350517
     ],
     "checksums": [
       416398286,
@@ -89365,12 +89365,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 470,
+      "text": 522,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 562,
+      "text": 614,
       "data": 0,
       "bss": 28
     }
@@ -97276,19 +97276,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "ch32v003_bootloader.bin",
     "uncompressed_size": 1920,
-    "compressed_size": 1788,
-    "compression_ratio": 0.93125,
-    "peak_stack": 84,
+    "compressed_size": 1758,
+    "compression_ratio": 0.915625,
+    "peak_stack": 88,
     "cycles": [
-      1238019,
-      1355895,
-      1567588,
-      1905122,
-      2724479,
-      4439617,
-      7167103,
-      11674347,
-      18110006
+      915894,
+      983512,
+      1118775,
+      1314597,
+      1868968,
+      2872467,
+      4666763,
+      7433697,
+      11585647
     ],
     "checksums": [
       3337172648,
@@ -97303,12 +97303,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -97318,19 +97318,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "ch32v30x_blink.bin",
     "uncompressed_size": 1064,
-    "compressed_size": 708,
-    "compression_ratio": 0.6654135338345865,
-    "peak_stack": 84,
+    "compressed_size": 684,
+    "compression_ratio": 0.6428571428571429,
+    "peak_stack": 88,
     "cycles": [
-      1348400,
-      1929549,
-      3124301,
-      3302259,
-      3489050,
-      4642925,
-      6119695,
-      8988845,
-      13408480
+      1139408,
+      1761617,
+      3036950,
+      3230452,
+      3349495,
+      4590478,
+      6008942,
+      9881542,
+      15825047
     ],
     "checksums": [
       1598959537,
@@ -97345,12 +97345,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -97360,19 +97360,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "cp.html.gz",
     "uncompressed_size": 7960,
-    "compressed_size": 8543,
-    "compression_ratio": 1.0732412060301508,
-    "peak_stack": 84,
+    "compressed_size": 8297,
+    "compression_ratio": 1.0423366834170855,
+    "peak_stack": 88,
     "cycles": [
-      428011,
-      436660,
-      456757,
-      480722,
-      574811,
-      717735,
-      1002627,
-      1585802,
-      2750712
+      267054,
+      274447,
+      289103,
+      316355,
+      379828,
+      497157,
+      729161,
+      1193681,
+      2131989
     ],
     "checksums": [
       3442673072,
@@ -97387,12 +97387,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -97528,19 +97528,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "cp.html",
     "uncompressed_size": 24603,
-    "compressed_size": 10135,
-    "compression_ratio": 0.41194163313417065,
-    "peak_stack": 84,
+    "compressed_size": 9362,
+    "compression_ratio": 0.38052270048368086,
+    "peak_stack": 88,
     "cycles": [
-      5737898,
-      9094429,
-      15850555,
-      29882710,
-      57692207,
-      109276505,
-      215546044,
-      402202444,
-      695134694
+      3714984,
+      5744687,
+      9729017,
+      17820004,
+      33969509,
+      64064712,
+      125986921,
+      235228071,
+      431840340
     ],
     "checksums": [
       2940965195,
@@ -97555,12 +97555,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -97738,19 +97738,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "FreeRTOSConfig.h",
     "uncompressed_size": 36522,
-    "compressed_size": 12199,
-    "compression_ratio": 0.3340178522534363,
-    "peak_stack": 84,
+    "compressed_size": 10977,
+    "compression_ratio": 0.300558567438804,
+    "peak_stack": 88,
     "cycles": [
-      7036317,
-      10993700,
-      19787233,
-      37289512,
-      70516091,
-      134397093,
-      271817117,
-      482713903,
-      904835105
+      4985958,
+      8163969,
+      14777868,
+      29266866,
+      55003120,
+      106683103,
+      212534385,
+      389802031,
+      731856690
     ],
     "checksums": [
       3891982175,
@@ -97765,12 +97765,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -97864,19 +97864,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "hifive-unleashed.dts",
     "uncompressed_size": 2290,
-    "compressed_size": 1130,
-    "compression_ratio": 0.49344978165938863,
-    "peak_stack": 84,
+    "compressed_size": 1060,
+    "compression_ratio": 0.462882096069869,
+    "peak_stack": 88,
     "cycles": [
-      2186008,
-      3062458,
-      4729359,
-      8324904,
-      13896311,
-      28053412,
-      48536430,
-      85962092,
-      114460436
+      1642372,
+      2494577,
+      4037379,
+      7388280,
+      12806463,
+      25863363,
+      44808902,
+      80153585,
+      107496493
     ],
     "checksums": [
       2872329334,
@@ -97891,12 +97891,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -97906,19 +97906,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "fvp_base_gicv3.dtb",
     "uncompressed_size": 10908,
-    "compressed_size": 3432,
-    "compression_ratio": 0.3146314631463146,
-    "peak_stack": 84,
+    "compressed_size": 3214,
+    "compression_ratio": 0.29464613127979467,
+    "peak_stack": 88,
     "cycles": [
-      4462219,
-      7509071,
-      12578669,
-      25138368,
-      50333387,
-      94465439,
-      163516237,
-      301050546,
-      427542751
+      3508550,
+      6198162,
+      10307833,
+      21106114,
+      42423584,
+      79119238,
+      137456174,
+      251978529,
+      356599980
     ],
     "checksums": [
       2288577686,
@@ -97933,12 +97933,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -97990,19 +97990,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "xargs.1",
     "uncompressed_size": 4227,
-    "compressed_size": 2182,
-    "compression_ratio": 0.5162053465814999,
-    "peak_stack": 84,
+    "compressed_size": 2084,
+    "compression_ratio": 0.4930210551218358,
+    "peak_stack": 88,
     "cycles": [
-      2991625,
-      4044216,
-      6694737,
-      11814634,
-      20537669,
-      39229745,
-      74757901,
-      130933177,
-      237374977
+      2354345,
+      3249860,
+      5390429,
+      9667620,
+      16902472,
+      32820507,
+      63225820,
+      110372029,
+      200685963
     ],
     "checksums": [
       2910828474,
@@ -98017,12 +98017,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -98032,19 +98032,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "data-package.json",
     "uncompressed_size": 4320,
-    "compressed_size": 1156,
-    "compression_ratio": 0.2675925925925926,
-    "peak_stack": 84,
+    "compressed_size": 996,
+    "compression_ratio": 0.23055555555555557,
+    "peak_stack": 88,
     "cycles": [
-      3275859,
-      4987932,
-      8539145,
-      15452557,
-      28856144,
-      56586532,
-      109263540,
-      198977159,
-      260044242
+      2320566,
+      3511763,
+      6230256,
+      11064455,
+      20975638,
+      41017747,
+      80392779,
+      147144355,
+      204236087
     ],
     "checksums": [
       2509278550,
@@ -98059,12 +98059,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -98074,19 +98074,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "rv32i_add.bin",
     "uncompressed_size": 8708,
-    "compressed_size": 1428,
-    "compression_ratio": 0.1639871382636656,
-    "peak_stack": 84,
+    "compressed_size": 1116,
+    "compression_ratio": 0.1281580156178227,
+    "peak_stack": 88,
     "cycles": [
-      193907115,
-      195395771,
-      197687480,
-      194980287,
-      198944565,
-      213364395,
-      221526691,
-      232727614,
-      224432846
+      228275127,
+      230985991,
+      236513022,
+      233274358,
+      235472861,
+      270902624,
+      297207233,
+      422851848,
+      426356960
     ],
     "checksums": [
       1270319384,
@@ -98101,12 +98101,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -98116,19 +98116,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "fields.c",
     "uncompressed_size": 11150,
-    "compressed_size": 3862,
-    "compression_ratio": 0.3463677130044843,
-    "peak_stack": 84,
+    "compressed_size": 3551,
+    "compression_ratio": 0.31847533632286995,
+    "peak_stack": 88,
     "cycles": [
-      4597529,
-      6861179,
-      13027355,
-      22480968,
-      41049505,
-      80715471,
-      151664476,
-      268005182,
-      463502150
+      3412879,
+      5237046,
+      10225479,
+      17979227,
+      33334590,
+      65278111,
+      124533992,
+      221143144,
+      380336042
     ],
     "checksums": [
       1427954421,
@@ -98143,12 +98143,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -98158,19 +98158,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "test.dtb",
     "uncompressed_size": 1805,
-    "compressed_size": 623,
-    "compression_ratio": 0.34515235457063714,
-    "peak_stack": 84,
+    "compressed_size": 586,
+    "compression_ratio": 0.32465373961218835,
+    "peak_stack": 88,
     "cycles": [
-      3006079,
-      4566500,
-      8147940,
-      14796901,
-      27314162,
-      50341654,
-      98313279,
-      178857785,
-      282011135
+      2320538,
+      3681667,
+      6718048,
+      12601087,
+      23438813,
+      43908592,
+      86377484,
+      158444778,
+      258560008
     ],
     "checksums": [
       4225417803,
@@ -98185,12 +98185,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -98200,19 +98200,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "grammar.lsp",
     "uncompressed_size": 3721,
-    "compressed_size": 1555,
-    "compression_ratio": 0.4178984144047299,
-    "peak_stack": 84,
+    "compressed_size": 1468,
+    "compression_ratio": 0.3945176027949476,
+    "peak_stack": 88,
     "cycles": [
-      2882974,
-      4156496,
-      7072664,
-      12233638,
-      22473031,
-      43238739,
-      76180856,
-      122324144,
-      178351187
+      2200687,
+      3261968,
+      5447779,
+      9428570,
+      17195574,
+      33115148,
+      58081247,
+      93934484,
+      135875411
     ],
     "checksums": [
       2186991957,
@@ -98227,12 +98227,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -98242,19 +98242,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "hifive_setup.bin",
     "uncompressed_size": 25296,
-    "compressed_size": 10985,
-    "compression_ratio": 0.4342583807716635,
-    "peak_stack": 84,
+    "compressed_size": 10287,
+    "compression_ratio": 0.4066650853889943,
+    "peak_stack": 88,
     "cycles": [
-      6188067,
-      9172137,
-      15819908,
-      25375074,
-      53161460,
-      99708880,
-      194458330,
-      363011748,
-      623644651
+      5484867,
+      7726088,
+      13053757,
+      20573191,
+      42548636,
+      78857500,
+      154316100,
+      291110716,
+      510269018
     ],
     "checksums": [
       2385256829,
@@ -98269,12 +98269,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -98284,19 +98284,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "rv32i_fence_i.bin",
     "uncompressed_size": 4232,
-    "compressed_size": 489,
-    "compression_ratio": 0.11554820415879018,
-    "peak_stack": 84,
+    "compressed_size": 327,
+    "compression_ratio": 0.07726843100189036,
+    "peak_stack": 88,
     "cycles": [
-      104671705,
-      105471318,
-      104084478,
-      103301019,
-      104088266,
-      106034756,
-      102674139,
-      103073605,
-      100816182
+      123245613,
+      124178331,
+      122525522,
+      121588163,
+      122499131,
+      124763814,
+      120686276,
+      120941200,
+      117784081
     ],
     "checksums": [
       1468463971,
@@ -98311,12 +98311,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -98326,19 +98326,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "wled_settings_wifi.htm",
     "uncompressed_size": 13011,
-    "compressed_size": 5572,
-    "compression_ratio": 0.4282530166781954,
-    "peak_stack": 84,
+    "compressed_size": 5235,
+    "compression_ratio": 0.4023518561217431,
+    "peak_stack": 88,
     "cycles": [
-      4244027,
-      6698875,
-      11256224,
-      20534105,
-      38705679,
-      72034468,
-      133008689,
-      236579835,
-      390970034
+      3272377,
+      5323429,
+      8812289,
+      16895729,
+      31722897,
+      60281343,
+      110756072,
+      195431160,
+      327465599
     ],
     "checksums": [
       1117725627,
@@ -98353,12 +98353,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -98368,19 +98368,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "wled_index.htm",
     "uncompressed_size": 19395,
-    "compressed_size": 6696,
-    "compression_ratio": 0.3452436194895592,
-    "peak_stack": 84,
+    "compressed_size": 5983,
+    "compression_ratio": 0.308481567414282,
+    "peak_stack": 88,
     "cycles": [
-      4857919,
-      7654033,
-      12931703,
-      24710680,
-      44842489,
-      85597879,
-      168477308,
-      309386239,
-      546445536
+      3426134,
+      5578350,
+      9534061,
+      18488141,
+      34317127,
+      66522648,
+      130615368,
+      239695514,
+      424565813
     ],
     "checksums": [
       1321955046,
@@ -98395,12 +98395,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -98452,19 +98452,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "wled_settings_leds.htm",
     "uncompressed_size": 67173,
-    "compressed_size": 23535,
-    "compression_ratio": 0.3503639855299004,
-    "peak_stack": 84,
+    "compressed_size": 21640,
+    "compression_ratio": 0.3221532460959016,
+    "peak_stack": 88,
     "cycles": [
-      7355191,
-      11852890,
-      21281654,
-      41862211,
-      77640033,
-      157986005,
-      299162827,
-      547059655,
-      979046212
+      5380559,
+      8777557,
+      15770022,
+      31688190,
+      59514479,
+      120118292,
+      229133195,
+      423320598,
+      760416705
     ],
     "checksums": [
       1667554633,
@@ -98479,12 +98479,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -98494,19 +98494,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "speed_7578.csv",
     "uncompressed_size": 25928,
-    "compressed_size": 5500,
-    "compression_ratio": 0.2121258870718914,
-    "peak_stack": 84,
+    "compressed_size": 5020,
+    "compression_ratio": 0.19361308238198088,
+    "peak_stack": 88,
     "cycles": [
-      15162903,
-      23033130,
-      36237071,
-      65686569,
-      118683573,
-      202154456,
-      304532406,
-      468385756,
-      730320770
+      6591794,
+      10248363,
+      16607833,
+      31125033,
+      57757760,
+      102704457,
+      166028658,
+      277113543,
+      461874850
     ],
     "checksums": [
       3602514344,
@@ -98521,12 +98521,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -98830,19 +98830,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "zynq7000s.dtb",
     "uncompressed_size": 15583,
-    "compressed_size": 5066,
-    "compression_ratio": 0.3250978630558942,
-    "peak_stack": 84,
+    "compressed_size": 4657,
+    "compression_ratio": 0.2988513123275364,
+    "peak_stack": 88,
     "cycles": [
-      5306485,
-      8964693,
-      15801375,
-      31495961,
-      61146100,
-      118580540,
-      220364905,
-      420991209,
-      740713023
+      3590051,
+      5998899,
+      10704543,
+      20847539,
+      40908160,
+      78685562,
+      147725160,
+      282723709,
+      505704198
     ],
     "checksums": [
       2895971482,
@@ -98857,12 +98857,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -99166,19 +99166,19 @@
     "config_name": "blaris_optimal_o2_a0_s10_f0_r1",
     "dataset": "zcu102_arm.dtb",
     "uncompressed_size": 66838,
-    "compressed_size": 15944,
-    "compression_ratio": 0.23854693437864688,
-    "peak_stack": 84,
+    "compressed_size": 13460,
+    "compression_ratio": 0.20138244711092493,
+    "peak_stack": 88,
     "cycles": [
-      10462758,
-      20099808,
-      37532135,
-      77192518,
-      148045045,
-      281896660,
-      531432648,
-      963574713,
-      1570442635
+      7441981,
+      14371165,
+      27289959,
+      54536634,
+      106927275,
+      204729343,
+      384524914,
+      717028450,
+      1188506650
     ],
     "checksums": [
       416398286,
@@ -99193,12 +99193,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -212230,19 +212230,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "ch32v003_bootloader.bin",
     "uncompressed_size": 1920,
-    "compressed_size": 2198,
-    "compression_ratio": 1.1447916666666667,
-    "peak_stack": 84,
+    "compressed_size": 2141,
+    "compression_ratio": 1.1151041666666666,
+    "peak_stack": 88,
     "cycles": [
-      184803,
-      195474,
-      214406,
-      251575,
-      333126,
-      487710,
-      810958,
-      1403602,
-      2590095
+      185330,
+      194468,
+      210126,
+      239868,
+      310407,
+      435280,
+      703934,
+      1195346,
+      2172088
     ],
     "checksums": [
       3337172648,
@@ -212257,12 +212257,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -212398,19 +212398,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "FreeRTOSConfig.h",
     "uncompressed_size": 36522,
-    "compressed_size": 24699,
-    "compression_ratio": 0.6762773123049121,
-    "peak_stack": 84,
+    "compressed_size": 23838,
+    "compression_ratio": 0.6527024806965664,
+    "peak_stack": 88,
     "cycles": [
-      280985,
-      309822,
-      377150,
-      506184,
-      751931,
-      1259910,
-      2313904,
-      4270846,
-      8040698
+      284027,
+      308200,
+      377888,
+      522495,
+      770664,
+      1235585,
+      2259049,
+      4154018,
+      7779978
     ],
     "checksums": [
       3891982175,
@@ -212425,12 +212425,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -212440,19 +212440,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "ch32v30x_blink.bin",
     "uncompressed_size": 1064,
-    "compressed_size": 901,
-    "compression_ratio": 0.8468045112781954,
-    "peak_stack": 84,
+    "compressed_size": 861,
+    "compression_ratio": 0.8092105263157895,
+    "peak_stack": 88,
     "cycles": [
-      239060,
-      263262,
-      313890,
-      414351,
-      594266,
-      992043,
-      1677554,
-      3350310,
-      6175244
+      248081,
+      267610,
+      336467,
+      419670,
+      591049,
+      983963,
+      1620431,
+      3240865,
+      5855180
     ],
     "checksums": [
       1598959537,
@@ -212467,12 +212467,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -212524,19 +212524,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "cp.html.gz",
     "uncompressed_size": 7960,
-    "compressed_size": 9368,
-    "compression_ratio": 1.1768844221105528,
-    "peak_stack": 84,
+    "compressed_size": 9116,
+    "compression_ratio": 1.1452261306532663,
+    "peak_stack": 88,
     "cycles": [
-      173387,
-      183128,
-      203063,
-      234690,
-      307897,
-      449403,
-      733103,
-      1300561,
-      2436833
+      171557,
+      179102,
+      194487,
+      221388,
+      278105,
+      391182,
+      618716,
+      1073003,
+      1980216
     ],
     "checksums": [
       3442673072,
@@ -212551,12 +212551,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -212692,19 +212692,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "data-package.json",
     "uncompressed_size": 4320,
-    "compressed_size": 2216,
-    "compression_ratio": 0.512962962962963,
-    "peak_stack": 84,
+    "compressed_size": 1986,
+    "compression_ratio": 0.4597222222222222,
+    "peak_stack": 88,
     "cycles": [
-      309843,
-      340709,
-      404854,
-      564558,
-      816671,
-      1408081,
-      2575892,
-      4837434,
-      9245087
+      320708,
+      347222,
+      419243,
+      537587,
+      782881,
+      1329133,
+      2365390,
+      4438290,
+      8332437
     ],
     "checksums": [
       2509278550,
@@ -212719,12 +212719,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -212734,19 +212734,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "fields.c",
     "uncompressed_size": 11150,
-    "compressed_size": 7849,
-    "compression_ratio": 0.7039461883408071,
-    "peak_stack": 84,
+    "compressed_size": 7694,
+    "compression_ratio": 0.6900448430493273,
+    "peak_stack": 88,
     "cycles": [
-      272087,
-      302883,
-      345537,
-      465556,
-      694553,
-      1136465,
-      2001822,
-      3654990,
-      6714231
+      268430,
+      292997,
+      336923,
+      453569,
+      640743,
+      1064092,
+      1856778,
+      3247847,
+      5932235
     ],
     "checksums": [
       1427954421,
@@ -212761,12 +212761,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -212776,19 +212776,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "cp.html",
     "uncompressed_size": 24603,
-    "compressed_size": 17910,
-    "compression_ratio": 0.7279600048774539,
-    "peak_stack": 84,
+    "compressed_size": 17433,
+    "compression_ratio": 0.708572125350567,
+    "peak_stack": 88,
     "cycles": [
-      281896,
-      311288,
-      375412,
-      523656,
-      804338,
-      1271969,
-      2367235,
-      4469869,
-      8508150
+      290612,
+      309702,
+      377603,
+      524594,
+      789861,
+      1252061,
+      2315478,
+      4309780,
+      8205174
     ],
     "checksums": [
       2940965195,
@@ -212803,12 +212803,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -212818,19 +212818,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "fvp_base_gicv3.dtb",
     "uncompressed_size": 10908,
-    "compressed_size": 6246,
-    "compression_ratio": 0.5726072607260726,
-    "peak_stack": 84,
+    "compressed_size": 6363,
+    "compression_ratio": 0.5833333333333334,
+    "peak_stack": 88,
     "cycles": [
-      308703,
-      351859,
-      447597,
-      585303,
-      931311,
-      1506406,
-      2784423,
-      5028405,
-      9407714
+      297294,
+      334592,
+      410769,
+      525823,
+      792873,
+      1276833,
+      2309058,
+      4193708,
+      7690602
     ],
     "checksums": [
       2288577686,
@@ -212845,12 +212845,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -212902,19 +212902,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "rv32i_add.bin",
     "uncompressed_size": 8708,
-    "compressed_size": 3139,
-    "compression_ratio": 0.36047312815801563,
-    "peak_stack": 84,
+    "compressed_size": 2491,
+    "compression_ratio": 0.28605879650895727,
+    "peak_stack": 88,
     "cycles": [
-      300318,
-      326157,
-      390504,
-      497679,
-      735705,
-      1168581,
-      2097716,
-      3926910,
-      7463870
+      344536,
+      393532,
+      513315,
+      727570,
+      1145098,
+      1992667,
+      3778228,
+      7247281,
+      13923343
     ],
     "checksums": [
       1270319384,
@@ -212929,12 +212929,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -212944,19 +212944,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "speed_7578.csv",
     "uncompressed_size": 25928,
-    "compressed_size": 14807,
-    "compression_ratio": 0.5710814563406356,
-    "peak_stack": 84,
+    "compressed_size": 13001,
+    "compression_ratio": 0.5014270286948472,
+    "peak_stack": 88,
     "cycles": [
-      382494,
-      460381,
-      578897,
-      859021,
-      1392979,
-      2477684,
-      4530944,
-      8591511,
-      16573720
+      402715,
+      472216,
+      566491,
+      803223,
+      1246370,
+      2164421,
+      3857345,
+      7214941,
+      13713059
     ],
     "checksums": [
       3602514344,
@@ -212971,12 +212971,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -213028,19 +213028,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "rv32i_fence_i.bin",
     "uncompressed_size": 4232,
-    "compressed_size": 1302,
-    "compression_ratio": 0.30765595463137996,
-    "peak_stack": 84,
+    "compressed_size": 982,
+    "compression_ratio": 0.23204158790170132,
+    "peak_stack": 88,
     "cycles": [
-      334010,
-      379616,
-      472805,
-      635153,
-      985866,
-      1679970,
-      3043664,
-      5788282,
-      11154346
+      352732,
+      413088,
+      524418,
+      734373,
+      1189045,
+      2080373,
+      3826041,
+      7360139,
+      14252875
     ],
     "checksums": [
       1468463971,
@@ -213055,12 +213055,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -213154,19 +213154,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "zynq7000s.dtb",
     "uncompressed_size": 15583,
-    "compressed_size": 9612,
-    "compression_ratio": 0.616826028364243,
-    "peak_stack": 84,
+    "compressed_size": 9432,
+    "compression_ratio": 0.6052749791439389,
+    "peak_stack": 88,
     "cycles": [
-      304743,
-      348335,
-      425380,
-      572032,
-      904752,
-      1522549,
-      2762303,
-      5220610,
-      9915082
+      306248,
+      340129,
+      423768,
+      552505,
+      866430,
+      1483118,
+      2630694,
+      4930162,
+      9395225
     ],
     "checksums": [
       2895971482,
@@ -213181,12 +213181,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -213196,19 +213196,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "wled_settings_wifi.htm",
     "uncompressed_size": 13011,
-    "compressed_size": 10212,
-    "compression_ratio": 0.7848743370993775,
-    "peak_stack": 84,
+    "compressed_size": 10130,
+    "compression_ratio": 0.7785719775574513,
+    "peak_stack": 88,
     "cycles": [
-      252246,
-      282775,
-      338938,
-      433756,
-      615999,
-      1029260,
-      1776907,
-      3214260,
-      5930892
+      254272,
+      278441,
+      320089,
+      405040,
+      553091,
+      904399,
+      1526870,
+      2707837,
+      4998913
     ],
     "checksums": [
       1117725627,
@@ -213223,12 +213223,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -213238,19 +213238,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "hifive_setup.bin",
     "uncompressed_size": 25296,
-    "compressed_size": 17442,
-    "compression_ratio": 0.6895161290322581,
-    "peak_stack": 84,
+    "compressed_size": 16818,
+    "compression_ratio": 0.6648481973434535,
+    "peak_stack": 88,
     "cycles": [
-      283558,
-      314905,
-      383553,
-      487432,
-      745380,
-      1202274,
-      2205067,
-      4195582,
-      7716200
+      282905,
+      311921,
+      384214,
+      498073,
+      761688,
+      1240295,
+      2246651,
+      4413058,
+      7884987
     ],
     "checksums": [
       2385256829,
@@ -213265,12 +213265,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -213322,19 +213322,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "wled_index.htm",
     "uncompressed_size": 19395,
-    "compressed_size": 11767,
-    "compression_ratio": 0.6067027584428977,
-    "peak_stack": 84,
+    "compressed_size": 11145,
+    "compression_ratio": 0.5746326372776489,
+    "peak_stack": 88,
     "cycles": [
-      307543,
-      347435,
-      419634,
-      586035,
-      912278,
-      1570978,
-      2949634,
-      5324086,
-      10274248
+      314453,
+      348058,
+      414995,
+      566315,
+      846898,
+      1432399,
+      2737791,
+      4795871,
+      9174645
     ],
     "checksums": [
       1321955046,
@@ -213349,12 +213349,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -213406,19 +213406,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "grammar.lsp",
     "uncompressed_size": 3721,
-    "compressed_size": 2910,
-    "compression_ratio": 0.7820478366030637,
-    "peak_stack": 84,
+    "compressed_size": 2850,
+    "compression_ratio": 0.7659231389411448,
+    "peak_stack": 88,
     "cycles": [
-      265991,
-      284340,
-      348200,
-      451530,
-      698266,
-      1125756,
-      1991193,
-      3181813,
-      5456481
+      260562,
+      275439,
+      329432,
+      413161,
+      641515,
+      998261,
+      1761254,
+      2783303,
+      4680450
     ],
     "checksums": [
       2186991957,
@@ -213433,12 +213433,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -213448,19 +213448,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "hifive-unleashed.dts",
     "uncompressed_size": 2290,
-    "compressed_size": 1828,
-    "compression_ratio": 0.7982532751091703,
-    "peak_stack": 84,
+    "compressed_size": 1736,
+    "compression_ratio": 0.7580786026200873,
+    "peak_stack": 88,
     "cycles": [
-      239351,
-      270969,
-      302119,
-      395402,
-      534964,
-      868385,
-      1482296,
-      2610265,
-      4482699
+      242387,
+      269161,
+      295161,
+      377854,
+      503620,
+      801947,
+      1344021,
+      2329693,
+      3946045
     ],
     "checksums": [
       2872329334,
@@ -213475,12 +213475,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -213490,19 +213490,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "wled_settings_leds.htm",
     "uncompressed_size": 67173,
-    "compressed_size": 48011,
-    "compression_ratio": 0.7147365757075015,
-    "peak_stack": 84,
+    "compressed_size": 47091,
+    "compression_ratio": 0.7010405966683042,
+    "peak_stack": 88,
     "cycles": [
-      279723,
-      300713,
-      371285,
-      487294,
-      714896,
-      1266356,
-      2203271,
-      4021175,
-      7320607
+      279368,
+      303726,
+      368219,
+      468803,
+      693436,
+      1181120,
+      2047703,
+      3769143,
+      6721468
     ],
     "checksums": [
       1667554633,
@@ -213517,12 +213517,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -213532,19 +213532,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "xargs.1",
     "uncompressed_size": 4227,
-    "compressed_size": 3906,
-    "compression_ratio": 0.9240596167494677,
-    "peak_stack": 84,
+    "compressed_size": 3862,
+    "compression_ratio": 0.9136503430328838,
+    "peak_stack": 88,
     "cycles": [
-      224052,
-      250803,
-      281741,
-      354130,
-      489366,
-      777665,
-      1353249,
-      2415938,
-      4575753
+      219992,
+      246825,
+      277774,
+      349511,
+      476766,
+      756543,
+      1309697,
+      2330818,
+      4480656
     ],
     "checksums": [
       2910828474,
@@ -213559,12 +213559,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -213616,19 +213616,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "test.dtb",
     "uncompressed_size": 1805,
-    "compressed_size": 1145,
-    "compression_ratio": 0.6343490304709142,
-    "peak_stack": 84,
+    "compressed_size": 1135,
+    "compression_ratio": 0.628808864265928,
+    "peak_stack": 88,
     "cycles": [
-      283483,
-      316569,
-      371095,
-      494288,
-      746065,
-      1192514,
-      2208184,
-      4020485,
-      7182411
+      284556,
+      311324,
+      366246,
+      481025,
+      722786,
+      1143830,
+      2101910,
+      3807767,
+      6827689
     ],
     "checksums": [
       4225417803,
@@ -213643,12 +213643,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -213700,19 +213700,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1",
     "dataset": "zcu102_arm.dtb",
     "uncompressed_size": 66838,
-    "compressed_size": 30628,
-    "compression_ratio": 0.4582423172446812,
-    "peak_stack": 84,
+    "compressed_size": 29289,
+    "compression_ratio": 0.4382088033753254,
+    "peak_stack": 88,
     "cycles": [
-      364558,
-      408697,
-      500184,
-      708360,
-      1097954,
-      1897328,
-      3441780,
-      6347447,
-      12073414
+      363147,
+      410100,
+      495346,
+      704457,
+      1061417,
+      1820520,
+      3363547,
+      6088450,
+      11698358
     ],
     "checksums": [
       416398286,
@@ -213727,12 +213727,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -215422,19 +215422,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "cp.html",
     "uncompressed_size": 24603,
-    "compressed_size": 18253,
-    "compression_ratio": 0.7419013941389262,
-    "peak_stack": 84,
+    "compressed_size": 17688,
+    "compression_ratio": 0.7189367150347519,
+    "peak_stack": 88,
     "cycles": [
-      275733,
-      300310,
-      355921,
-      496919,
-      757573,
-      1197455,
-      2207967,
-      4178597,
-      7902226
+      283753,
+      307774,
+      361646,
+      505096,
+      744543,
+      1169296,
+      2197517,
+      4036120,
+      7677611
     ],
     "checksums": [
       2940965195,
@@ -215449,12 +215449,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -215548,19 +215548,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "ch32v003_bootloader.bin",
     "uncompressed_size": 1920,
-    "compressed_size": 2220,
-    "compression_ratio": 1.15625,
-    "peak_stack": 84,
+    "compressed_size": 2159,
+    "compression_ratio": 1.1244791666666667,
+    "peak_stack": 88,
     "cycles": [
-      185774,
-      196916,
-      214866,
-      251636,
-      330022,
-      484077,
-      798489,
-      1384255,
-      2540690
+      182214,
+      190575,
+      206639,
+      233998,
+      299895,
+      425526,
+      683859,
+      1166544,
+      2106816
     ],
     "checksums": [
       3337172648,
@@ -215575,12 +215575,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -215632,19 +215632,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "ch32v30x_blink.bin",
     "uncompressed_size": 1064,
-    "compressed_size": 908,
-    "compression_ratio": 0.8533834586466166,
-    "peak_stack": 84,
+    "compressed_size": 861,
+    "compression_ratio": 0.8092105263157895,
+    "peak_stack": 88,
     "cycles": [
-      240879,
-      261523,
-      321719,
-      407950,
-      585419,
-      965530,
-      1630201,
-      3215167,
-      5889541
+      250039,
+      269123,
+      338514,
+      420916,
+      593274,
+      987065,
+      1620383,
+      3234974,
+      5829895
     ],
     "checksums": [
       1598959537,
@@ -215659,12 +215659,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -216220,19 +216220,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "FreeRTOSConfig.h",
     "uncompressed_size": 36522,
-    "compressed_size": 25511,
-    "compression_ratio": 0.698510486829856,
-    "peak_stack": 84,
+    "compressed_size": 24234,
+    "compression_ratio": 0.6635452603909973,
+    "peak_stack": 88,
     "cycles": [
-      280412,
-      306954,
-      373972,
-      505207,
-      740649,
-      1207662,
-      2179250,
-      4055178,
-      7580151
+      284763,
+      313410,
+      376578,
+      522738,
+      766037,
+      1228509,
+      2226562,
+      4116043,
+      7641257
     ],
     "checksums": [
       3891982175,
@@ -216247,12 +216247,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -216262,19 +216262,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "cp.html.gz",
     "uncompressed_size": 7960,
-    "compressed_size": 9368,
-    "compression_ratio": 1.1768844221105528,
-    "peak_stack": 84,
+    "compressed_size": 9116,
+    "compression_ratio": 1.1452261306532663,
+    "peak_stack": 88,
     "cycles": [
-      173387,
-      183128,
-      203063,
-      234690,
-      307897,
-      449403,
-      733103,
-      1300561,
-      2436833
+      171557,
+      179102,
+      194487,
+      221388,
+      278105,
+      391182,
+      618716,
+      1073003,
+      1980216
     ],
     "checksums": [
       3442673072,
@@ -216289,12 +216289,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -216304,19 +216304,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "fvp_base_gicv3.dtb",
     "uncompressed_size": 10908,
-    "compressed_size": 6598,
-    "compression_ratio": 0.6048771543821049,
-    "peak_stack": 84,
+    "compressed_size": 6553,
+    "compression_ratio": 0.6007517418408508,
+    "peak_stack": 88,
     "cycles": [
-      288784,
-      326456,
-      409038,
-      518260,
-      789631,
-      1289042,
-      2372958,
-      4246654,
-      7852718
+      286082,
+      324409,
+      395568,
+      511097,
+      749541,
+      1211831,
+      2209214,
+      3994660,
+      7249423
     ],
     "checksums": [
       2288577686,
@@ -216331,12 +216331,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -216346,19 +216346,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "fields.c",
     "uncompressed_size": 11150,
-    "compressed_size": 8171,
-    "compression_ratio": 0.7328251121076234,
-    "peak_stack": 84,
+    "compressed_size": 7904,
+    "compression_ratio": 0.7088789237668162,
+    "peak_stack": 88,
     "cycles": [
-      264150,
-      288901,
-      331550,
-      441420,
-      647158,
-      1063351,
-      1867534,
-      3360007,
-      6160304
+      264357,
+      285178,
+      318328,
+      412578,
+      582213,
+      930961,
+      1616912,
+      2840623,
+      5259313
     ],
     "checksums": [
       1427954421,
@@ -216373,12 +216373,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -216388,19 +216388,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "xargs.1",
     "uncompressed_size": 4227,
-    "compressed_size": 4018,
-    "compression_ratio": 0.9505559498462266,
-    "peak_stack": 84,
+    "compressed_size": 3957,
+    "compression_ratio": 0.936124911284599,
+    "peak_stack": 88,
     "cycles": [
-      219383,
-      244350,
-      276706,
-      340181,
-      470837,
-      744805,
-      1281590,
-      2293821,
-      4371975
+      214683,
+      236718,
+      270470,
+      328848,
+      445700,
+      705610,
+      1196482,
+      2115809,
+      4021455
     ],
     "checksums": [
       2910828474,
@@ -216415,12 +216415,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -216430,19 +216430,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "test.dtb",
     "uncompressed_size": 1805,
-    "compressed_size": 1178,
-    "compression_ratio": 0.6526315789473685,
-    "peak_stack": 84,
+    "compressed_size": 1156,
+    "compression_ratio": 0.6404432132963989,
+    "peak_stack": 88,
     "cycles": [
-      284447,
-      313111,
-      376024,
-      503524,
-      757843,
-      1215310,
-      2274038,
-      4100821,
-      7114166
+      280546,
+      304758,
+      355573,
+      459509,
+      676488,
+      1055070,
+      1903562,
+      3447433,
+      6119862
     ],
     "checksums": [
       4225417803,
@@ -216457,12 +216457,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -216472,19 +216472,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "grammar.lsp",
     "uncompressed_size": 3721,
-    "compressed_size": 3047,
-    "compression_ratio": 0.8188658962644451,
-    "peak_stack": 84,
+    "compressed_size": 2923,
+    "compression_ratio": 0.7855415210964795,
+    "peak_stack": 88,
     "cycles": [
-      251314,
-      266006,
-      323121,
-      406276,
-      618662,
-      984737,
-      1726580,
-      2779349,
-      4807739
+      258522,
+      272932,
+      323427,
+      402441,
+      619851,
+      959622,
+      1709519,
+      2728192,
+      4608253
     ],
     "checksums": [
       2186991957,
@@ -216499,12 +216499,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -216514,19 +216514,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "hifive-unleashed.dts",
     "uncompressed_size": 2290,
-    "compressed_size": 1861,
-    "compression_ratio": 0.8126637554585153,
-    "peak_stack": 84,
+    "compressed_size": 1754,
+    "compression_ratio": 0.765938864628821,
+    "peak_stack": 88,
     "cycles": [
-      234245,
-      264770,
-      294925,
-      385037,
-      517018,
-      838889,
-      1403896,
-      2464373,
-      4276153
+      239545,
+      265402,
+      291789,
+      367970,
+      487825,
+      786198,
+      1312589,
+      2282270,
+      3934750
     ],
     "checksums": [
       2872329334,
@@ -216541,12 +216541,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -216556,19 +216556,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "speed_7578.csv",
     "uncompressed_size": 25928,
-    "compressed_size": 14917,
-    "compression_ratio": 0.5753239740820735,
-    "peak_stack": 84,
+    "compressed_size": 13206,
+    "compression_ratio": 0.5093335390311632,
+    "peak_stack": 88,
     "cycles": [
-      366231,
-      435124,
-      552731,
-      791266,
-      1244132,
-      2157532,
-      3914556,
-      7375376,
-      14185870
+      383767,
+      443605,
+      539741,
+      736499,
+      1111791,
+      1906342,
+      3378532,
+      6243176,
+      11842136
     ],
     "checksums": [
       3602514344,
@@ -216583,12 +216583,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -216640,19 +216640,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "wled_index.htm",
     "uncompressed_size": 19395,
-    "compressed_size": 12094,
-    "compression_ratio": 0.6235627739108017,
-    "peak_stack": 84,
+    "compressed_size": 11334,
+    "compression_ratio": 0.5843774168600154,
+    "peak_stack": 88,
     "cycles": [
-      291658,
-      329272,
-      387362,
-      528112,
-      804998,
-      1357626,
-      2454202,
-      4511076,
-      8560318
+      305151,
+      335428,
+      382359,
+      507101,
+      741644,
+      1243436,
+      2219534,
+      3959949,
+      7446038
     ],
     "checksums": [
       1321955046,
@@ -216667,12 +216667,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -216682,19 +216682,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "hifive_setup.bin",
     "uncompressed_size": 25296,
-    "compressed_size": 17848,
-    "compression_ratio": 0.7055660974067046,
-    "peak_stack": 84,
+    "compressed_size": 17223,
+    "compression_ratio": 0.6808586337760911,
+    "peak_stack": 88,
     "cycles": [
-      270672,
-      298949,
-      350201,
-      454532,
-      689749,
-      1092033,
-      1943182,
-      3734705,
-      6844609
+      281514,
+      308629,
+      380117,
+      477097,
+      764931,
+      1223846,
+      2208948,
+      4375476,
+      7794361
     ],
     "checksums": [
       2385256829,
@@ -216709,12 +216709,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -216724,19 +216724,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "rv32i_add.bin",
     "uncompressed_size": 8708,
-    "compressed_size": 2947,
-    "compression_ratio": 0.3384244372990354,
-    "peak_stack": 84,
+    "compressed_size": 2491,
+    "compression_ratio": 0.28605879650895727,
+    "peak_stack": 88,
     "cycles": [
-      326479,
-      355039,
-      422351,
-      542415,
-      808751,
-      1140527,
-      1858296,
-      3238271,
-      5922744
+      344536,
+      393532,
+      513315,
+      727570,
+      1145098,
+      1992667,
+      3778228,
+      7247281,
+      13923343
     ],
     "checksums": [
       1270319384,
@@ -216751,12 +216751,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -216766,19 +216766,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "wled_settings_wifi.htm",
     "uncompressed_size": 13011,
-    "compressed_size": 10476,
-    "compression_ratio": 0.8051648605026516,
-    "peak_stack": 84,
+    "compressed_size": 10316,
+    "compression_ratio": 0.7928675735915763,
+    "peak_stack": 88,
     "cycles": [
-      248879,
-      279027,
-      333448,
-      425502,
-      615951,
-      1037878,
-      1796281,
-      3183955,
-      5973248
+      251302,
+      277128,
+      319039,
+      399270,
+      542655,
+      888972,
+      1500276,
+      2628212,
+      4862371
     ],
     "checksums": [
       1117725627,
@@ -216793,12 +216793,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -216808,19 +216808,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "zynq7000s.dtb",
     "uncompressed_size": 15583,
-    "compressed_size": 10007,
-    "compression_ratio": 0.6421741641532439,
-    "peak_stack": 84,
+    "compressed_size": 9673,
+    "compression_ratio": 0.6207405506000129,
+    "peak_stack": 88,
     "cycles": [
-      288334,
-      327707,
-      403629,
-      526295,
-      831003,
-      1401540,
-      2509837,
-      4746301,
-      9023673
+      297492,
+      322747,
+      401777,
+      513639,
+      791829,
+      1328463,
+      2362941,
+      4417771,
+      8341068
     ],
     "checksums": [
       2895971482,
@@ -216835,12 +216835,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -216850,19 +216850,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "rv32i_fence_i.bin",
     "uncompressed_size": 4232,
-    "compressed_size": 1300,
-    "compression_ratio": 0.30718336483931946,
-    "peak_stack": 84,
+    "compressed_size": 982,
+    "compression_ratio": 0.23204158790170132,
+    "peak_stack": 88,
     "cycles": [
-      363107,
-      427300,
-      549879,
-      806608,
-      1318621,
-      2330507,
-      4289772,
-      8262740,
-      16068768
+      353033,
+      413092,
+      524613,
+      734272,
+      1189197,
+      2080517,
+      3826106,
+      7357876,
+      14249619
     ],
     "checksums": [
       1468463971,
@@ -216877,12 +216877,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -216892,19 +216892,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "data-package.json",
     "uncompressed_size": 4320,
-    "compressed_size": 2285,
-    "compression_ratio": 0.5289351851851852,
-    "peak_stack": 84,
+    "compressed_size": 2022,
+    "compression_ratio": 0.46805555555555556,
+    "peak_stack": 88,
     "cycles": [
-      306062,
-      332596,
-      399843,
-      546115,
-      799735,
-      1380006,
-      2520160,
-      4684823,
-      8931905
+      326608,
+      352583,
+      414168,
+      535285,
+      772026,
+      1287510,
+      2296872,
+      4347310,
+      8203703
     ],
     "checksums": [
       2509278550,
@@ -216919,12 +216919,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -217018,19 +217018,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "wled_settings_leds.htm",
     "uncompressed_size": 67173,
-    "compressed_size": 50046,
-    "compression_ratio": 0.7450314858648565,
-    "peak_stack": 84,
+    "compressed_size": 48501,
+    "compression_ratio": 0.7220311732392479,
+    "peak_stack": 88,
     "cycles": [
-      265499,
-      286832,
-      357023,
-      461725,
-      662580,
-      1166133,
-      2018265,
-      3720415,
-      6745054
+      270351,
+      297121,
+      351600,
+      436939,
+      644567,
+      1078967,
+      1881336,
+      3420754,
+      6127329
     ],
     "checksums": [
       1667554633,
@@ -217045,12 +217045,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -217060,19 +217060,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1",
     "dataset": "zcu102_arm.dtb",
     "uncompressed_size": 66838,
-    "compressed_size": 31732,
-    "compression_ratio": 0.47475986714144647,
-    "peak_stack": 84,
+    "compressed_size": 30162,
+    "compression_ratio": 0.4512702354947784,
+    "peak_stack": 88,
     "cycles": [
-      355969,
-      393201,
-      481138,
-      680375,
-      1046109,
-      1803647,
-      3211240,
-      5768926,
-      11146497
+      357267,
+      401332,
+      478425,
+      680253,
+      1023193,
+      1726626,
+      3078452,
+      5660030,
+      10827391
     ],
     "checksums": [
       416398286,
@@ -217087,12 +217087,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -239656,19 +239656,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "cp.html.gz",
     "uncompressed_size": 7960,
-    "compressed_size": 8716,
-    "compression_ratio": 1.0949748743718593,
-    "peak_stack": 84,
+    "compressed_size": 8468,
+    "compression_ratio": 1.063819095477387,
+    "peak_stack": 88,
     "cycles": [
-      219701,
-      228911,
-      247832,
-      281198,
-      354150,
-      495940,
-      779848,
-      1346160,
-      2480551
+      187838,
+      195275,
+      210343,
+      237658,
+      294529,
+      407647,
+      635238,
+      1088845,
+      1995859
     ],
     "checksums": [
       3442673072,
@@ -239683,12 +239683,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -239740,19 +239740,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "data-package.json",
     "uncompressed_size": 4320,
-    "compressed_size": 1345,
-    "compression_ratio": 0.3113425925925926,
-    "peak_stack": 84,
+    "compressed_size": 1193,
+    "compression_ratio": 0.2761574074074074,
+    "peak_stack": 88,
     "cycles": [
-      761385,
-      965495,
-      1475963,
-      2475256,
-      4387880,
-      8288262,
-      15924791,
-      30252612,
-      51338503
+      694672,
+      925015,
+      1401180,
+      2418664,
+      4298026,
+      8208859,
+      15952499,
+      30520361,
+      53550797
     ],
     "checksums": [
       2509278550,
@@ -239767,12 +239767,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -239950,19 +239950,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "ch32v30x_blink.bin",
     "uncompressed_size": 1064,
-    "compressed_size": 769,
-    "compression_ratio": 0.7227443609022557,
-    "peak_stack": 83,
+    "compressed_size": 735,
+    "compression_ratio": 0.6907894736842105,
+    "peak_stack": 88,
     "cycles": [
-      451149,
-      580377,
-      884602,
-      1353810,
-      2132119,
-      3522401,
-      4897726,
-      7656775,
-      11022296
+      398284,
+      515290,
+      795697,
+      1224797,
+      1939321,
+      3726324,
+      6499430,
+      14025285,
+      25153299
     ],
     "checksums": [
       1598959537,
@@ -239977,12 +239977,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -239992,19 +239992,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "FreeRTOSConfig.h",
     "uncompressed_size": 36522,
-    "compressed_size": 14716,
-    "compression_ratio": 0.40293521712940145,
-    "peak_stack": 84,
+    "compressed_size": 13717,
+    "compression_ratio": 0.37558184108208753,
+    "peak_stack": 88,
     "cycles": [
-      883641,
-      1200474,
-      1847854,
-      3081637,
-      5317848,
-      9865273,
-      19352629,
-      34871865,
-      66650277
+      774180,
+      1075510,
+      1620295,
+      2759736,
+      4747791,
+      9047732,
+      17814309,
+      32422589,
+      61947614
     ],
     "checksums": [
       3891982175,
@@ -240019,12 +240019,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -240034,19 +240034,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "ch32v003_bootloader.bin",
     "uncompressed_size": 1920,
-    "compressed_size": 1930,
-    "compression_ratio": 1.0052083333333333,
-    "peak_stack": 84,
+    "compressed_size": 1875,
+    "compression_ratio": 0.9765625,
+    "peak_stack": 88,
     "cycles": [
-      283656,
-      307305,
-      346075,
-      425439,
-      605027,
-      962125,
-      1648679,
-      2589791,
-      4239181
+      253914,
+      276809,
+      308338,
+      397258,
+      554923,
+      888378,
+      1490040,
+      2400854,
+      3944722
     ],
     "checksums": [
       3337172648,
@@ -240061,12 +240061,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -240076,19 +240076,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "cp.html",
     "uncompressed_size": 24603,
-    "compressed_size": 11956,
-    "compression_ratio": 0.48595699711417306,
-    "peak_stack": 84,
+    "compressed_size": 11531,
+    "compression_ratio": 0.46868268097386495,
+    "peak_stack": 88,
     "cycles": [
-      797774,
-      1030678,
-      1424827,
-      2316339,
-      3910394,
-      6826876,
-      13418001,
-      24964894,
-      45914400
+      690283,
+      864908,
+      1253742,
+      2035380,
+      3480001,
+      6131564,
+      12057248,
+      22672245,
+      42834499
     ],
     "checksums": [
       2940965195,
@@ -240103,12 +240103,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -240118,19 +240118,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "hifive_setup.bin",
     "uncompressed_size": 25296,
-    "compressed_size": 12468,
-    "compression_ratio": 0.4928842504743833,
-    "peak_stack": 84,
+    "compressed_size": 11778,
+    "compression_ratio": 0.465607210626186,
+    "peak_stack": 88,
     "cycles": [
-      843244,
-      1086260,
-      1716049,
-      2560881,
-      4923945,
-      8649262,
-      17118190,
-      31803036,
-      57342221
+      674454,
+      878361,
+      1365422,
+      2014998,
+      4016405,
+      7161573,
+      13953804,
+      26467882,
+      47900889
     ],
     "checksums": [
       2385256829,
@@ -240145,12 +240145,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -240160,19 +240160,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "fields.c",
     "uncompressed_size": 11150,
-    "compressed_size": 4588,
-    "compression_ratio": 0.4114798206278027,
-    "peak_stack": 84,
+    "compressed_size": 4351,
+    "compression_ratio": 0.39022421524663675,
+    "peak_stack": 88,
     "cycles": [
-      992831,
-      1301802,
-      1994390,
-      3323901,
-      5720710,
-      10757563,
-      20200571,
-      36764315,
-      64728933
+      854899,
+      1136889,
+      1799176,
+      2966334,
+      5146941,
+      9750040,
+      18468800,
+      32931324,
+      58553656
     ],
     "checksums": [
       1427954421,
@@ -240187,12 +240187,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -240244,19 +240244,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "rv32i_add.bin",
     "uncompressed_size": 8708,
-    "compressed_size": 1933,
-    "compression_ratio": 0.22197978870004592,
-    "peak_stack": 84,
+    "compressed_size": 1570,
+    "compression_ratio": 0.1802939825447864,
+    "peak_stack": 88,
     "cycles": [
-      879675,
-      1059500,
-      1454058,
-      2149136,
-      3595428,
-      5141833,
-      7275333,
-      9232320,
-      11821918
+      658787,
+      914604,
+      1488883,
+      2510846,
+      4628444,
+      8644139,
+      16429170,
+      28688581,
+      44100913
     ],
     "checksums": [
       1270319384,
@@ -240271,12 +240271,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -240286,19 +240286,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "grammar.lsp",
     "uncompressed_size": 3721,
-    "compressed_size": 1806,
-    "compression_ratio": 0.48535339962375706,
-    "peak_stack": 84,
+    "compressed_size": 1750,
+    "compression_ratio": 0.47030368180596616,
+    "peak_stack": 88,
     "cycles": [
-      699763,
-      819142,
-      1192764,
-      1741312,
-      3214090,
-      5626452,
-      10351448,
-      16441119,
-      26121748
+      636297,
+      767989,
+      1103656,
+      1617971,
+      2950235,
+      5208254,
+      9371187,
+      15029302,
+      23506778
     ],
     "checksums": [
       2186991957,
@@ -240313,12 +240313,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -240328,19 +240328,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "hifive-unleashed.dts",
     "uncompressed_size": 2290,
-    "compressed_size": 1268,
-    "compression_ratio": 0.5537117903930131,
-    "peak_stack": 84,
+    "compressed_size": 1220,
+    "compression_ratio": 0.5327510917030568,
+    "peak_stack": 88,
     "cycles": [
-      642668,
-      801968,
-      1157341,
-      1881019,
-      2965524,
-      5767153,
-      10088622,
-      18383773,
-      27344223
+      561749,
+      703952,
+      1054966,
+      1700745,
+      2715553,
+      5351164,
+      9662450,
+      17488275,
+      27746230
     ],
     "checksums": [
       2872329334,
@@ -240355,12 +240355,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -240370,19 +240370,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "fvp_base_gicv3.dtb",
     "uncompressed_size": 10908,
-    "compressed_size": 3961,
-    "compression_ratio": 0.3631279794646131,
-    "peak_stack": 84,
+    "compressed_size": 3772,
+    "compression_ratio": 0.34580124679134583,
+    "peak_stack": 88,
     "cycles": [
-      1038583,
-      1437227,
-      2185509,
-      3773920,
-      6901631,
-      12787135,
-      23258569,
-      42584495,
-      71089740
+      869247,
+      1171804,
+      1822764,
+      3142499,
+      5783879,
+      10432916,
+      19175339,
+      35016796,
+      58974546
     ],
     "checksums": [
       2288577686,
@@ -240397,12 +240397,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -240412,19 +240412,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "rv32i_fence_i.bin",
     "uncompressed_size": 4232,
-    "compressed_size": 715,
-    "compression_ratio": 0.1689508506616257,
-    "peak_stack": 84,
+    "compressed_size": 532,
+    "compression_ratio": 0.12570888468809074,
+    "peak_stack": 88,
     "cycles": [
-      1119422,
-      1551363,
-      2394634,
-      3914413,
-      7166806,
-      10895418,
-      14782619,
-      18654453,
-      23311066
+      790323,
+      1102903,
+      1700067,
+      2782565,
+      5120722,
+      9716959,
+      17154388,
+      27718308,
+      40737455
     ],
     "checksums": [
       1468463971,
@@ -240439,12 +240439,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -240454,19 +240454,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "speed_7578.csv",
     "uncompressed_size": 25928,
-    "compressed_size": 6657,
-    "compression_ratio": 0.25674946004319654,
-    "peak_stack": 84,
+    "compressed_size": 6275,
+    "compression_ratio": 0.2420163529774761,
+    "peak_stack": 88,
     "cycles": [
-      1439125,
-      2007805,
-      3144387,
-      5361258,
-      9595978,
-      18000472,
-      32103723,
-      57570902,
-      101851513
+      1247583,
+      1727668,
+      2566039,
+      4330685,
+      7546619,
+      14154650,
+      25500127,
+      46131640,
+      83025612
     ],
     "checksums": [
       3602514344,
@@ -240481,12 +240481,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -240580,19 +240580,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "test.dtb",
     "uncompressed_size": 1805,
-    "compressed_size": 723,
-    "compression_ratio": 0.4005540166204986,
-    "peak_stack": 84,
+    "compressed_size": 698,
+    "compression_ratio": 0.38670360110803326,
+    "peak_stack": 88,
     "cycles": [
-      824346,
-      1043069,
-      1504926,
-      2402419,
-      4268765,
-      7661941,
-      14605146,
-      26734326,
-      44602643
+      720076,
+      950737,
+      1438408,
+      2462595,
+      4458406,
+      8108537,
+      15696448,
+      28877776,
+      49450947
     ],
     "checksums": [
       4225417803,
@@ -240607,12 +240607,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -240748,19 +240748,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "zynq7000s.dtb",
     "uncompressed_size": 15583,
-    "compressed_size": 5876,
-    "compression_ratio": 0.37707758454726303,
-    "peak_stack": 84,
+    "compressed_size": 5535,
+    "compression_ratio": 0.3551947635243535,
+    "peak_stack": 88,
     "cycles": [
-      997284,
-      1325349,
-      1875985,
-      3133066,
-      5678692,
-      10556961,
-      19490462,
-      36926227,
-      67206055
+      862496,
+      1215564,
+      1812767,
+      3193597,
+      6037066,
+      11212237,
+      21040296,
+      40157461,
+      74177182
     ],
     "checksums": [
       2895971482,
@@ -240775,12 +240775,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -240874,19 +240874,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "xargs.1",
     "uncompressed_size": 4227,
-    "compressed_size": 2580,
-    "compression_ratio": 0.6103619588360539,
-    "peak_stack": 84,
+    "compressed_size": 2522,
+    "compression_ratio": 0.5966406434823752,
+    "peak_stack": 88,
     "cycles": [
-      583801,
-      711173,
-      906584,
-      1405828,
-      2219904,
-      4031480,
-      7309640,
-      12867018,
-      23422093
+      509839,
+      628684,
+      828545,
+      1272289,
+      2066807,
+      3753823,
+      6850913,
+      12195172,
+      22108703
     ],
     "checksums": [
       2910828474,
@@ -240901,12 +240901,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -240958,19 +240958,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "wled_settings_wifi.htm",
     "uncompressed_size": 13011,
-    "compressed_size": 6530,
-    "compression_ratio": 0.5018830220582584,
-    "peak_stack": 84,
+    "compressed_size": 6308,
+    "compression_ratio": 0.48482053646914147,
+    "peak_stack": 88,
     "cycles": [
-      808272,
-      1105024,
-      1580082,
-      2622791,
-      4476076,
-      8359891,
-      15090653,
-      27116043,
-      45150886
+      670785,
+      910279,
+      1305324,
+      2159938,
+      3630079,
+      6785650,
+      12383230,
+      22538739,
+      38278060
     ],
     "checksums": [
       1117725627,
@@ -240985,12 +240985,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -241042,19 +241042,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "wled_index.htm",
     "uncompressed_size": 19395,
-    "compressed_size": 7718,
-    "compression_ratio": 0.39793761278680073,
-    "peak_stack": 84,
+    "compressed_size": 7144,
+    "compression_ratio": 0.3683423562773911,
+    "peak_stack": 88,
     "cycles": [
-      907894,
-      1228815,
-      1761469,
-      3073569,
-      5382901,
-      9624364,
-      19665492,
-      36365401,
-      65990231
+      776783,
+      1058567,
+      1534853,
+      2693133,
+      4610307,
+      8176882,
+      16454228,
+      30939854,
+      58057329
     ],
     "checksums": [
       1321955046,
@@ -241069,12 +241069,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -241084,19 +241084,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "wled_settings_leds.htm",
     "uncompressed_size": 67173,
-    "compressed_size": 28088,
-    "compression_ratio": 0.4181441948401888,
-    "peak_stack": 84,
+    "compressed_size": 26833,
+    "compression_ratio": 0.39946109299867505,
+    "peak_stack": 88,
     "cycles": [
-      1067362,
-      1331608,
-      2103691,
-      3432198,
-      6139439,
-      12091557,
-      22962901,
-      42159026,
-      75337297
+      885351,
+      1117493,
+      1753233,
+      2889182,
+      5232157,
+      10105965,
+      19315914,
+      35922820,
+      64518975
     ],
     "checksums": [
       1667554633,
@@ -241111,12 +241111,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -241252,19 +241252,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1",
     "dataset": "zcu102_arm.dtb",
     "uncompressed_size": 66838,
-    "compressed_size": 18929,
-    "compression_ratio": 0.28320715760495524,
-    "peak_stack": 84,
+    "compressed_size": 16580,
+    "compression_ratio": 0.24806247942787038,
+    "peak_stack": 88,
     "cycles": [
-      1346982,
-      1930846,
-      2983882,
-      5258156,
-      10003398,
-      18728924,
-      34943386,
-      62983427,
-      113212913
+      1161301,
+      1709277,
+      2686475,
+      4617063,
+      8817357,
+      16555241,
+      31515047,
+      58556475,
+      105814071
     ],
     "checksums": [
       416398286,
@@ -241279,12 +241279,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -249736,19 +249736,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "ch32v003_bootloader.bin",
     "uncompressed_size": 1920,
-    "compressed_size": 1956,
-    "compression_ratio": 1.01875,
-    "peak_stack": 84,
+    "compressed_size": 1895,
+    "compression_ratio": 0.9869791666666666,
+    "peak_stack": 88,
     "cycles": [
-      265917,
-      285309,
-      318760,
-      382374,
-      516718,
-      807633,
-      1358631,
-      2213274,
-      3715310
+      233665,
+      251796,
+      278583,
+      343918,
+      463467,
+      722364,
+      1224806,
+      1993238,
+      3330233
     ],
     "checksums": [
       3337172648,
@@ -249763,12 +249763,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -249946,19 +249946,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "FreeRTOSConfig.h",
     "uncompressed_size": 36522,
-    "compressed_size": 15214,
-    "compression_ratio": 0.4165708340178523,
-    "peak_stack": 84,
+    "compressed_size": 14209,
+    "compression_ratio": 0.3890531734297136,
+    "peak_stack": 88,
     "cycles": [
-      702333,
-      890783,
-      1297723,
-      2047881,
-      3556252,
-      6504357,
-      12666420,
-      23235100,
-      44198477
+      626171,
+      792505,
+      1160743,
+      1852346,
+      3214985,
+      5817841,
+      11675811,
+      21562955,
+      41400132
     ],
     "checksums": [
       3891982175,
@@ -249973,12 +249973,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -250576,19 +250576,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "test.dtb",
     "uncompressed_size": 1805,
-    "compressed_size": 747,
-    "compression_ratio": 0.4138504155124654,
-    "peak_stack": 84,
+    "compressed_size": 717,
+    "compression_ratio": 0.3972299168975069,
+    "peak_stack": 88,
     "cycles": [
-      683221,
-      856508,
-      1165204,
-      1842775,
-      3154783,
-      5752649,
-      10864555,
-      20505238,
-      37220201
+      585781,
+      740425,
+      1029743,
+      1665414,
+      2877274,
+      5214831,
+      9937481,
+      18809851,
+      33591509
     ],
     "checksums": [
       4225417803,
@@ -250603,12 +250603,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -250618,19 +250618,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "grammar.lsp",
     "uncompressed_size": 3721,
-    "compressed_size": 1838,
-    "compression_ratio": 0.49395323837678046,
-    "peak_stack": 84,
+    "compressed_size": 1792,
+    "compression_ratio": 0.48159097016930935,
+    "peak_stack": 88,
     "cycles": [
-      609203,
-      704853,
-      995941,
-      1469667,
-      2602264,
-      4565456,
-      8477894,
-      14134243,
-      23879388
+      538789,
+      640426,
+      899780,
+      1331980,
+      2372353,
+      4179938,
+      7670065,
+      12827242,
+      21198785
     ],
     "checksums": [
       2186991957,
@@ -250645,12 +250645,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -250660,19 +250660,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "cp.html.gz",
     "uncompressed_size": 7960,
-    "compressed_size": 8716,
-    "compression_ratio": 1.0949748743718593,
-    "peak_stack": 84,
+    "compressed_size": 8468,
+    "compression_ratio": 1.063819095477387,
+    "peak_stack": 88,
     "cycles": [
-      219701,
-      228911,
-      247832,
-      281198,
-      354150,
-      495940,
-      779848,
-      1346160,
-      2480551
+      187838,
+      195275,
+      210343,
+      237658,
+      294529,
+      407647,
+      635238,
+      1088845,
+      1995859
     ],
     "checksums": [
       3442673072,
@@ -250687,12 +250687,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -250702,19 +250702,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "ch32v30x_blink.bin",
     "uncompressed_size": 1064,
-    "compressed_size": 776,
-    "compression_ratio": 0.7293233082706767,
-    "peak_stack": 83,
+    "compressed_size": 740,
+    "compression_ratio": 0.6954887218045113,
+    "peak_stack": 88,
     "cycles": [
-      416586,
-      525454,
-      787700,
-      1194763,
-      1883517,
-      3577802,
-      6335920,
-      13468352,
-      24349081
+      385237,
+      496449,
+      760796,
+      1168991,
+      1858218,
+      3571616,
+      6264900,
+      13439404,
+      24165522
     ],
     "checksums": [
       1598959537,
@@ -250729,12 +250729,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -250744,19 +250744,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "xargs.1",
     "uncompressed_size": 4227,
-    "compressed_size": 2644,
-    "compression_ratio": 0.6255027206056305,
-    "peak_stack": 84,
+    "compressed_size": 2580,
+    "compression_ratio": 0.6103619588360539,
+    "peak_stack": 88,
     "cycles": [
-      528522,
-      636274,
-      807209,
-      1213239,
-      1948689,
-      3477252,
-      6367669,
-      11413180,
-      21215376
+      458024,
+      551348,
+      717230,
+      1091653,
+      1771749,
+      3172499,
+      5808111,
+      10590888,
+      19479579
     ],
     "checksums": [
       2910828474,
@@ -250771,12 +250771,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -250786,19 +250786,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "hifive-unleashed.dts",
     "uncompressed_size": 2290,
-    "compressed_size": 1294,
-    "compression_ratio": 0.5650655021834061,
-    "peak_stack": 84,
+    "compressed_size": 1254,
+    "compression_ratio": 0.5475982532751091,
+    "peak_stack": 88,
     "cycles": [
-      527394,
-      625866,
-      823009,
-      1240474,
-      1873321,
-      3428969,
-      6188479,
-      11453366,
-      19457728
+      445076,
+      526800,
+      696613,
+      1026479,
+      1556073,
+      2881101,
+      5159162,
+      9524915,
+      16111020
     ],
     "checksums": [
       2872329334,
@@ -250813,12 +250813,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -250828,19 +250828,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "zcu102_arm.dtb",
     "uncompressed_size": 66838,
-    "compressed_size": 20169,
-    "compression_ratio": 0.30175947814117715,
-    "peak_stack": 84,
+    "compressed_size": 17879,
+    "compression_ratio": 0.26749753134444476,
+    "peak_stack": 88,
     "cycles": [
-      935916,
-      1290016,
-      1976017,
-      3151456,
-      6099473,
-      11451462,
-      21814929,
-      41190661,
-      76246498
+      821111,
+      1193487,
+      1824699,
+      3059487,
+      5828669,
+      11034416,
+      21021677,
+      39803849,
+      73899663
     ],
     "checksums": [
       416398286,
@@ -250855,12 +250855,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -250870,19 +250870,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "wled_index.htm",
     "uncompressed_size": 19395,
-    "compressed_size": 8012,
-    "compression_ratio": 0.4130961588038154,
-    "peak_stack": 84,
+    "compressed_size": 7492,
+    "compression_ratio": 0.3862851250322248,
+    "peak_stack": 88,
     "cycles": [
-      724540,
-      963858,
-      1322343,
-      2233747,
-      3805527,
-      6685465,
-      13510980,
-      25600192,
-      49037753
+      630507,
+      825497,
+      1128434,
+      1910474,
+      3229287,
+      5633427,
+      11453018,
+      21470385,
+      41236866
     ],
     "checksums": [
       1321955046,
@@ -250897,12 +250897,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -250912,19 +250912,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "rv32i_fence_i.bin",
     "uncompressed_size": 4232,
-    "compressed_size": 845,
-    "compression_ratio": 0.19966918714555765,
-    "peak_stack": 84,
+    "compressed_size": 589,
+    "compression_ratio": 0.13917769376181474,
+    "peak_stack": 88,
     "cycles": [
-      573053,
-      904686,
-      1479141,
-      2627577,
-      5003890,
-      8540190,
-      15440469,
-      29277469,
-      55551615
+      527233,
+      852241,
+      1436775,
+      2598438,
+      4993993,
+      9782393,
+      19078532,
+      37889157,
+      74589784
     ],
     "checksums": [
       1468463971,
@@ -250939,12 +250939,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -250954,19 +250954,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "cp.html",
     "uncompressed_size": 24603,
-    "compressed_size": 12221,
-    "compression_ratio": 0.4967280412957769,
-    "peak_stack": 84,
+    "compressed_size": 11788,
+    "compression_ratio": 0.47912856155753364,
+    "peak_stack": 88,
     "cycles": [
-      628067,
-      757803,
-      1022105,
-      1579612,
-      2565271,
-      4469098,
-      8710578,
-      16160570,
-      31286993
+      559881,
+      672856,
+      918172,
+      1396055,
+      2296502,
+      4019867,
+      7890897,
+      14640954,
+      28255704
     ],
     "checksums": [
       2940965195,
@@ -250981,12 +250981,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -250996,19 +250996,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "rv32i_add.bin",
     "uncompressed_size": 8708,
-    "compressed_size": 2121,
-    "compression_ratio": 0.24356913183279744,
-    "peak_stack": 84,
+    "compressed_size": 1694,
+    "compression_ratio": 0.1945337620578778,
+    "peak_stack": 88,
     "cycles": [
-      626932,
-      737553,
-      984971,
-      1426735,
-      2360530,
-      3657895,
-      5867731,
-      9898182,
-      17655015
+      589779,
+      808590,
+      1301218,
+      2177146,
+      3989017,
+      7446849,
+      14947190,
+      29409356,
+      57401828
     ],
     "checksums": [
       1270319384,
@@ -251023,12 +251023,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -251038,19 +251038,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "fields.c",
     "uncompressed_size": 11150,
-    "compressed_size": 4707,
-    "compression_ratio": 0.42215246636771303,
-    "peak_stack": 84,
+    "compressed_size": 4498,
+    "compression_ratio": 0.40340807174887894,
+    "peak_stack": 88,
     "cycles": [
-      807142,
-      1019098,
-      1528002,
-      2441475,
-      4221895,
-      7882811,
-      14888367,
-      27932655,
-      50587629
+      688742,
+      879495,
+      1303206,
+      2090109,
+      3625434,
+      6687534,
+      12733257,
+      23544580,
+      42828979
     ],
     "checksums": [
       1427954421,
@@ -251065,12 +251065,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -251122,19 +251122,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "data-package.json",
     "uncompressed_size": 4320,
-    "compressed_size": 1415,
-    "compression_ratio": 0.3275462962962963,
-    "peak_stack": 84,
+    "compressed_size": 1235,
+    "compression_ratio": 0.28587962962962965,
+    "peak_stack": 88,
     "cycles": [
-      600416,
-      752622,
-      1112581,
-      1849525,
-      3214735,
-      5990541,
-      11579525,
-      22387867,
-      42592424
+      563364,
+      717940,
+      1054056,
+      1741308,
+      3080032,
+      5758984,
+      11140972,
+      21608106,
+      41008767
     ],
     "checksums": [
       2509278550,
@@ -251149,12 +251149,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -251164,19 +251164,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "hifive_setup.bin",
     "uncompressed_size": 25296,
-    "compressed_size": 12844,
-    "compression_ratio": 0.5077482605945604,
-    "peak_stack": 84,
+    "compressed_size": 12167,
+    "compression_ratio": 0.4809851359898798,
+    "peak_stack": 88,
     "cycles": [
-      635074,
-      799600,
-      1138892,
-      1671044,
-      3069741,
-      5372661,
-      10448830,
-      19554107,
-      35877976
+      548862,
+      683123,
+      993804,
+      1465984,
+      2743374,
+      4893145,
+      9505667,
+      18215880,
+      33529428
     ],
     "checksums": [
       2385256829,
@@ -251191,12 +251191,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -251206,19 +251206,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "zynq7000s.dtb",
     "uncompressed_size": 15583,
-    "compressed_size": 6110,
-    "compression_ratio": 0.3920939485336585,
-    "peak_stack": 84,
+    "compressed_size": 5757,
+    "compression_ratio": 0.3694410575627286,
+    "peak_stack": 88,
     "cycles": [
-      785531,
-      997933,
-      1414116,
-      2266672,
-      4114098,
-      7532302,
-      13968605,
-      27075945,
-      51034491
+      680467,
+      914166,
+      1304644,
+      2087978,
+      4001509,
+      7169132,
+      13546755,
+      26116316,
+      49113136
     ],
     "checksums": [
       2895971482,
@@ -251233,12 +251233,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -251248,19 +251248,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "fvp_base_gicv3.dtb",
     "uncompressed_size": 10908,
-    "compressed_size": 4146,
-    "compression_ratio": 0.38008800880088006,
-    "peak_stack": 84,
+    "compressed_size": 3935,
+    "compression_ratio": 0.36074440777411076,
+    "peak_stack": 88,
     "cycles": [
-      827911,
-      1077992,
-      1616243,
-      2590193,
-      4751442,
-      8681727,
-      16373930,
-      31069695,
-      56876482
+      676524,
+      880553,
+      1342972,
+      2165330,
+      3933165,
+      7214615,
+      13358291,
+      25697309,
+      46513791
     ],
     "checksums": [
       2288577686,
@@ -251275,12 +251275,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -251290,19 +251290,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "wled_settings_leds.htm",
     "uncompressed_size": 67173,
-    "compressed_size": 29315,
-    "compression_ratio": 0.43641046253703125,
-    "peak_stack": 84,
+    "compressed_size": 27932,
+    "compression_ratio": 0.41582183317702054,
+    "peak_stack": 88,
     "cycles": [
-      842714,
-      1007940,
-      1501797,
-      2406137,
-      4173350,
-      7993052,
-      15204026,
-      28594016,
-      52317686
+      726145,
+      880500,
+      1314692,
+      2128699,
+      3686563,
+      6952377,
+      13368079,
+      25367515,
+      46323274
     ],
     "checksums": [
       1667554633,
@@ -251317,12 +251317,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -251332,19 +251332,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "speed_7578.csv",
     "uncompressed_size": 25928,
-    "compressed_size": 7090,
-    "compression_ratio": 0.27344955260722,
-    "peak_stack": 84,
+    "compressed_size": 6723,
+    "compression_ratio": 0.25929497068805923,
+    "peak_stack": 88,
     "cycles": [
-      1036549,
-      1425086,
-      2121090,
-      3516113,
-      6262929,
-      11814344,
-      21486718,
-      39665751,
-      72680987
+      909115,
+      1195951,
+      1743934,
+      2821055,
+      4882130,
+      9260946,
+      16843423,
+      31004690,
+      56679123
     ],
     "checksums": [
       3602514344,
@@ -251359,12 +251359,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -251374,19 +251374,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1",
     "dataset": "wled_settings_wifi.htm",
     "uncompressed_size": 13011,
-    "compressed_size": 6678,
-    "compression_ratio": 0.513258012451003,
-    "peak_stack": 84,
+    "compressed_size": 6472,
+    "compression_ratio": 0.4974252555529936,
+    "peak_stack": 88,
     "cycles": [
-      667334,
-      887157,
-      1232327,
-      2032006,
-      3431545,
-      6277203,
-      11606036,
-      21296293,
-      38466528
+      576745,
+      769838,
+      1076130,
+      1796934,
+      3029028,
+      5603404,
+      10270317,
+      18819492,
+      33534815
     ],
     "checksums": [
       1117725627,
@@ -251401,12 +251401,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -295852,19 +295852,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "cp.html",
     "uncompressed_size": 24603,
-    "compressed_size": 13556,
-    "compression_ratio": 0.5509897167012153,
-    "peak_stack": 84,
+    "compressed_size": 13071,
+    "compression_ratio": 0.5312766735763931,
+    "peak_stack": 88,
     "cycles": [
-      455942,
-      518990,
-      630916,
-      880416,
-      1361104,
-      2204721,
-      4116281,
-      7577516,
-      14661360
+      424746,
+      477860,
+      597795,
+      798777,
+      1269371,
+      2043345,
+      3822713,
+      7078770,
+      13537045
     ],
     "checksums": [
       2940965195,
@@ -295879,12 +295879,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -295894,19 +295894,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "ch32v003_bootloader.bin",
     "uncompressed_size": 1920,
-    "compressed_size": 1996,
-    "compression_ratio": 1.0395833333333333,
-    "peak_stack": 84,
+    "compressed_size": 1937,
+    "compression_ratio": 1.0088541666666666,
+    "peak_stack": 88,
     "cycles": [
-      242157,
-      254839,
-      283614,
-      332753,
-      434227,
-      642084,
-      1057345,
-      1779221,
-      3132596
+      211638,
+      221637,
+      244543,
+      282524,
+      370933,
+      547572,
+      908440,
+      1517736,
+      2606374
     ],
     "checksums": [
       3337172648,
@@ -295921,12 +295921,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -296146,19 +296146,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "FreeRTOSConfig.h",
     "uncompressed_size": 36522,
-    "compressed_size": 17667,
-    "compression_ratio": 0.4837358304583539,
-    "peak_stack": 84,
+    "compressed_size": 16611,
+    "compression_ratio": 0.4548217512732052,
+    "peak_stack": 88,
     "cycles": [
-      481321,
-      550631,
-      718126,
-      1034071,
-      1581490,
-      2728108,
-      5062166,
-      9346692,
-      17909510
+      435553,
+      514967,
+      678790,
+      990804,
+      1571327,
+      2765174,
+      5058778,
+      9491930,
+      18103793
     ],
     "checksums": [
       3891982175,
@@ -296173,12 +296173,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -296230,19 +296230,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "ch32v30x_blink.bin",
     "uncompressed_size": 1064,
-    "compressed_size": 791,
-    "compression_ratio": 0.743421052631579,
-    "peak_stack": 84,
+    "compressed_size": 753,
+    "compression_ratio": 0.7077067669172933,
+    "peak_stack": 88,
     "cycles": [
-      344960,
-      384031,
-      491607,
-      632499,
-      903042,
-      1519166,
-      2545505,
-      5186229,
-      9407113
+      321715,
+      360760,
+      471098,
+      616828,
+      889856,
+      1531107,
+      2571655,
+      5298158,
+      9594469
     ],
     "checksums": [
       1598959537,
@@ -296257,12 +296257,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -296356,19 +296356,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "data-package.json",
     "uncompressed_size": 4320,
-    "compressed_size": 1543,
-    "compression_ratio": 0.35717592592592595,
-    "peak_stack": 84,
+    "compressed_size": 1375,
+    "compression_ratio": 0.31828703703703703,
+    "peak_stack": 88,
     "cycles": [
-      502446,
-      584922,
-      765055,
-      1152756,
-      1830806,
-      3290635,
-      6204888,
-      11860302,
-      22674043
+      471589,
+      558152,
+      741237,
+      1096331,
+      1812919,
+      3268086,
+      6212357,
+      11912342,
+      22533702
     ],
     "checksums": [
       2509278550,
@@ -296383,12 +296383,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -296398,19 +296398,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "cp.html.gz",
     "uncompressed_size": 7960,
-    "compressed_size": 8716,
-    "compression_ratio": 1.0949748743718593,
-    "peak_stack": 84,
+    "compressed_size": 8468,
+    "compression_ratio": 1.063819095477387,
+    "peak_stack": 88,
     "cycles": [
-      219701,
-      228911,
-      247832,
-      281198,
-      354150,
-      495940,
-      779848,
-      1346160,
-      2480551
+      187838,
+      195275,
+      210343,
+      237658,
+      294529,
+      407647,
+      635238,
+      1088845,
+      1995859
     ],
     "checksums": [
       3442673072,
@@ -296425,12 +296425,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -296440,19 +296440,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "fields.c",
     "uncompressed_size": 11150,
-    "compressed_size": 5494,
-    "compression_ratio": 0.49273542600896864,
-    "peak_stack": 84,
+    "compressed_size": 5288,
+    "compression_ratio": 0.4742600896860987,
+    "peak_stack": 88,
     "cycles": [
-      523460,
-      593181,
-      771571,
-      1144881,
-      1754428,
-      3175855,
-      5743224,
-      10449129,
-      19320776
+      460800,
+      531176,
+      688866,
+      1052293,
+      1612358,
+      2876162,
+      5283641,
+      9628105,
+      17773685
     ],
     "checksums": [
       1427954421,
@@ -296467,12 +296467,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -296650,19 +296650,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "rv32i_add.bin",
     "uncompressed_size": 8708,
-    "compressed_size": 2368,
-    "compression_ratio": 0.2719338539274231,
-    "peak_stack": 84,
+    "compressed_size": 1716,
+    "compression_ratio": 0.19706017455213598,
+    "peak_stack": 88,
     "cycles": [
-      507071,
-      594351,
-      796109,
-      1136014,
-      1900413,
-      3292171,
-      6338023,
-      12221047,
-      23589762
+      503977,
+      588348,
+      771635,
+      1106444,
+      1794352,
+      3121767,
+      5955301,
+      11487369,
+      22117609
     ],
     "checksums": [
       1270319384,
@@ -296677,12 +296677,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -296692,19 +296692,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "xargs.1",
     "uncompressed_size": 4227,
-    "compressed_size": 2934,
-    "compression_ratio": 0.6941092973740242,
-    "peak_stack": 84,
+    "compressed_size": 2864,
+    "compression_ratio": 0.6775490891885498,
+    "peak_stack": 88,
     "cycles": [
-      396337,
-      448162,
-      541254,
-      749756,
-      1119146,
-      1887331,
-      3350883,
-      6049364,
-      11590638
+      351792,
+      402457,
+      486563,
+      673020,
+      1023661,
+      1772303,
+      3125587,
+      5652547,
+      10880299
     ],
     "checksums": [
       2910828474,
@@ -296719,12 +296719,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -296776,19 +296776,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "test.dtb",
     "uncompressed_size": 1805,
-    "compressed_size": 841,
-    "compression_ratio": 0.4659279778393352,
-    "peak_stack": 84,
+    "compressed_size": 806,
+    "compression_ratio": 0.44653739612188365,
+    "peak_stack": 88,
     "cycles": [
-      574611,
-      698509,
-      884983,
-      1305250,
-      2250350,
-      3908980,
-      7305969,
-      13847535,
-      24847357
+      494798,
+      621587,
+      786761,
+      1202471,
+      2084670,
+      3597369,
+      6836879,
+      13027375,
+      23390381
     ],
     "checksums": [
       4225417803,
@@ -296803,12 +296803,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -296860,19 +296860,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "grammar.lsp",
     "uncompressed_size": 3721,
-    "compressed_size": 2069,
-    "compression_ratio": 0.556033324375168,
-    "peak_stack": 84,
+    "compressed_size": 2010,
+    "compression_ratio": 0.5401773716742811,
+    "peak_stack": 88,
     "cycles": [
-      468223,
-      515641,
-      649873,
-      892872,
-      1466162,
-      2513230,
-      4390556,
-      7206161,
-      12323595
+      416115,
+      460998,
+      588661,
+      793351,
+      1319951,
+      2255572,
+      3979382,
+      6588438,
+      11070017
     ],
     "checksums": [
       2186991957,
@@ -296887,12 +296887,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -296902,19 +296902,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "zcu102_arm.dtb",
     "uncompressed_size": 66838,
-    "compressed_size": 22946,
-    "compression_ratio": 0.3433076992130225,
-    "peak_stack": 84,
+    "compressed_size": 20404,
+    "compression_ratio": 0.3052754421137676,
+    "peak_stack": 88,
     "cycles": [
-      633320,
-      769183,
-      1017973,
-      1561919,
-      2733431,
-      5044392,
-      9252008,
-      17400773,
-      32990906
+      562033,
+      701725,
+      975732,
+      1515188,
+      2625286,
+      4937316,
+      9247968,
+      17508397,
+      33132899
     ],
     "checksums": [
       416398286,
@@ -296929,12 +296929,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -296944,19 +296944,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "zynq7000s.dtb",
     "uncompressed_size": 15583,
-    "compressed_size": 6982,
-    "compression_ratio": 0.44805236475646537,
-    "peak_stack": 84,
+    "compressed_size": 6647,
+    "compression_ratio": 0.4265545787075659,
+    "peak_stack": 88,
     "cycles": [
-      558757,
-      656730,
-      846196,
-      1245573,
-      2154488,
-      3795303,
-      7038058,
-      13600142,
-      25682642
+      487575,
+      582392,
+      761869,
+      1116893,
+      1965377,
+      3457443,
+      6410502,
+      12295207,
+      23508802
     ],
     "checksums": [
       2895971482,
@@ -296971,12 +296971,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -296986,19 +296986,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "speed_7578.csv",
     "uncompressed_size": 25928,
-    "compressed_size": 8858,
-    "compression_ratio": 0.3416383832150571,
-    "peak_stack": 84,
+    "compressed_size": 8660,
+    "compression_ratio": 0.334001851280469,
+    "peak_stack": 88,
     "cycles": [
-      645413,
-      782366,
-      1028658,
-      1567438,
-      2547979,
-      4598066,
-      8301434,
-      15365307,
-      28779238
+      572805,
+      689113,
+      875811,
+      1311488,
+      2099497,
+      3722698,
+      6695916,
+      12391214,
+      23263505
     ],
     "checksums": [
       3602514344,
@@ -297013,12 +297013,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -297028,19 +297028,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "fvp_base_gicv3.dtb",
     "uncompressed_size": 10908,
-    "compressed_size": 4585,
-    "compression_ratio": 0.4203337000366703,
-    "peak_stack": 84,
+    "compressed_size": 4491,
+    "compression_ratio": 0.41171617161716173,
+    "peak_stack": 88,
     "cycles": [
-      562631,
-      693290,
-      923189,
-      1374562,
-      2360680,
-      4130414,
-      7815445,
-      14538331,
-      26857155
+      495247,
+      615312,
+      856231,
+      1298741,
+      2200779,
+      3850134,
+      7392032,
+      13777116,
+      25303664
     ],
     "checksums": [
       2288577686,
@@ -297055,12 +297055,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -297112,19 +297112,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "wled_settings_wifi.htm",
     "uncompressed_size": 13011,
-    "compressed_size": 7574,
-    "compression_ratio": 0.5821228191530243,
-    "peak_stack": 84,
+    "compressed_size": 7299,
+    "compression_ratio": 0.5609868572746138,
+    "peak_stack": 88,
     "cycles": [
-      457987,
-      534671,
-      662323,
-      943010,
-      1385024,
-      2403675,
-      4331306,
-      7966792,
-      14689404
+      412718,
+      484002,
+      592713,
+      868343,
+      1274114,
+      2167745,
+      3917261,
+      7056937,
+      12833601
     ],
     "checksums": [
       1117725627,
@@ -297139,12 +297139,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -297154,19 +297154,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "rv32i_fence_i.bin",
     "uncompressed_size": 4232,
-    "compressed_size": 921,
-    "compression_ratio": 0.21762759924385633,
-    "peak_stack": 84,
+    "compressed_size": 609,
+    "compression_ratio": 0.14390359168241965,
+    "peak_stack": 88,
     "cycles": [
-      474716,
-      636109,
-      992469,
-      1658457,
-      3000848,
-      5725264,
-      11008492,
-      21715484,
-      42681356
+      462341,
+      643989,
+      982079,
+      1706807,
+      3122019,
+      5992187,
+      11559417,
+      22844287,
+      44916842
     ],
     "checksums": [
       1468463971,
@@ -297181,12 +297181,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -297196,19 +297196,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "hifive_setup.bin",
     "uncompressed_size": 25296,
-    "compressed_size": 13845,
-    "compression_ratio": 0.5473197343453511,
-    "peak_stack": 84,
+    "compressed_size": 12997,
+    "compression_ratio": 0.5137966476913346,
+    "peak_stack": 88,
     "cycles": [
-      466679,
-      535201,
-      681304,
-      932547,
-      1565076,
-      2564684,
-      4808379,
-      9193353,
-      17031098
+      415136,
+      478793,
+      649239,
+      869101,
+      1499687,
+      2537213,
+      4866675,
+      9318518,
+      17234591
     ],
     "checksums": [
       2385256829,
@@ -297223,12 +297223,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -297238,19 +297238,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "wled_index.htm",
     "uncompressed_size": 19395,
-    "compressed_size": 8776,
-    "compression_ratio": 0.4524877545759216,
-    "peak_stack": 84,
+    "compressed_size": 8195,
+    "compression_ratio": 0.4225315803042021,
+    "peak_stack": 88,
     "cycles": [
-      509040,
-      595234,
-      755093,
-      1109671,
-      1775815,
-      2999563,
-      5789555,
-      10820409,
-      20316409
+      465491,
+      550587,
+      680302,
+      1075628,
+      1700541,
+      2911931,
+      5603139,
+      10469865,
+      19806868
     ],
     "checksums": [
       1321955046,
@@ -297265,12 +297265,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -297322,19 +297322,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "hifive-unleashed.dts",
     "uncompressed_size": 2290,
-    "compressed_size": 1431,
-    "compression_ratio": 0.6248908296943232,
-    "peak_stack": 84,
+    "compressed_size": 1357,
+    "compression_ratio": 0.5925764192139737,
+    "peak_stack": 88,
     "cycles": [
-      388478,
-      429335,
-      489961,
-      666026,
-      895605,
-      1514023,
-      2570721,
-      4489352,
-      7498895
+      340876,
+      377177,
+      436791,
+      596289,
+      805150,
+      1354346,
+      2365432,
+      4167241,
+      7083824
     ],
     "checksums": [
       2872329334,
@@ -297349,12 +297349,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -297448,19 +297448,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1",
     "dataset": "wled_settings_leds.htm",
     "uncompressed_size": 67173,
-    "compressed_size": 33937,
-    "compression_ratio": 0.5052178702752594,
-    "peak_stack": 84,
+    "compressed_size": 32628,
+    "compression_ratio": 0.48573087401187975,
+    "peak_stack": 88,
     "cycles": [
-      528477,
-      591773,
-      780538,
-      1076578,
-      1656434,
-      3060953,
-      5590303,
-      10304751,
-      19043671
+      476107,
+      547104,
+      723640,
+      1008862,
+      1628162,
+      2934058,
+      5431880,
+      10013742,
+      18465038
     ],
     "checksums": [
       1667554633,
@@ -297475,12 +297475,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -300514,19 +300514,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "ch32v003_bootloader.bin",
     "uncompressed_size": 1920,
-    "compressed_size": 2065,
-    "compression_ratio": 1.0755208333333333,
-    "peak_stack": 84,
+    "compressed_size": 2004,
+    "compression_ratio": 1.04375,
+    "peak_stack": 88,
     "cycles": [
-      223677,
-      236127,
-      251402,
-      290885,
-      374278,
-      520239,
-      840494,
-      1433996,
-      2611741
+      192065,
+      201043,
+      214589,
+      244985,
+      312770,
+      427783,
+      681289,
+      1159022,
+      2117379
     ],
     "checksums": [
       3337172648,
@@ -300541,12 +300541,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -300724,19 +300724,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "FreeRTOSConfig.h",
     "uncompressed_size": 36522,
-    "compressed_size": 22624,
-    "compression_ratio": 0.6194622419363671,
-    "peak_stack": 84,
+    "compressed_size": 21422,
+    "compression_ratio": 0.5865505722578173,
+    "peak_stack": 88,
     "cycles": [
-      360509,
-      393898,
-      484285,
-      641141,
-      938143,
-      1500395,
-      2769347,
-      5032974,
-      9476708
+      328352,
+      356368,
+      422865,
+      572329,
+      833644,
+      1329853,
+      2425008,
+      4417789,
+      8273009
     ],
     "checksums": [
       3891982175,
@@ -300751,12 +300751,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -300850,19 +300850,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "fvp_base_gicv3.dtb",
     "uncompressed_size": 10908,
-    "compressed_size": 5676,
-    "compression_ratio": 0.5203520352035204,
-    "peak_stack": 84,
+    "compressed_size": 5632,
+    "compression_ratio": 0.5163182984965163,
+    "peak_stack": 88,
     "cycles": [
-      401648,
-      453968,
-      548004,
-      696466,
-      1035474,
-      1670517,
-      3087918,
-      5530039,
-      9885880
+      356091,
+      402646,
+      476752,
+      630933,
+      922334,
+      1480548,
+      2715527,
+      4832865,
+      8828241
     ],
     "checksums": [
       2288577686,
@@ -300877,12 +300877,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -300892,19 +300892,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "rv32i_add.bin",
     "uncompressed_size": 8708,
-    "compressed_size": 2147,
-    "compression_ratio": 0.24655489205328435,
-    "peak_stack": 84,
+    "compressed_size": 1778,
+    "compression_ratio": 0.20418006430868169,
+    "peak_stack": 88,
     "cycles": [
-      482714,
-      529347,
-      634090,
-      813071,
-      1218986,
-      1843517,
-      2863391,
-      4832391,
-      7719324
+      380668,
+      438442,
+      566683,
+      802164,
+      1267524,
+      2195866,
+      4164936,
+      7984099,
+      15335120
     ],
     "checksums": [
       1270319384,
@@ -300919,12 +300919,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -300934,19 +300934,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "hifive-unleashed.dts",
     "uncompressed_size": 2290,
-    "compressed_size": 1664,
-    "compression_ratio": 0.7266375545851529,
-    "peak_stack": 84,
+    "compressed_size": 1557,
+    "compression_ratio": 0.6799126637554586,
+    "peak_stack": 88,
     "cycles": [
-      316981,
-      352907,
-      385241,
-      492084,
-      650427,
-      1050724,
-      1741770,
-      3070216,
-      5308437
+      274732,
+      301593,
+      329907,
+      408260,
+      528101,
+      839502,
+      1382122,
+      2379884,
+      4120070
     ],
     "checksums": [
       2872329334,
@@ -300961,12 +300961,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -300976,19 +300976,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "wled_settings_wifi.htm",
     "uncompressed_size": 13011,
-    "compressed_size": 9487,
-    "compression_ratio": 0.7291522557835678,
-    "peak_stack": 84,
+    "compressed_size": 9248,
+    "compression_ratio": 0.7107831834601491,
+    "peak_stack": 88,
     "cycles": [
-      337985,
-      377291,
-      435450,
-      555406,
-      774694,
-      1297727,
-      2217005,
-      3933065,
-      7197568
+      293524,
+      322542,
+      361617,
+      452175,
+      606501,
+      975528,
+      1619953,
+      2831680,
+      5160720
     ],
     "checksums": [
       1117725627,
@@ -301003,12 +301003,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -301018,19 +301018,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "cp.html.gz",
     "uncompressed_size": 7960,
-    "compressed_size": 8716,
-    "compression_ratio": 1.0949748743718593,
-    "peak_stack": 84,
+    "compressed_size": 8468,
+    "compression_ratio": 1.063819095477387,
+    "peak_stack": 88,
     "cycles": [
-      219701,
-      228911,
-      247832,
-      281198,
-      354150,
-      495940,
-      779848,
-      1346160,
-      2480551
+      187838,
+      195275,
+      210343,
+      237658,
+      294529,
+      407647,
+      635238,
+      1088845,
+      1995859
     ],
     "checksums": [
       3442673072,
@@ -301045,12 +301045,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -301060,19 +301060,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "fields.c",
     "uncompressed_size": 11150,
-    "compressed_size": 7253,
-    "compression_ratio": 0.6504932735426009,
-    "peak_stack": 84,
+    "compressed_size": 6964,
+    "compression_ratio": 0.6245739910313901,
+    "peak_stack": 88,
     "cycles": [
-      350001,
-      381305,
-      430745,
-      582573,
-      812003,
-      1332194,
-      2339521,
-      4155358,
-      7646085
+      312421,
+      342870,
+      380715,
+      511373,
+      700476,
+      1150029,
+      1983101,
+      3519428,
+      6453825
     ],
     "checksums": [
       1427954421,
@@ -301087,12 +301087,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -301102,19 +301102,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "hifive_setup.bin",
     "uncompressed_size": 25296,
-    "compressed_size": 15783,
-    "compression_ratio": 0.6239326375711575,
-    "peak_stack": 84,
+    "compressed_size": 15090,
+    "compression_ratio": 0.5965370018975332,
+    "peak_stack": 88,
     "cycles": [
-      344788,
-      378659,
-      453726,
-      577073,
-      866033,
-      1383858,
-      2479850,
-      4807794,
-      8613789
+      307777,
+      340137,
+      403999,
+      512107,
+      794902,
+      1237977,
+      2210624,
+      4314363,
+      7703100
     ],
     "checksums": [
       2385256829,
@@ -301129,12 +301129,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -301144,19 +301144,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "grammar.lsp",
     "uncompressed_size": 3721,
-    "compressed_size": 2710,
-    "compression_ratio": 0.7282988443966676,
-    "peak_stack": 84,
+    "compressed_size": 2654,
+    "compression_ratio": 0.7132491265788766,
+    "peak_stack": 88,
     "cycles": [
-      325743,
-      342733,
-      401211,
-      494780,
-      737655,
-      1150040,
-      1985704,
-      3165067,
-      5319539
+      293368,
+      305822,
+      364391,
+      439646,
+      662525,
+      1006771,
+      1785891,
+      2819549,
+      4696041
     ],
     "checksums": [
       2186991957,
@@ -301171,12 +301171,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -301186,19 +301186,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "ch32v30x_blink.bin",
     "uncompressed_size": 1064,
-    "compressed_size": 815,
-    "compression_ratio": 0.7659774436090225,
-    "peak_stack": 84,
+    "compressed_size": 777,
+    "compression_ratio": 0.7302631578947368,
+    "peak_stack": 88,
     "cycles": [
-      311872,
-      339607,
-      412057,
-      531781,
-      751269,
-      1179350,
-      1902724,
-      3729549,
-      6827093
+      278854,
+      309345,
+      381426,
+      494127,
+      693908,
+      1184186,
+      1974024,
+      4052283,
+      7335699
     ],
     "checksums": [
       1598959537,
@@ -301213,12 +301213,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -301228,19 +301228,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "test.dtb",
     "uncompressed_size": 1805,
-    "compressed_size": 1099,
-    "compression_ratio": 0.6088642659279778,
-    "peak_stack": 84,
+    "compressed_size": 1019,
+    "compression_ratio": 0.5645429362880886,
+    "peak_stack": 88,
     "cycles": [
-      362186,
-      398780,
-      459072,
-      601587,
-      882780,
-      1423643,
-      2530528,
-      4592929,
-      8323631
+      335737,
+      359686,
+      415168,
+      509386,
+      757350,
+      1141731,
+      2046601,
+      3752390,
+      6819930
     ],
     "checksums": [
       4225417803,
@@ -301255,12 +301255,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -301270,19 +301270,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "cp.html",
     "uncompressed_size": 24603,
-    "compressed_size": 16249,
-    "compression_ratio": 0.6604479128561558,
-    "peak_stack": 84,
+    "compressed_size": 15734,
+    "compression_ratio": 0.6395155062390765,
+    "peak_stack": 88,
     "cycles": [
-      372006,
-      399655,
-      476649,
-      641987,
-      969058,
-      1524656,
-      2804157,
-      5245091,
-      9880478
+      335126,
+      351809,
+      415650,
+      577302,
+      843816,
+      1305149,
+      2401455,
+      4419449,
+      8348478
     ],
     "checksums": [
       2940965195,
@@ -301297,12 +301297,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -301312,19 +301312,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "data-package.json",
     "uncompressed_size": 4320,
-    "compressed_size": 1932,
-    "compression_ratio": 0.44722222222222224,
-    "peak_stack": 84,
+    "compressed_size": 1644,
+    "compression_ratio": 0.38055555555555554,
+    "peak_stack": 88,
     "cycles": [
-      402704,
-      424291,
-      506895,
-      673822,
-      966650,
-      1621323,
-      2927537,
-      5470280,
-      10357242
+      375297,
+      403110,
+      473084,
+      614234,
+      881959,
+      1464566,
+      2594026,
+      4897155,
+      9148415
     ],
     "checksums": [
       2509278550,
@@ -301339,12 +301339,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -301354,19 +301354,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "speed_7578.csv",
     "uncompressed_size": 25928,
-    "compressed_size": 12703,
-    "compression_ratio": 0.48993366244986114,
-    "peak_stack": 84,
+    "compressed_size": 11129,
+    "compression_ratio": 0.4292270904041962,
+    "peak_stack": 88,
     "cycles": [
-      503853,
-      586876,
-      718017,
-      1063077,
-      1621942,
-      2793716,
-      5028460,
-      9443098,
-      17986972
+      501262,
+      576153,
+      692789,
+      948607,
+      1428170,
+      2464583,
+      4371818,
+      8058797,
+      15163977
     ],
     "checksums": [
       3602514344,
@@ -301381,12 +301381,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -301438,19 +301438,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "xargs.1",
     "uncompressed_size": 4227,
-    "compressed_size": 3668,
-    "compression_ratio": 0.867754908918855,
-    "peak_stack": 84,
+    "compressed_size": 3569,
+    "compression_ratio": 0.8443340430565413,
+    "peak_stack": 88,
     "cycles": [
-      281012,
-      309273,
-      344031,
-      419615,
-      563886,
-      870663,
-      1478813,
-      2610938,
-      4926479
+      246354,
+      272958,
+      298276,
+      368382,
+      494078,
+      761267,
+      1289623,
+      2259759,
+      4363789
     ],
     "checksums": [
       2910828474,
@@ -301465,12 +301465,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -301480,19 +301480,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "wled_index.htm",
     "uncompressed_size": 19395,
-    "compressed_size": 10508,
-    "compression_ratio": 0.5417891209074504,
-    "peak_stack": 84,
+    "compressed_size": 9797,
+    "compression_ratio": 0.5051301881928332,
+    "peak_stack": 88,
     "cycles": [
-      388295,
-      435075,
-      516130,
-      715232,
-      1066696,
-      1739696,
-      3224358,
-      5851565,
-      11036325
+      362660,
+      398817,
+      469806,
+      638081,
+      916846,
+      1515709,
+      2866803,
+      5063124,
+      9587286
     ],
     "checksums": [
       1321955046,
@@ -301507,12 +301507,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -301522,19 +301522,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "wled_settings_leds.htm",
     "uncompressed_size": 67173,
-    "compressed_size": 44619,
-    "compression_ratio": 0.6642400964673306,
-    "peak_stack": 84,
+    "compressed_size": 42885,
+    "compression_ratio": 0.6384261533651914,
+    "peak_stack": 88,
     "cycles": [
-      356654,
-      389326,
-      476570,
-      590098,
-      837946,
-      1453836,
-      2495495,
-      4540720,
-      8183072
+      322278,
+      349280,
+      412744,
+      506137,
+      752594,
+      1235757,
+      2109886,
+      3851821,
+      6837605
     ],
     "checksums": [
       1667554633,
@@ -301549,12 +301549,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -301564,19 +301564,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "zynq7000s.dtb",
     "uncompressed_size": 15583,
-    "compressed_size": 8806,
-    "compression_ratio": 0.5651029968555477,
-    "peak_stack": 84,
+    "compressed_size": 8364,
+    "compression_ratio": 0.5367387537701341,
+    "peak_stack": 88,
     "cycles": [
-      407634,
-      449119,
-      521588,
-      675907,
-      1030895,
-      1749953,
-      3002352,
-      5638737,
-      10634757
+      365055,
+      397788,
+      470847,
+      596034,
+      901164,
+      1526414,
+      2616937,
+      4887799,
+      9246240
     ],
     "checksums": [
       2895971482,
@@ -301591,12 +301591,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -301606,19 +301606,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "rv32i_fence_i.bin",
     "uncompressed_size": 4232,
-    "compressed_size": 950,
-    "compression_ratio": 0.22448015122873347,
-    "peak_stack": 84,
+    "compressed_size": 634,
+    "compression_ratio": 0.1498109640831758,
+    "peak_stack": 88,
     "cycles": [
-      384327,
-      433786,
-      525994,
-      685239,
-      1034834,
-      1728160,
-      3092436,
-      5836332,
-      11204076
+      364520,
+      425963,
+      536995,
+      746468,
+      1200775,
+      2092903,
+      3838196,
+      7372000,
+      14265462
     ],
     "checksums": [
       1468463971,
@@ -301633,12 +301633,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -301648,19 +301648,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1",
     "dataset": "zcu102_arm.dtb",
     "uncompressed_size": 66838,
-    "compressed_size": 26310,
-    "compression_ratio": 0.3936383494419342,
-    "peak_stack": 84,
+    "compressed_size": 24804,
+    "compression_ratio": 0.3711062569197163,
+    "peak_stack": 88,
     "cycles": [
-      470194,
-      527625,
-      626122,
-      849444,
-      1277160,
-      2153889,
-      3802822,
-      6913295,
-      13223448
+      426370,
+      471871,
+      562175,
+      780695,
+      1163463,
+      1959513,
+      3519819,
+      6446222,
+      12428347
     ],
     "checksums": [
       416398286,
@@ -301675,12 +301675,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -323404,19 +323404,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "ch32v003_bootloader.bin",
     "uncompressed_size": 1920,
-    "compressed_size": 1824,
-    "compression_ratio": 0.95,
-    "peak_stack": 84,
+    "compressed_size": 1795,
+    "compression_ratio": 0.9348958333333334,
+    "peak_stack": 88,
     "cycles": [
-      1053326,
-      1121208,
-      1247502,
-      1417749,
-      1905485,
-      2876486,
-      4545401,
-      7305097,
-      11366431
+      800272,
+      855754,
+      957182,
+      1111634,
+      1504166,
+      2305453,
+      3677558,
+      5974595,
+      9429067
     ],
     "checksums": [
       3337172648,
@@ -323431,12 +323431,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -323446,19 +323446,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "data-package.json",
     "uncompressed_size": 4320,
-    "compressed_size": 1223,
-    "compression_ratio": 0.2831018518518518,
-    "peak_stack": 84,
+    "compressed_size": 1066,
+    "compression_ratio": 0.24675925925925926,
+    "peak_stack": 88,
     "cycles": [
-      2048652,
-      2694305,
-      4081839,
-      6730656,
-      12131987,
-      22661254,
-      43882954,
-      82616636,
-      136914243
+      1553164,
+      2069798,
+      3162210,
+      5259987,
+      9348474,
+      17800003,
+      34577337,
+      65721466,
+      114978871
     ],
     "checksums": [
       2509278550,
@@ -323473,12 +323473,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -323488,19 +323488,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "rv32i_fence_i.bin",
     "uncompressed_size": 4232,
-    "compressed_size": 632,
-    "compression_ratio": 0.14933837429111532,
-    "peak_stack": 84,
+    "compressed_size": 445,
+    "compression_ratio": 0.10515122873345936,
+    "peak_stack": 88,
     "cycles": [
-      2112939,
-      2799983,
-      4055699,
-      6577161,
-      11705319,
-      17561314,
-      23821427,
-      30047913,
-      37140937
+      1353067,
+      1754216,
+      2541946,
+      4115514,
+      7224481,
+      13642300,
+      23527486,
+      38018393,
+      56769879
     ],
     "checksums": [
       1468463971,
@@ -323515,12 +323515,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -323530,19 +323530,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "hifive_setup.bin",
     "uncompressed_size": 25296,
-    "compressed_size": 11557,
-    "compression_ratio": 0.456870651486401,
-    "peak_stack": 84,
+    "compressed_size": 10905,
+    "compression_ratio": 0.43109582542694497,
+    "peak_stack": 88,
     "cycles": [
-      2591608,
-      4133863,
-      7195864,
-      12244788,
-      25752049,
-      46093193,
-      88642744,
-      166204704,
-      292528094
+      1754530,
+      2713814,
+      4710450,
+      7817586,
+      16197017,
+      30331484,
+      58953586,
+      113658899,
+      202077668
     ],
     "checksums": [
       2385256829,
@@ -323557,12 +323557,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -323572,19 +323572,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "fields.c",
     "uncompressed_size": 11150,
-    "compressed_size": 4085,
-    "compression_ratio": 0.3663677130044843,
-    "peak_stack": 84,
+    "compressed_size": 3831,
+    "compression_ratio": 0.34358744394618834,
+    "peak_stack": 88,
     "cycles": [
-      2981045,
-      4252226,
-      7369045,
-      12018836,
-      21951082,
-      41434763,
-      80392220,
-      146327013,
-      254751398
+      2260250,
+      3212804,
+      5716225,
+      9352079,
+      17338657,
+      32867079,
+      63488152,
+      115869164,
+      204464246
     ],
     "checksums": [
       1427954421,
@@ -323599,12 +323599,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -323614,19 +323614,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "ch32v30x_blink.bin",
     "uncompressed_size": 1064,
-    "compressed_size": 724,
-    "compression_ratio": 0.6804511278195489,
-    "peak_stack": 83,
+    "compressed_size": 699,
+    "compression_ratio": 0.6569548872180451,
+    "peak_stack": 88,
     "cycles": [
-      888661,
-      1049574,
-      1400219,
-      1972859,
-      2996515,
-      4729895,
-      6593603,
-      10034902,
-      14159697
+      645932,
+      779812,
+      1093592,
+      1593884,
+      2485370,
+      4528539,
+      7732306,
+      16079738,
+      28403818
     ],
     "checksums": [
       1598959537,
@@ -323641,12 +323641,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -323656,19 +323656,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "cp.html.gz",
     "uncompressed_size": 7960,
-    "compressed_size": 8548,
-    "compression_ratio": 1.0738693467336684,
-    "peak_stack": 84,
+    "compressed_size": 8301,
+    "compression_ratio": 1.0428391959798995,
+    "peak_stack": 88,
     "cycles": [
-      419278,
-      427992,
-      447108,
-      468757,
-      557274,
-      693938,
-      968278,
-      1535641,
-      2664893
+      260109,
+      267385,
+      281997,
+      305474,
+      367951,
+      481171,
+      704547,
+      1159874,
+      2066169
     ],
     "checksums": [
       3442673072,
@@ -323683,12 +323683,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -323740,19 +323740,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "FreeRTOSConfig.h",
     "uncompressed_size": 36522,
-    "compressed_size": 13242,
-    "compression_ratio": 0.36257598160013144,
-    "peak_stack": 84,
+    "compressed_size": 12173,
+    "compression_ratio": 0.33330595257652923,
+    "peak_stack": 88,
     "cycles": [
-      3199981,
-      4683771,
-      7745114,
-      14082546,
-      25643421,
-      48873213,
-      95928048,
-      174828223,
-      333834657
+      2394455,
+      3609088,
+      5966833,
+      10895975,
+      20100461,
+      38860353,
+      77379332,
+      142202547,
+      271094880
     ],
     "checksums": [
       3891982175,
@@ -323767,12 +323767,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -323782,19 +323782,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "hifive-unleashed.dts",
     "uncompressed_size": 2290,
-    "compressed_size": 1173,
-    "compression_ratio": 0.5122270742358078,
-    "peak_stack": 84,
+    "compressed_size": 1121,
+    "compression_ratio": 0.48951965065502184,
+    "peak_stack": 88,
     "cycles": [
-      1856355,
-      2453798,
-      3733952,
-      6589607,
-      10589826,
-      21194231,
-      37165217,
-      67003565,
-      99267860
+      1329891,
+      1768853,
+      2732566,
+      4829332,
+      7809671,
+      15575832,
+      27509956,
+      50204360,
+      78340030
     ],
     "checksums": [
       2872329334,
@@ -323809,12 +323809,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -323824,19 +323824,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "grammar.lsp",
     "uncompressed_size": 3721,
-    "compressed_size": 1628,
-    "compression_ratio": 0.4375167965600645,
-    "peak_stack": 84,
+    "compressed_size": 1559,
+    "compression_ratio": 0.4189733942488578,
+    "peak_stack": 88,
     "cycles": [
-      1997411,
-      2528386,
-      3903947,
-      6091956,
-      11200142,
-      20958045,
-      37263940,
-      60363977,
-      93957109
+      1546441,
+      2028140,
+      3081795,
+      4961897,
+      8941054,
+      16789371,
+      29990712,
+      49655253,
+      76943740
     ],
     "checksums": [
       2186991957,
@@ -323851,12 +323851,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -323866,19 +323866,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "rv32i_add.bin",
     "uncompressed_size": 8708,
-    "compressed_size": 1709,
-    "compression_ratio": 0.19625631603123564,
-    "peak_stack": 84,
+    "compressed_size": 1356,
+    "compression_ratio": 0.155718879191548,
+    "peak_stack": 88,
     "cycles": [
-      3626960,
-      5776376,
-      10234572,
-      18520485,
-      35374362,
-      52634039,
-      76275124,
-      97554996,
-      119107749
+      2208503,
+      3471931,
+      6345312,
+      11505623,
+      22059486,
+      42294295,
+      80169372,
+      140086720,
+      223761060
     ],
     "checksums": [
       1270319384,
@@ -323893,12 +323893,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -323992,19 +323992,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "fvp_base_gicv3.dtb",
     "uncompressed_size": 10908,
-    "compressed_size": 3624,
-    "compression_ratio": 0.33223322332233224,
-    "peak_stack": 84,
+    "compressed_size": 3442,
+    "compression_ratio": 0.31554822148881556,
+    "peak_stack": 88,
     "cycles": [
-      2752185,
-      3820390,
-      6031092,
-      10731694,
-      20612227,
-      38522889,
-      70340272,
-      132131098,
-      221521463
+      2124207,
+      3029814,
+      4766939,
+      8717107,
+      16945884,
+      31498156,
+      58592531,
+      109563633,
+      183576492
     ],
     "checksums": [
       2288577686,
@@ -324019,12 +324019,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -324076,19 +324076,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "cp.html",
     "uncompressed_size": 24603,
-    "compressed_size": 10915,
-    "compression_ratio": 0.44364508393285373,
-    "peak_stack": 84,
+    "compressed_size": 10321,
+    "compression_ratio": 0.4195016867861643,
+    "peak_stack": 88,
     "cycles": [
-      2580444,
-      3511798,
-      5389993,
-      8924041,
-      16315607,
-      29292628,
-      57357326,
-      108774622,
-      204621227
+      1991415,
+      2747415,
+      4173539,
+      7245506,
+      13115555,
+      24229545,
+      47175478,
+      89528028,
+      171361655
     ],
     "checksums": [
       2940965195,
@@ -324103,12 +324103,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -324496,19 +324496,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "wled_index.htm",
     "uncompressed_size": 19395,
-    "compressed_size": 7063,
-    "compression_ratio": 0.3641660221706625,
-    "peak_stack": 84,
+    "compressed_size": 6493,
+    "compression_ratio": 0.33477700438257285,
+    "peak_stack": 88,
     "cycles": [
-      2656841,
-      3852969,
-      5971540,
-      11003763,
-      19810915,
-      37129043,
-      75156399,
-      140882853,
-      258330316
+      1897582,
+      2791039,
+      4360702,
+      8177554,
+      14924373,
+      27851909,
+      55443730,
+      105327169,
+      199659514
     ],
     "checksums": [
       1321955046,
@@ -324523,12 +324523,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -324580,19 +324580,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "zynq7000s.dtb",
     "uncompressed_size": 15583,
-    "compressed_size": 5369,
-    "compression_ratio": 0.34454212924340627,
-    "peak_stack": 84,
+    "compressed_size": 5032,
+    "compression_ratio": 0.32291599820317013,
+    "peak_stack": 88,
     "cycles": [
-      3014905,
-      4273759,
-      6925428,
-      12578672,
-      23820977,
-      44488440,
-      83446087,
-      159876651,
-      296339688
+      2329292,
+      3257044,
+      5288837,
+      9743195,
+      18378192,
+      34466652,
+      65083504,
+      124552105,
+      228821918
     ],
     "checksums": [
       2895971482,
@@ -324607,12 +324607,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -324622,19 +324622,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "test.dtb",
     "uncompressed_size": 1805,
-    "compressed_size": 656,
-    "compression_ratio": 0.3634349030470914,
-    "peak_stack": 84,
+    "compressed_size": 623,
+    "compression_ratio": 0.34515235457063714,
+    "peak_stack": 88,
     "cycles": [
-      2202264,
-      3020659,
-      4759598,
-      8195292,
-      14898227,
-      27306971,
-      53591079,
-      99481058,
-      169100022
+      1780892,
+      2475288,
+      3924643,
+      6952886,
+      12723582,
+      23117011,
+      45525286,
+      84563044,
+      142770289
     ],
     "checksums": [
       4225417803,
@@ -324649,12 +324649,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -324706,19 +324706,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "speed_7578.csv",
     "uncompressed_size": 25928,
-    "compressed_size": 5894,
-    "compression_ratio": 0.22732181425485962,
-    "peak_stack": 84,
+    "compressed_size": 5526,
+    "compression_ratio": 0.2131286639925949,
+    "peak_stack": 88,
     "cycles": [
-      3106676,
-      4631171,
-      7543596,
-      13074867,
-      24116859,
-      44563980,
-      77141752,
-      137385126,
-      246058021
+      2273414,
+      3434490,
+      5505162,
+      9589067,
+      17737229,
+      33687375,
+      60735244,
+      110174752,
+      199274254
     ],
     "checksums": [
       3602514344,
@@ -324733,12 +324733,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -324832,19 +324832,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "xargs.1",
     "uncompressed_size": 4227,
-    "compressed_size": 2319,
-    "compression_ratio": 0.5486160397444997,
-    "peak_stack": 84,
+    "compressed_size": 2252,
+    "compression_ratio": 0.5327655547669742,
+    "peak_stack": 88,
     "cycles": [
-      2191901,
-      2857109,
-      4068186,
-      6899621,
-      11485274,
-      21752879,
-      41821838,
-      73515687,
-      133565622
+      1721197,
+      2272199,
+      3373597,
+      5839953,
+      9869071,
+      18958555,
+      36336417,
+      64144914,
+      118141619
     ],
     "checksums": [
       2910828474,
@@ -324859,12 +324859,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -324874,19 +324874,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "zcu102_arm.dtb",
     "uncompressed_size": 66838,
-    "compressed_size": 17360,
-    "compression_ratio": 0.25973248750710676,
-    "peak_stack": 84,
+    "compressed_size": 14889,
+    "compression_ratio": 0.22276250037403872,
+    "peak_stack": 88,
     "cycles": [
-      3606146,
-      5646189,
-      9224696,
-      16609495,
-      31339605,
-      61254488,
-      116547292,
-      214653506,
-      387929741
+      2610945,
+      3994529,
+      6454291,
+      11376124,
+      21634111,
+      41709355,
+      79571609,
+      150438728,
+      272999547
     ],
     "checksums": [
       416398286,
@@ -324901,12 +324901,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -324958,19 +324958,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "wled_settings_wifi.htm",
     "uncompressed_size": 13011,
-    "compressed_size": 5908,
-    "compression_ratio": 0.4540773191914534,
-    "peak_stack": 84,
+    "compressed_size": 5660,
+    "compression_ratio": 0.43501652447928674,
+    "peak_stack": 88,
     "cycles": [
-      2550866,
-      3737472,
-      6135065,
-      10396932,
-      18833730,
-      35386393,
-      64758467,
-      122254082,
-      207383613
+      1937627,
+      2857385,
+      4731554,
+      7976147,
+      14655438,
+      27400442,
+      50903295,
+      95992684,
+      165233756
     ],
     "checksums": [
       1117725627,
@@ -324985,12 +324985,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }
@@ -325000,19 +325000,19 @@
     "config_name": "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1",
     "dataset": "wled_settings_leds.htm",
     "uncompressed_size": 67173,
-    "compressed_size": 25318,
-    "compression_ratio": 0.3769073883852143,
-    "peak_stack": 84,
+    "compressed_size": 23871,
+    "compression_ratio": 0.3553659952659551,
+    "peak_stack": 88,
     "cycles": [
-      3813254,
-      5279237,
-      9171964,
-      17123141,
-      31271424,
-      61951642,
-      120533765,
-      223767867,
-      410137481
+      2833206,
+      4001039,
+      7024123,
+      12989287,
+      24119023,
+      47621983,
+      92709765,
+      174302134,
+      320926821
     ],
     "checksums": [
       1667554633,
@@ -325027,12 +325027,12 @@
     ],
     "status": "PASS",
     "pure_size": {
-      "text": 662,
+      "text": 702,
       "data": 0,
       "bss": 0
     },
     "with_adapter_size": {
-      "text": 752,
+      "text": 792,
       "data": 0,
       "bss": 36
     }

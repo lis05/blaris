@@ -105,7 +105,8 @@ int blaris_compress(const uint8_t* data, size_t length, uint8_t* buffer,
         }
 
         // Try match transitions.
-        for (size_t l = MIN_LENGTH; l <= MAX_LENGTH; l++) {
+        for (size_t idx = 1; idx < 16; idx++) {
+            size_t l = TOKEN_LENGTHS[idx];
             if (i + l > length || sheet[l] == (uint32_t)-1) {
                 break;
             }
@@ -118,7 +119,8 @@ int blaris_compress(const uint8_t* data, size_t length, uint8_t* buffer,
         }
 
         // Try literal run transitions.
-        for (size_t count = 1; count <= MAX_LITERALS; count++) {
+        for (size_t idx = 0; idx < 16; idx++) {
+            size_t count = TOKEN_LENGTHS[idx];
             if (i + count > length) {
                 break;
             }
@@ -211,7 +213,7 @@ int blaris_compress(const uint8_t* data, size_t length, uint8_t* buffer,
             }
             if (all_same) {
                 uint32_t new_distance = cur_distance + distances[first - 1];
-                if (DISTANCE_BITS(new_distance) <= MAX_DISTANCE_BITS) {
+                if (new_distance <= MAX_DISTANCE) {
                     controls[i] = (uint8_t)MATCH_TO_CONTROL(match_len, new_distance);
                     distances[distance_index] = new_distance;
                 }

@@ -1,0 +1,6848 @@
+{
+  "meta": {
+    "git_rev": "a784e02",
+    "timestamp": "2026-11-23T17:14:46.087984+00:00",
+    "offset_size": 2,
+    "opts": [
+      "-Os",
+      "-O2",
+      "-O3"
+    ],
+    "levels": [
+      "L1",
+      "L2",
+      "L3",
+      "L4",
+      "L5",
+      "L6",
+      "L7",
+      "L8",
+      "L9"
+    ],
+    "datasets": [
+      "FreeRTOSConfig.h",
+      "ch32v003_bootloader.bin",
+      "ch32v30x_blink.bin",
+      "cp.html",
+      "cp.html.gz",
+      "data-package.json",
+      "fields.c",
+      "fvp_base_gicv3.dtb",
+      "grammar.lsp",
+      "hifive-unleashed.dts",
+      "hifive_setup.bin",
+      "rv32i_add.bin",
+      "rv32i_fence_i.bin",
+      "speed_7578.csv",
+      "test.dtb",
+      "wled_index.htm",
+      "wled_settings_leds.htm",
+      "wled_settings_wifi.htm",
+      "xargs.1",
+      "zcu102_arm.dtb",
+      "zynq7000s.dtb"
+    ],
+    "raw_bytes": 356654,
+    "full_iters": 3,
+    "ra_iters": 1000,
+    "slice_sizes": [
+      4,
+      32,
+      256
+    ],
+    "elapsed_sec": 42.33
+  },
+  "summary": {
+    "-Os": {
+      "L1": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 648,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 76,
+        "ram_bytes": 112,
+        "full_cycles_sum": 9938075166,
+        "full_cycles": 3312691722.0,
+        "ra_cycles": {
+          "4": 63922.69433333333,
+          "32": 508739.20595238096,
+          "256": 4112161.8585238094
+        }
+      },
+      "L2": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 648,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 76,
+        "ram_bytes": 112,
+        "full_cycles_sum": 9938075166,
+        "full_cycles": 3312691722.0,
+        "ra_cycles": {
+          "4": 63922.69433333333,
+          "32": 508739.20595238096,
+          "256": 4112161.8585238094
+        }
+      },
+      "L3": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 648,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 76,
+        "ram_bytes": 112,
+        "full_cycles_sum": 9938075166,
+        "full_cycles": 3312691722.0,
+        "ra_cycles": {
+          "4": 63922.69433333333,
+          "32": 508739.20595238096,
+          "256": 4112161.8585238094
+        }
+      },
+      "L4": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 648,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 76,
+        "ram_bytes": 112,
+        "full_cycles_sum": 9938075166,
+        "full_cycles": 3312691722.0,
+        "ra_cycles": {
+          "4": 63922.69433333333,
+          "32": 508739.20595238096,
+          "256": 4112161.8585238094
+        }
+      },
+      "L5": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 648,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 76,
+        "ram_bytes": 112,
+        "full_cycles_sum": 9938075166,
+        "full_cycles": 3312691722.0,
+        "ra_cycles": {
+          "4": 63922.69433333333,
+          "32": 508739.20595238096,
+          "256": 4112161.8585238094
+        }
+      },
+      "L6": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 648,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 76,
+        "ram_bytes": 112,
+        "full_cycles_sum": 9938075166,
+        "full_cycles": 3312691722.0,
+        "ra_cycles": {
+          "4": 63922.69433333333,
+          "32": 508739.20595238096,
+          "256": 4112161.8585238094
+        }
+      },
+      "L7": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 648,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 76,
+        "ram_bytes": 112,
+        "full_cycles_sum": 9938075166,
+        "full_cycles": 3312691722.0,
+        "ra_cycles": {
+          "4": 63922.69433333333,
+          "32": 508739.20595238096,
+          "256": 4112161.8585238094
+        }
+      },
+      "L8": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 648,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 76,
+        "ram_bytes": 112,
+        "full_cycles_sum": 9938075166,
+        "full_cycles": 3312691722.0,
+        "ra_cycles": {
+          "4": 63922.69433333333,
+          "32": 508739.20595238096,
+          "256": 4112161.8585238094
+        }
+      },
+      "L9": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 648,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 76,
+        "ram_bytes": 112,
+        "full_cycles_sum": 9938075166,
+        "full_cycles": 3312691722.0,
+        "ra_cycles": {
+          "4": 63922.69433333333,
+          "32": 508739.20595238096,
+          "256": 4112161.8585238094
+        }
+      }
+    },
+    "-O2": {
+      "L1": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 812,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 80,
+        "ram_bytes": 116,
+        "full_cycles_sum": 9167008908,
+        "full_cycles": 3055669636.0,
+        "ra_cycles": {
+          "4": 58279.78080952381,
+          "32": 463257.26757142856,
+          "256": 3743840.4094285714
+        }
+      },
+      "L2": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 812,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 80,
+        "ram_bytes": 116,
+        "full_cycles_sum": 9167008908,
+        "full_cycles": 3055669636.0,
+        "ra_cycles": {
+          "4": 58279.78080952381,
+          "32": 463257.26757142856,
+          "256": 3743840.4094285714
+        }
+      },
+      "L3": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 812,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 80,
+        "ram_bytes": 116,
+        "full_cycles_sum": 9167008908,
+        "full_cycles": 3055669636.0,
+        "ra_cycles": {
+          "4": 58279.78080952381,
+          "32": 463257.26757142856,
+          "256": 3743840.4094285714
+        }
+      },
+      "L4": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 812,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 80,
+        "ram_bytes": 116,
+        "full_cycles_sum": 9167008908,
+        "full_cycles": 3055669636.0,
+        "ra_cycles": {
+          "4": 58279.78080952381,
+          "32": 463257.26757142856,
+          "256": 3743840.4094285714
+        }
+      },
+      "L5": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 812,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 80,
+        "ram_bytes": 116,
+        "full_cycles_sum": 9167008908,
+        "full_cycles": 3055669636.0,
+        "ra_cycles": {
+          "4": 58279.78080952381,
+          "32": 463257.26757142856,
+          "256": 3743840.4094285714
+        }
+      },
+      "L6": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 812,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 80,
+        "ram_bytes": 116,
+        "full_cycles_sum": 9167008908,
+        "full_cycles": 3055669636.0,
+        "ra_cycles": {
+          "4": 58279.78080952381,
+          "32": 463257.26757142856,
+          "256": 3743840.4094285714
+        }
+      },
+      "L7": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 812,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 80,
+        "ram_bytes": 116,
+        "full_cycles_sum": 9167008908,
+        "full_cycles": 3055669636.0,
+        "ra_cycles": {
+          "4": 58279.78080952381,
+          "32": 463257.26757142856,
+          "256": 3743840.4094285714
+        }
+      },
+      "L8": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 812,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 80,
+        "ram_bytes": 116,
+        "full_cycles_sum": 9167008908,
+        "full_cycles": 3055669636.0,
+        "ra_cycles": {
+          "4": 58279.78080952381,
+          "32": 463257.26757142856,
+          "256": 3743840.4094285714
+        }
+      },
+      "L9": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 812,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 80,
+        "ram_bytes": 116,
+        "full_cycles_sum": 9167008908,
+        "full_cycles": 3055669636.0,
+        "ra_cycles": {
+          "4": 58279.78080952381,
+          "32": 463257.26757142856,
+          "256": 3743840.4094285714
+        }
+      }
+    },
+    "-O3": {
+      "L1": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 826,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 56,
+        "ram_bytes": 92,
+        "full_cycles_sum": 7330453128,
+        "full_cycles": 2443484376.0,
+        "ra_cycles": {
+          "4": 46469.87680952381,
+          "32": 368406.83561904763,
+          "256": 2976249.4087619046
+        }
+      },
+      "L2": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 826,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 56,
+        "ram_bytes": 92,
+        "full_cycles_sum": 7330453128,
+        "full_cycles": 2443484376.0,
+        "ra_cycles": {
+          "4": 46469.87680952381,
+          "32": 368406.83561904763,
+          "256": 2976249.4087619046
+        }
+      },
+      "L3": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 826,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 56,
+        "ram_bytes": 92,
+        "full_cycles_sum": 7330453128,
+        "full_cycles": 2443484376.0,
+        "ra_cycles": {
+          "4": 46469.87680952381,
+          "32": 368406.83561904763,
+          "256": 2976249.4087619046
+        }
+      },
+      "L4": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 826,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 56,
+        "ram_bytes": 92,
+        "full_cycles_sum": 7330453128,
+        "full_cycles": 2443484376.0,
+        "ra_cycles": {
+          "4": 46469.87680952381,
+          "32": 368406.83561904763,
+          "256": 2976249.4087619046
+        }
+      },
+      "L5": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 826,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 56,
+        "ram_bytes": 92,
+        "full_cycles_sum": 7330453128,
+        "full_cycles": 2443484376.0,
+        "ra_cycles": {
+          "4": 46469.87680952381,
+          "32": 368406.83561904763,
+          "256": 2976249.4087619046
+        }
+      },
+      "L6": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 826,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 56,
+        "ram_bytes": 92,
+        "full_cycles_sum": 7330453128,
+        "full_cycles": 2443484376.0,
+        "ra_cycles": {
+          "4": 46469.87680952381,
+          "32": 368406.83561904763,
+          "256": 2976249.4087619046
+        }
+      },
+      "L7": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 826,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 56,
+        "ram_bytes": 92,
+        "full_cycles_sum": 7330453128,
+        "full_cycles": 2443484376.0,
+        "ra_cycles": {
+          "4": 46469.87680952381,
+          "32": 368406.83561904763,
+          "256": 2976249.4087619046
+        }
+      },
+      "L8": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 826,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 56,
+        "ram_bytes": 92,
+        "full_cycles_sum": 7330453128,
+        "full_cycles": 2443484376.0,
+        "ra_cycles": {
+          "4": 46469.87680952381,
+          "32": 368406.83561904763,
+          "256": 2976249.4087619046
+        }
+      },
+      "L9": {
+        "raw_bytes": 356654,
+        "comp_bytes": 127995,
+        "ratio_pct": 35.88772311540036,
+        "flash_bytes": 826,
+        "data_bytes": 0,
+        "bss_bytes": 36,
+        "static_ram_bytes": 36,
+        "stack_bytes": 56,
+        "ram_bytes": 92,
+        "full_cycles_sum": 7330453128,
+        "full_cycles": 2443484376.0,
+        "ra_cycles": {
+          "4": 46469.87680952381,
+          "32": 368406.83561904763,
+          "256": 2976249.4087619046
+        }
+      }
+    }
+  },
+  "files": {
+    "-Os": {
+      "L1": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 76,
+          "full_cycles_sum": 422425332,
+          "ra_cycles": {
+            "4": 17319646,
+            "32": 123716224,
+            "256": 978795912
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 76,
+          "full_cycles_sum": 586110,
+          "ra_cycles": {
+            "4": 1511933,
+            "32": 4417319,
+            "256": 26997819
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 76,
+          "full_cycles_sum": 1654611,
+          "ra_cycles": {
+            "4": 2850672,
+            "32": 16565933,
+            "256": 148499819
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 76,
+          "full_cycles_sum": 201651027,
+          "ra_cycles": {
+            "4": 12807336,
+            "32": 93203397,
+            "256": 712451685
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 76,
+          "full_cycles_sum": 291411,
+          "ra_cycles": {
+            "4": 469404,
+            "32": 813276,
+            "256": 3512754
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 76,
+          "full_cycles_sum": 17116632,
+          "ra_cycles": {
+            "4": 6554014,
+            "32": 44277328,
+            "256": 349592433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 76,
+          "full_cycles_sum": 69467493,
+          "ra_cycles": {
+            "4": 9740001,
+            "32": 69865441,
+            "256": 541631107
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 76,
+          "full_cycles_sum": 74471958,
+          "ra_cycles": {
+            "4": 10318856,
+            "32": 73022068,
+            "256": 608633820
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 76,
+          "full_cycles_sum": 13904106,
+          "ra_cycles": {
+            "4": 6602820,
+            "32": 40950064,
+            "256": 322702868
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 76,
+          "full_cycles_sum": 5324793,
+          "ra_cycles": {
+            "4": 4447688,
+            "32": 26068053,
+            "256": 198043139
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 76,
+          "full_cycles_sum": 288166950,
+          "ra_cycles": {
+            "4": 15581853,
+            "32": 123029326,
+            "256": 975789078
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 76,
+          "full_cycles_sum": 4896986724,
+          "ra_cycles": {
+            "4": 738260018,
+            "32": 5900754413,
+            "256": 48538766414
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 76,
+          "full_cycles_sum": 1304042775,
+          "ra_cycles": {
+            "4": 399443058,
+            "32": 3365153448,
+            "256": 26596228808
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 76,
+          "full_cycles_sum": 478490679,
+          "ra_cycles": {
+            "4": 30960287,
+            "32": 198468984,
+            "256": 1543422055
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 76,
+          "full_cycles_sum": 8051193,
+          "ra_cycles": {
+            "4": 7121090,
+            "32": 49534070,
+            "256": 402562437
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 76,
+          "full_cycles_sum": 129173145,
+          "ra_cycles": {
+            "4": 10721295,
+            "32": 70504516,
+            "256": 563817166
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 76,
+          "full_cycles_sum": 723553707,
+          "ra_cycles": {
+            "4": 16624655,
+            "32": 116789404,
+            "256": 937845498
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 76,
+          "full_cycles_sum": 68944425,
+          "ra_cycles": {
+            "4": 9292367,
+            "32": 58570626,
+            "256": 454057723
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 76,
+          "full_cycles_sum": 12932634,
+          "ra_cycles": {
+            "4": 5613506,
+            "32": 33820328,
+            "256": 272271169
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 76,
+          "full_cycles_sum": 1073761176,
+          "ra_cycles": {
+            "4": 22566683,
+            "32": 172628261,
+            "256": 1378499514
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 76,
+          "full_cycles_sum": 147078285,
+          "ra_cycles": {
+            "4": 13569399,
+            "32": 101370846,
+            "256": 801277811
+          }
+        }
+      },
+      "L2": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 76,
+          "full_cycles_sum": 422425332,
+          "ra_cycles": {
+            "4": 17319646,
+            "32": 123716224,
+            "256": 978795912
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 76,
+          "full_cycles_sum": 586110,
+          "ra_cycles": {
+            "4": 1511933,
+            "32": 4417319,
+            "256": 26997819
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 76,
+          "full_cycles_sum": 1654611,
+          "ra_cycles": {
+            "4": 2850672,
+            "32": 16565933,
+            "256": 148499819
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 76,
+          "full_cycles_sum": 201651027,
+          "ra_cycles": {
+            "4": 12807336,
+            "32": 93203397,
+            "256": 712451685
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 76,
+          "full_cycles_sum": 291411,
+          "ra_cycles": {
+            "4": 469404,
+            "32": 813276,
+            "256": 3512754
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 76,
+          "full_cycles_sum": 17116632,
+          "ra_cycles": {
+            "4": 6554014,
+            "32": 44277328,
+            "256": 349592433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 76,
+          "full_cycles_sum": 69467493,
+          "ra_cycles": {
+            "4": 9740001,
+            "32": 69865441,
+            "256": 541631107
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 76,
+          "full_cycles_sum": 74471958,
+          "ra_cycles": {
+            "4": 10318856,
+            "32": 73022068,
+            "256": 608633820
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 76,
+          "full_cycles_sum": 13904106,
+          "ra_cycles": {
+            "4": 6602820,
+            "32": 40950064,
+            "256": 322702868
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 76,
+          "full_cycles_sum": 5324793,
+          "ra_cycles": {
+            "4": 4447688,
+            "32": 26068053,
+            "256": 198043139
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 76,
+          "full_cycles_sum": 288166950,
+          "ra_cycles": {
+            "4": 15581853,
+            "32": 123029326,
+            "256": 975789078
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 76,
+          "full_cycles_sum": 4896986724,
+          "ra_cycles": {
+            "4": 738260018,
+            "32": 5900754413,
+            "256": 48538766414
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 76,
+          "full_cycles_sum": 1304042775,
+          "ra_cycles": {
+            "4": 399443058,
+            "32": 3365153448,
+            "256": 26596228808
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 76,
+          "full_cycles_sum": 478490679,
+          "ra_cycles": {
+            "4": 30960287,
+            "32": 198468984,
+            "256": 1543422055
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 76,
+          "full_cycles_sum": 8051193,
+          "ra_cycles": {
+            "4": 7121090,
+            "32": 49534070,
+            "256": 402562437
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 76,
+          "full_cycles_sum": 129173145,
+          "ra_cycles": {
+            "4": 10721295,
+            "32": 70504516,
+            "256": 563817166
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 76,
+          "full_cycles_sum": 723553707,
+          "ra_cycles": {
+            "4": 16624655,
+            "32": 116789404,
+            "256": 937845498
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 76,
+          "full_cycles_sum": 68944425,
+          "ra_cycles": {
+            "4": 9292367,
+            "32": 58570626,
+            "256": 454057723
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 76,
+          "full_cycles_sum": 12932634,
+          "ra_cycles": {
+            "4": 5613506,
+            "32": 33820328,
+            "256": 272271169
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 76,
+          "full_cycles_sum": 1073761176,
+          "ra_cycles": {
+            "4": 22566683,
+            "32": 172628261,
+            "256": 1378499514
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 76,
+          "full_cycles_sum": 147078285,
+          "ra_cycles": {
+            "4": 13569399,
+            "32": 101370846,
+            "256": 801277811
+          }
+        }
+      },
+      "L3": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 76,
+          "full_cycles_sum": 422425332,
+          "ra_cycles": {
+            "4": 17319646,
+            "32": 123716224,
+            "256": 978795912
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 76,
+          "full_cycles_sum": 586110,
+          "ra_cycles": {
+            "4": 1511933,
+            "32": 4417319,
+            "256": 26997819
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 76,
+          "full_cycles_sum": 1654611,
+          "ra_cycles": {
+            "4": 2850672,
+            "32": 16565933,
+            "256": 148499819
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 76,
+          "full_cycles_sum": 201651027,
+          "ra_cycles": {
+            "4": 12807336,
+            "32": 93203397,
+            "256": 712451685
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 76,
+          "full_cycles_sum": 291411,
+          "ra_cycles": {
+            "4": 469404,
+            "32": 813276,
+            "256": 3512754
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 76,
+          "full_cycles_sum": 17116632,
+          "ra_cycles": {
+            "4": 6554014,
+            "32": 44277328,
+            "256": 349592433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 76,
+          "full_cycles_sum": 69467493,
+          "ra_cycles": {
+            "4": 9740001,
+            "32": 69865441,
+            "256": 541631107
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 76,
+          "full_cycles_sum": 74471958,
+          "ra_cycles": {
+            "4": 10318856,
+            "32": 73022068,
+            "256": 608633820
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 76,
+          "full_cycles_sum": 13904106,
+          "ra_cycles": {
+            "4": 6602820,
+            "32": 40950064,
+            "256": 322702868
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 76,
+          "full_cycles_sum": 5324793,
+          "ra_cycles": {
+            "4": 4447688,
+            "32": 26068053,
+            "256": 198043139
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 76,
+          "full_cycles_sum": 288166950,
+          "ra_cycles": {
+            "4": 15581853,
+            "32": 123029326,
+            "256": 975789078
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 76,
+          "full_cycles_sum": 4896986724,
+          "ra_cycles": {
+            "4": 738260018,
+            "32": 5900754413,
+            "256": 48538766414
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 76,
+          "full_cycles_sum": 1304042775,
+          "ra_cycles": {
+            "4": 399443058,
+            "32": 3365153448,
+            "256": 26596228808
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 76,
+          "full_cycles_sum": 478490679,
+          "ra_cycles": {
+            "4": 30960287,
+            "32": 198468984,
+            "256": 1543422055
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 76,
+          "full_cycles_sum": 8051193,
+          "ra_cycles": {
+            "4": 7121090,
+            "32": 49534070,
+            "256": 402562437
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 76,
+          "full_cycles_sum": 129173145,
+          "ra_cycles": {
+            "4": 10721295,
+            "32": 70504516,
+            "256": 563817166
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 76,
+          "full_cycles_sum": 723553707,
+          "ra_cycles": {
+            "4": 16624655,
+            "32": 116789404,
+            "256": 937845498
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 76,
+          "full_cycles_sum": 68944425,
+          "ra_cycles": {
+            "4": 9292367,
+            "32": 58570626,
+            "256": 454057723
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 76,
+          "full_cycles_sum": 12932634,
+          "ra_cycles": {
+            "4": 5613506,
+            "32": 33820328,
+            "256": 272271169
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 76,
+          "full_cycles_sum": 1073761176,
+          "ra_cycles": {
+            "4": 22566683,
+            "32": 172628261,
+            "256": 1378499514
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 76,
+          "full_cycles_sum": 147078285,
+          "ra_cycles": {
+            "4": 13569399,
+            "32": 101370846,
+            "256": 801277811
+          }
+        }
+      },
+      "L4": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 76,
+          "full_cycles_sum": 422425332,
+          "ra_cycles": {
+            "4": 17319646,
+            "32": 123716224,
+            "256": 978795912
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 76,
+          "full_cycles_sum": 586110,
+          "ra_cycles": {
+            "4": 1511933,
+            "32": 4417319,
+            "256": 26997819
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 76,
+          "full_cycles_sum": 1654611,
+          "ra_cycles": {
+            "4": 2850672,
+            "32": 16565933,
+            "256": 148499819
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 76,
+          "full_cycles_sum": 201651027,
+          "ra_cycles": {
+            "4": 12807336,
+            "32": 93203397,
+            "256": 712451685
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 76,
+          "full_cycles_sum": 291411,
+          "ra_cycles": {
+            "4": 469404,
+            "32": 813276,
+            "256": 3512754
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 76,
+          "full_cycles_sum": 17116632,
+          "ra_cycles": {
+            "4": 6554014,
+            "32": 44277328,
+            "256": 349592433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 76,
+          "full_cycles_sum": 69467493,
+          "ra_cycles": {
+            "4": 9740001,
+            "32": 69865441,
+            "256": 541631107
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 76,
+          "full_cycles_sum": 74471958,
+          "ra_cycles": {
+            "4": 10318856,
+            "32": 73022068,
+            "256": 608633820
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 76,
+          "full_cycles_sum": 13904106,
+          "ra_cycles": {
+            "4": 6602820,
+            "32": 40950064,
+            "256": 322702868
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 76,
+          "full_cycles_sum": 5324793,
+          "ra_cycles": {
+            "4": 4447688,
+            "32": 26068053,
+            "256": 198043139
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 76,
+          "full_cycles_sum": 288166950,
+          "ra_cycles": {
+            "4": 15581853,
+            "32": 123029326,
+            "256": 975789078
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 76,
+          "full_cycles_sum": 4896986724,
+          "ra_cycles": {
+            "4": 738260018,
+            "32": 5900754413,
+            "256": 48538766414
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 76,
+          "full_cycles_sum": 1304042775,
+          "ra_cycles": {
+            "4": 399443058,
+            "32": 3365153448,
+            "256": 26596228808
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 76,
+          "full_cycles_sum": 478490679,
+          "ra_cycles": {
+            "4": 30960287,
+            "32": 198468984,
+            "256": 1543422055
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 76,
+          "full_cycles_sum": 8051193,
+          "ra_cycles": {
+            "4": 7121090,
+            "32": 49534070,
+            "256": 402562437
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 76,
+          "full_cycles_sum": 129173145,
+          "ra_cycles": {
+            "4": 10721295,
+            "32": 70504516,
+            "256": 563817166
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 76,
+          "full_cycles_sum": 723553707,
+          "ra_cycles": {
+            "4": 16624655,
+            "32": 116789404,
+            "256": 937845498
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 76,
+          "full_cycles_sum": 68944425,
+          "ra_cycles": {
+            "4": 9292367,
+            "32": 58570626,
+            "256": 454057723
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 76,
+          "full_cycles_sum": 12932634,
+          "ra_cycles": {
+            "4": 5613506,
+            "32": 33820328,
+            "256": 272271169
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 76,
+          "full_cycles_sum": 1073761176,
+          "ra_cycles": {
+            "4": 22566683,
+            "32": 172628261,
+            "256": 1378499514
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 76,
+          "full_cycles_sum": 147078285,
+          "ra_cycles": {
+            "4": 13569399,
+            "32": 101370846,
+            "256": 801277811
+          }
+        }
+      },
+      "L5": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 76,
+          "full_cycles_sum": 422425332,
+          "ra_cycles": {
+            "4": 17319646,
+            "32": 123716224,
+            "256": 978795912
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 76,
+          "full_cycles_sum": 586110,
+          "ra_cycles": {
+            "4": 1511933,
+            "32": 4417319,
+            "256": 26997819
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 76,
+          "full_cycles_sum": 1654611,
+          "ra_cycles": {
+            "4": 2850672,
+            "32": 16565933,
+            "256": 148499819
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 76,
+          "full_cycles_sum": 201651027,
+          "ra_cycles": {
+            "4": 12807336,
+            "32": 93203397,
+            "256": 712451685
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 76,
+          "full_cycles_sum": 291411,
+          "ra_cycles": {
+            "4": 469404,
+            "32": 813276,
+            "256": 3512754
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 76,
+          "full_cycles_sum": 17116632,
+          "ra_cycles": {
+            "4": 6554014,
+            "32": 44277328,
+            "256": 349592433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 76,
+          "full_cycles_sum": 69467493,
+          "ra_cycles": {
+            "4": 9740001,
+            "32": 69865441,
+            "256": 541631107
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 76,
+          "full_cycles_sum": 74471958,
+          "ra_cycles": {
+            "4": 10318856,
+            "32": 73022068,
+            "256": 608633820
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 76,
+          "full_cycles_sum": 13904106,
+          "ra_cycles": {
+            "4": 6602820,
+            "32": 40950064,
+            "256": 322702868
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 76,
+          "full_cycles_sum": 5324793,
+          "ra_cycles": {
+            "4": 4447688,
+            "32": 26068053,
+            "256": 198043139
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 76,
+          "full_cycles_sum": 288166950,
+          "ra_cycles": {
+            "4": 15581853,
+            "32": 123029326,
+            "256": 975789078
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 76,
+          "full_cycles_sum": 4896986724,
+          "ra_cycles": {
+            "4": 738260018,
+            "32": 5900754413,
+            "256": 48538766414
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 76,
+          "full_cycles_sum": 1304042775,
+          "ra_cycles": {
+            "4": 399443058,
+            "32": 3365153448,
+            "256": 26596228808
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 76,
+          "full_cycles_sum": 478490679,
+          "ra_cycles": {
+            "4": 30960287,
+            "32": 198468984,
+            "256": 1543422055
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 76,
+          "full_cycles_sum": 8051193,
+          "ra_cycles": {
+            "4": 7121090,
+            "32": 49534070,
+            "256": 402562437
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 76,
+          "full_cycles_sum": 129173145,
+          "ra_cycles": {
+            "4": 10721295,
+            "32": 70504516,
+            "256": 563817166
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 76,
+          "full_cycles_sum": 723553707,
+          "ra_cycles": {
+            "4": 16624655,
+            "32": 116789404,
+            "256": 937845498
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 76,
+          "full_cycles_sum": 68944425,
+          "ra_cycles": {
+            "4": 9292367,
+            "32": 58570626,
+            "256": 454057723
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 76,
+          "full_cycles_sum": 12932634,
+          "ra_cycles": {
+            "4": 5613506,
+            "32": 33820328,
+            "256": 272271169
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 76,
+          "full_cycles_sum": 1073761176,
+          "ra_cycles": {
+            "4": 22566683,
+            "32": 172628261,
+            "256": 1378499514
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 76,
+          "full_cycles_sum": 147078285,
+          "ra_cycles": {
+            "4": 13569399,
+            "32": 101370846,
+            "256": 801277811
+          }
+        }
+      },
+      "L6": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 76,
+          "full_cycles_sum": 422425332,
+          "ra_cycles": {
+            "4": 17319646,
+            "32": 123716224,
+            "256": 978795912
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 76,
+          "full_cycles_sum": 586110,
+          "ra_cycles": {
+            "4": 1511933,
+            "32": 4417319,
+            "256": 26997819
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 76,
+          "full_cycles_sum": 1654611,
+          "ra_cycles": {
+            "4": 2850672,
+            "32": 16565933,
+            "256": 148499819
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 76,
+          "full_cycles_sum": 201651027,
+          "ra_cycles": {
+            "4": 12807336,
+            "32": 93203397,
+            "256": 712451685
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 76,
+          "full_cycles_sum": 291411,
+          "ra_cycles": {
+            "4": 469404,
+            "32": 813276,
+            "256": 3512754
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 76,
+          "full_cycles_sum": 17116632,
+          "ra_cycles": {
+            "4": 6554014,
+            "32": 44277328,
+            "256": 349592433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 76,
+          "full_cycles_sum": 69467493,
+          "ra_cycles": {
+            "4": 9740001,
+            "32": 69865441,
+            "256": 541631107
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 76,
+          "full_cycles_sum": 74471958,
+          "ra_cycles": {
+            "4": 10318856,
+            "32": 73022068,
+            "256": 608633820
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 76,
+          "full_cycles_sum": 13904106,
+          "ra_cycles": {
+            "4": 6602820,
+            "32": 40950064,
+            "256": 322702868
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 76,
+          "full_cycles_sum": 5324793,
+          "ra_cycles": {
+            "4": 4447688,
+            "32": 26068053,
+            "256": 198043139
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 76,
+          "full_cycles_sum": 288166950,
+          "ra_cycles": {
+            "4": 15581853,
+            "32": 123029326,
+            "256": 975789078
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 76,
+          "full_cycles_sum": 4896986724,
+          "ra_cycles": {
+            "4": 738260018,
+            "32": 5900754413,
+            "256": 48538766414
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 76,
+          "full_cycles_sum": 1304042775,
+          "ra_cycles": {
+            "4": 399443058,
+            "32": 3365153448,
+            "256": 26596228808
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 76,
+          "full_cycles_sum": 478490679,
+          "ra_cycles": {
+            "4": 30960287,
+            "32": 198468984,
+            "256": 1543422055
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 76,
+          "full_cycles_sum": 8051193,
+          "ra_cycles": {
+            "4": 7121090,
+            "32": 49534070,
+            "256": 402562437
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 76,
+          "full_cycles_sum": 129173145,
+          "ra_cycles": {
+            "4": 10721295,
+            "32": 70504516,
+            "256": 563817166
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 76,
+          "full_cycles_sum": 723553707,
+          "ra_cycles": {
+            "4": 16624655,
+            "32": 116789404,
+            "256": 937845498
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 76,
+          "full_cycles_sum": 68944425,
+          "ra_cycles": {
+            "4": 9292367,
+            "32": 58570626,
+            "256": 454057723
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 76,
+          "full_cycles_sum": 12932634,
+          "ra_cycles": {
+            "4": 5613506,
+            "32": 33820328,
+            "256": 272271169
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 76,
+          "full_cycles_sum": 1073761176,
+          "ra_cycles": {
+            "4": 22566683,
+            "32": 172628261,
+            "256": 1378499514
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 76,
+          "full_cycles_sum": 147078285,
+          "ra_cycles": {
+            "4": 13569399,
+            "32": 101370846,
+            "256": 801277811
+          }
+        }
+      },
+      "L7": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 76,
+          "full_cycles_sum": 422425332,
+          "ra_cycles": {
+            "4": 17319646,
+            "32": 123716224,
+            "256": 978795912
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 76,
+          "full_cycles_sum": 586110,
+          "ra_cycles": {
+            "4": 1511933,
+            "32": 4417319,
+            "256": 26997819
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 76,
+          "full_cycles_sum": 1654611,
+          "ra_cycles": {
+            "4": 2850672,
+            "32": 16565933,
+            "256": 148499819
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 76,
+          "full_cycles_sum": 201651027,
+          "ra_cycles": {
+            "4": 12807336,
+            "32": 93203397,
+            "256": 712451685
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 76,
+          "full_cycles_sum": 291411,
+          "ra_cycles": {
+            "4": 469404,
+            "32": 813276,
+            "256": 3512754
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 76,
+          "full_cycles_sum": 17116632,
+          "ra_cycles": {
+            "4": 6554014,
+            "32": 44277328,
+            "256": 349592433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 76,
+          "full_cycles_sum": 69467493,
+          "ra_cycles": {
+            "4": 9740001,
+            "32": 69865441,
+            "256": 541631107
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 76,
+          "full_cycles_sum": 74471958,
+          "ra_cycles": {
+            "4": 10318856,
+            "32": 73022068,
+            "256": 608633820
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 76,
+          "full_cycles_sum": 13904106,
+          "ra_cycles": {
+            "4": 6602820,
+            "32": 40950064,
+            "256": 322702868
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 76,
+          "full_cycles_sum": 5324793,
+          "ra_cycles": {
+            "4": 4447688,
+            "32": 26068053,
+            "256": 198043139
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 76,
+          "full_cycles_sum": 288166950,
+          "ra_cycles": {
+            "4": 15581853,
+            "32": 123029326,
+            "256": 975789078
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 76,
+          "full_cycles_sum": 4896986724,
+          "ra_cycles": {
+            "4": 738260018,
+            "32": 5900754413,
+            "256": 48538766414
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 76,
+          "full_cycles_sum": 1304042775,
+          "ra_cycles": {
+            "4": 399443058,
+            "32": 3365153448,
+            "256": 26596228808
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 76,
+          "full_cycles_sum": 478490679,
+          "ra_cycles": {
+            "4": 30960287,
+            "32": 198468984,
+            "256": 1543422055
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 76,
+          "full_cycles_sum": 8051193,
+          "ra_cycles": {
+            "4": 7121090,
+            "32": 49534070,
+            "256": 402562437
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 76,
+          "full_cycles_sum": 129173145,
+          "ra_cycles": {
+            "4": 10721295,
+            "32": 70504516,
+            "256": 563817166
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 76,
+          "full_cycles_sum": 723553707,
+          "ra_cycles": {
+            "4": 16624655,
+            "32": 116789404,
+            "256": 937845498
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 76,
+          "full_cycles_sum": 68944425,
+          "ra_cycles": {
+            "4": 9292367,
+            "32": 58570626,
+            "256": 454057723
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 76,
+          "full_cycles_sum": 12932634,
+          "ra_cycles": {
+            "4": 5613506,
+            "32": 33820328,
+            "256": 272271169
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 76,
+          "full_cycles_sum": 1073761176,
+          "ra_cycles": {
+            "4": 22566683,
+            "32": 172628261,
+            "256": 1378499514
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 76,
+          "full_cycles_sum": 147078285,
+          "ra_cycles": {
+            "4": 13569399,
+            "32": 101370846,
+            "256": 801277811
+          }
+        }
+      },
+      "L8": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 76,
+          "full_cycles_sum": 422425332,
+          "ra_cycles": {
+            "4": 17319646,
+            "32": 123716224,
+            "256": 978795912
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 76,
+          "full_cycles_sum": 586110,
+          "ra_cycles": {
+            "4": 1511933,
+            "32": 4417319,
+            "256": 26997819
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 76,
+          "full_cycles_sum": 1654611,
+          "ra_cycles": {
+            "4": 2850672,
+            "32": 16565933,
+            "256": 148499819
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 76,
+          "full_cycles_sum": 201651027,
+          "ra_cycles": {
+            "4": 12807336,
+            "32": 93203397,
+            "256": 712451685
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 76,
+          "full_cycles_sum": 291411,
+          "ra_cycles": {
+            "4": 469404,
+            "32": 813276,
+            "256": 3512754
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 76,
+          "full_cycles_sum": 17116632,
+          "ra_cycles": {
+            "4": 6554014,
+            "32": 44277328,
+            "256": 349592433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 76,
+          "full_cycles_sum": 69467493,
+          "ra_cycles": {
+            "4": 9740001,
+            "32": 69865441,
+            "256": 541631107
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 76,
+          "full_cycles_sum": 74471958,
+          "ra_cycles": {
+            "4": 10318856,
+            "32": 73022068,
+            "256": 608633820
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 76,
+          "full_cycles_sum": 13904106,
+          "ra_cycles": {
+            "4": 6602820,
+            "32": 40950064,
+            "256": 322702868
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 76,
+          "full_cycles_sum": 5324793,
+          "ra_cycles": {
+            "4": 4447688,
+            "32": 26068053,
+            "256": 198043139
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 76,
+          "full_cycles_sum": 288166950,
+          "ra_cycles": {
+            "4": 15581853,
+            "32": 123029326,
+            "256": 975789078
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 76,
+          "full_cycles_sum": 4896986724,
+          "ra_cycles": {
+            "4": 738260018,
+            "32": 5900754413,
+            "256": 48538766414
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 76,
+          "full_cycles_sum": 1304042775,
+          "ra_cycles": {
+            "4": 399443058,
+            "32": 3365153448,
+            "256": 26596228808
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 76,
+          "full_cycles_sum": 478490679,
+          "ra_cycles": {
+            "4": 30960287,
+            "32": 198468984,
+            "256": 1543422055
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 76,
+          "full_cycles_sum": 8051193,
+          "ra_cycles": {
+            "4": 7121090,
+            "32": 49534070,
+            "256": 402562437
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 76,
+          "full_cycles_sum": 129173145,
+          "ra_cycles": {
+            "4": 10721295,
+            "32": 70504516,
+            "256": 563817166
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 76,
+          "full_cycles_sum": 723553707,
+          "ra_cycles": {
+            "4": 16624655,
+            "32": 116789404,
+            "256": 937845498
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 76,
+          "full_cycles_sum": 68944425,
+          "ra_cycles": {
+            "4": 9292367,
+            "32": 58570626,
+            "256": 454057723
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 76,
+          "full_cycles_sum": 12932634,
+          "ra_cycles": {
+            "4": 5613506,
+            "32": 33820328,
+            "256": 272271169
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 76,
+          "full_cycles_sum": 1073761176,
+          "ra_cycles": {
+            "4": 22566683,
+            "32": 172628261,
+            "256": 1378499514
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 76,
+          "full_cycles_sum": 147078285,
+          "ra_cycles": {
+            "4": 13569399,
+            "32": 101370846,
+            "256": 801277811
+          }
+        }
+      },
+      "L9": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 76,
+          "full_cycles_sum": 422425332,
+          "ra_cycles": {
+            "4": 17319646,
+            "32": 123716224,
+            "256": 978795912
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 76,
+          "full_cycles_sum": 586110,
+          "ra_cycles": {
+            "4": 1511933,
+            "32": 4417319,
+            "256": 26997819
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 76,
+          "full_cycles_sum": 1654611,
+          "ra_cycles": {
+            "4": 2850672,
+            "32": 16565933,
+            "256": 148499819
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 76,
+          "full_cycles_sum": 201651027,
+          "ra_cycles": {
+            "4": 12807336,
+            "32": 93203397,
+            "256": 712451685
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 76,
+          "full_cycles_sum": 291411,
+          "ra_cycles": {
+            "4": 469404,
+            "32": 813276,
+            "256": 3512754
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 76,
+          "full_cycles_sum": 17116632,
+          "ra_cycles": {
+            "4": 6554014,
+            "32": 44277328,
+            "256": 349592433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 76,
+          "full_cycles_sum": 69467493,
+          "ra_cycles": {
+            "4": 9740001,
+            "32": 69865441,
+            "256": 541631107
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 76,
+          "full_cycles_sum": 74471958,
+          "ra_cycles": {
+            "4": 10318856,
+            "32": 73022068,
+            "256": 608633820
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 76,
+          "full_cycles_sum": 13904106,
+          "ra_cycles": {
+            "4": 6602820,
+            "32": 40950064,
+            "256": 322702868
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 76,
+          "full_cycles_sum": 5324793,
+          "ra_cycles": {
+            "4": 4447688,
+            "32": 26068053,
+            "256": 198043139
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 76,
+          "full_cycles_sum": 288166950,
+          "ra_cycles": {
+            "4": 15581853,
+            "32": 123029326,
+            "256": 975789078
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 76,
+          "full_cycles_sum": 4896986724,
+          "ra_cycles": {
+            "4": 738260018,
+            "32": 5900754413,
+            "256": 48538766414
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 76,
+          "full_cycles_sum": 1304042775,
+          "ra_cycles": {
+            "4": 399443058,
+            "32": 3365153448,
+            "256": 26596228808
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 76,
+          "full_cycles_sum": 478490679,
+          "ra_cycles": {
+            "4": 30960287,
+            "32": 198468984,
+            "256": 1543422055
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 76,
+          "full_cycles_sum": 8051193,
+          "ra_cycles": {
+            "4": 7121090,
+            "32": 49534070,
+            "256": 402562437
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 76,
+          "full_cycles_sum": 129173145,
+          "ra_cycles": {
+            "4": 10721295,
+            "32": 70504516,
+            "256": 563817166
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 76,
+          "full_cycles_sum": 723553707,
+          "ra_cycles": {
+            "4": 16624655,
+            "32": 116789404,
+            "256": 937845498
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 76,
+          "full_cycles_sum": 68944425,
+          "ra_cycles": {
+            "4": 9292367,
+            "32": 58570626,
+            "256": 454057723
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 76,
+          "full_cycles_sum": 12932634,
+          "ra_cycles": {
+            "4": 5613506,
+            "32": 33820328,
+            "256": 272271169
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 76,
+          "full_cycles_sum": 1073761176,
+          "ra_cycles": {
+            "4": 22566683,
+            "32": 172628261,
+            "256": 1378499514
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 76,
+          "full_cycles_sum": 147078285,
+          "ra_cycles": {
+            "4": 13569399,
+            "32": 101370846,
+            "256": 801277811
+          }
+        }
+      }
+    },
+    "-O2": {
+      "L1": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 80,
+          "full_cycles_sum": 402217827,
+          "ra_cycles": {
+            "4": 16489591,
+            "32": 117865092,
+            "256": 932309009
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 80,
+          "full_cycles_sum": 580323,
+          "ra_cycles": {
+            "4": 1483635,
+            "32": 4360908,
+            "256": 26750623
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 80,
+          "full_cycles_sum": 1518291,
+          "ra_cycles": {
+            "4": 2657922,
+            "32": 15262082,
+            "256": 136187713
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 80,
+          "full_cycles_sum": 193423923,
+          "ra_cycles": {
+            "4": 12285705,
+            "32": 89404880,
+            "256": 683378080
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 80,
+          "full_cycles_sum": 297516,
+          "ra_cycles": {
+            "4": 480463,
+            "32": 831579,
+            "256": 3588301
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 80,
+          "full_cycles_sum": 16422066,
+          "ra_cycles": {
+            "4": 6290178,
+            "32": 42478396,
+            "256": 335389433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 80,
+          "full_cycles_sum": 66530082,
+          "ra_cycles": {
+            "4": 9332624,
+            "32": 66906031,
+            "256": 518727921
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 80,
+          "full_cycles_sum": 71598171,
+          "ra_cycles": {
+            "4": 9925327,
+            "32": 70211056,
+            "256": 585128882
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 80,
+          "full_cycles_sum": 13319223,
+          "ra_cycles": {
+            "4": 6328246,
+            "32": 39231323,
+            "256": 309130072
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 80,
+          "full_cycles_sum": 5146533,
+          "ra_cycles": {
+            "4": 4300515,
+            "32": 25198752,
+            "256": 191464186
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 80,
+          "full_cycles_sum": 274033116,
+          "ra_cycles": {
+            "4": 14857288,
+            "32": 117079668,
+            "256": 928004155
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 80,
+          "full_cycles_sum": 4426972902,
+          "ra_cycles": {
+            "4": 667429464,
+            "32": 5334448784,
+            "256": 43880144249
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 80,
+          "full_cycles_sum": 1178498397,
+          "ra_cycles": {
+            "4": 361012465,
+            "32": 3041190448,
+            "256": 24035748780
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 80,
+          "full_cycles_sum": 451018785,
+          "ra_cycles": {
+            "4": 29178766,
+            "32": 187087199,
+            "256": 1454942421
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 80,
+          "full_cycles_sum": 7638795,
+          "ra_cycles": {
+            "4": 6772790,
+            "32": 47019660,
+            "256": 382173171
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 80,
+          "full_cycles_sum": 124052616,
+          "ra_cycles": {
+            "4": 10298394,
+            "32": 67720660,
+            "256": 541512048
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 80,
+          "full_cycles_sum": 693000186,
+          "ra_cycles": {
+            "4": 15923244,
+            "32": 111849119,
+            "256": 898141102
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 80,
+          "full_cycles_sum": 66367770,
+          "ra_cycles": {
+            "4": 8945179,
+            "32": 56388430,
+            "256": 437113683
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 80,
+          "full_cycles_sum": 12455928,
+          "ra_cycles": {
+            "4": 5406353,
+            "32": 32579300,
+            "256": 262237204
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 80,
+          "full_cycles_sum": 1020976350,
+          "ra_cycles": {
+            "4": 21462698,
+            "32": 164125644,
+            "256": 1310710316
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 80,
+          "full_cycles_sum": 140940108,
+          "ra_cycles": {
+            "4": 13014550,
+            "32": 97163608,
+            "256": 767867249
+          }
+        }
+      },
+      "L2": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 80,
+          "full_cycles_sum": 402217827,
+          "ra_cycles": {
+            "4": 16489591,
+            "32": 117865092,
+            "256": 932309009
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 80,
+          "full_cycles_sum": 580323,
+          "ra_cycles": {
+            "4": 1483635,
+            "32": 4360908,
+            "256": 26750623
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 80,
+          "full_cycles_sum": 1518291,
+          "ra_cycles": {
+            "4": 2657922,
+            "32": 15262082,
+            "256": 136187713
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 80,
+          "full_cycles_sum": 193423923,
+          "ra_cycles": {
+            "4": 12285705,
+            "32": 89404880,
+            "256": 683378080
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 80,
+          "full_cycles_sum": 297516,
+          "ra_cycles": {
+            "4": 480463,
+            "32": 831579,
+            "256": 3588301
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 80,
+          "full_cycles_sum": 16422066,
+          "ra_cycles": {
+            "4": 6290178,
+            "32": 42478396,
+            "256": 335389433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 80,
+          "full_cycles_sum": 66530082,
+          "ra_cycles": {
+            "4": 9332624,
+            "32": 66906031,
+            "256": 518727921
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 80,
+          "full_cycles_sum": 71598171,
+          "ra_cycles": {
+            "4": 9925327,
+            "32": 70211056,
+            "256": 585128882
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 80,
+          "full_cycles_sum": 13319223,
+          "ra_cycles": {
+            "4": 6328246,
+            "32": 39231323,
+            "256": 309130072
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 80,
+          "full_cycles_sum": 5146533,
+          "ra_cycles": {
+            "4": 4300515,
+            "32": 25198752,
+            "256": 191464186
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 80,
+          "full_cycles_sum": 274033116,
+          "ra_cycles": {
+            "4": 14857288,
+            "32": 117079668,
+            "256": 928004155
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 80,
+          "full_cycles_sum": 4426972902,
+          "ra_cycles": {
+            "4": 667429464,
+            "32": 5334448784,
+            "256": 43880144249
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 80,
+          "full_cycles_sum": 1178498397,
+          "ra_cycles": {
+            "4": 361012465,
+            "32": 3041190448,
+            "256": 24035748780
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 80,
+          "full_cycles_sum": 451018785,
+          "ra_cycles": {
+            "4": 29178766,
+            "32": 187087199,
+            "256": 1454942421
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 80,
+          "full_cycles_sum": 7638795,
+          "ra_cycles": {
+            "4": 6772790,
+            "32": 47019660,
+            "256": 382173171
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 80,
+          "full_cycles_sum": 124052616,
+          "ra_cycles": {
+            "4": 10298394,
+            "32": 67720660,
+            "256": 541512048
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 80,
+          "full_cycles_sum": 693000186,
+          "ra_cycles": {
+            "4": 15923244,
+            "32": 111849119,
+            "256": 898141102
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 80,
+          "full_cycles_sum": 66367770,
+          "ra_cycles": {
+            "4": 8945179,
+            "32": 56388430,
+            "256": 437113683
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 80,
+          "full_cycles_sum": 12455928,
+          "ra_cycles": {
+            "4": 5406353,
+            "32": 32579300,
+            "256": 262237204
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 80,
+          "full_cycles_sum": 1020976350,
+          "ra_cycles": {
+            "4": 21462698,
+            "32": 164125644,
+            "256": 1310710316
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 80,
+          "full_cycles_sum": 140940108,
+          "ra_cycles": {
+            "4": 13014550,
+            "32": 97163608,
+            "256": 767867249
+          }
+        }
+      },
+      "L3": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 80,
+          "full_cycles_sum": 402217827,
+          "ra_cycles": {
+            "4": 16489591,
+            "32": 117865092,
+            "256": 932309009
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 80,
+          "full_cycles_sum": 580323,
+          "ra_cycles": {
+            "4": 1483635,
+            "32": 4360908,
+            "256": 26750623
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 80,
+          "full_cycles_sum": 1518291,
+          "ra_cycles": {
+            "4": 2657922,
+            "32": 15262082,
+            "256": 136187713
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 80,
+          "full_cycles_sum": 193423923,
+          "ra_cycles": {
+            "4": 12285705,
+            "32": 89404880,
+            "256": 683378080
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 80,
+          "full_cycles_sum": 297516,
+          "ra_cycles": {
+            "4": 480463,
+            "32": 831579,
+            "256": 3588301
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 80,
+          "full_cycles_sum": 16422066,
+          "ra_cycles": {
+            "4": 6290178,
+            "32": 42478396,
+            "256": 335389433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 80,
+          "full_cycles_sum": 66530082,
+          "ra_cycles": {
+            "4": 9332624,
+            "32": 66906031,
+            "256": 518727921
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 80,
+          "full_cycles_sum": 71598171,
+          "ra_cycles": {
+            "4": 9925327,
+            "32": 70211056,
+            "256": 585128882
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 80,
+          "full_cycles_sum": 13319223,
+          "ra_cycles": {
+            "4": 6328246,
+            "32": 39231323,
+            "256": 309130072
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 80,
+          "full_cycles_sum": 5146533,
+          "ra_cycles": {
+            "4": 4300515,
+            "32": 25198752,
+            "256": 191464186
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 80,
+          "full_cycles_sum": 274033116,
+          "ra_cycles": {
+            "4": 14857288,
+            "32": 117079668,
+            "256": 928004155
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 80,
+          "full_cycles_sum": 4426972902,
+          "ra_cycles": {
+            "4": 667429464,
+            "32": 5334448784,
+            "256": 43880144249
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 80,
+          "full_cycles_sum": 1178498397,
+          "ra_cycles": {
+            "4": 361012465,
+            "32": 3041190448,
+            "256": 24035748780
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 80,
+          "full_cycles_sum": 451018785,
+          "ra_cycles": {
+            "4": 29178766,
+            "32": 187087199,
+            "256": 1454942421
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 80,
+          "full_cycles_sum": 7638795,
+          "ra_cycles": {
+            "4": 6772790,
+            "32": 47019660,
+            "256": 382173171
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 80,
+          "full_cycles_sum": 124052616,
+          "ra_cycles": {
+            "4": 10298394,
+            "32": 67720660,
+            "256": 541512048
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 80,
+          "full_cycles_sum": 693000186,
+          "ra_cycles": {
+            "4": 15923244,
+            "32": 111849119,
+            "256": 898141102
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 80,
+          "full_cycles_sum": 66367770,
+          "ra_cycles": {
+            "4": 8945179,
+            "32": 56388430,
+            "256": 437113683
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 80,
+          "full_cycles_sum": 12455928,
+          "ra_cycles": {
+            "4": 5406353,
+            "32": 32579300,
+            "256": 262237204
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 80,
+          "full_cycles_sum": 1020976350,
+          "ra_cycles": {
+            "4": 21462698,
+            "32": 164125644,
+            "256": 1310710316
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 80,
+          "full_cycles_sum": 140940108,
+          "ra_cycles": {
+            "4": 13014550,
+            "32": 97163608,
+            "256": 767867249
+          }
+        }
+      },
+      "L4": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 80,
+          "full_cycles_sum": 402217827,
+          "ra_cycles": {
+            "4": 16489591,
+            "32": 117865092,
+            "256": 932309009
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 80,
+          "full_cycles_sum": 580323,
+          "ra_cycles": {
+            "4": 1483635,
+            "32": 4360908,
+            "256": 26750623
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 80,
+          "full_cycles_sum": 1518291,
+          "ra_cycles": {
+            "4": 2657922,
+            "32": 15262082,
+            "256": 136187713
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 80,
+          "full_cycles_sum": 193423923,
+          "ra_cycles": {
+            "4": 12285705,
+            "32": 89404880,
+            "256": 683378080
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 80,
+          "full_cycles_sum": 297516,
+          "ra_cycles": {
+            "4": 480463,
+            "32": 831579,
+            "256": 3588301
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 80,
+          "full_cycles_sum": 16422066,
+          "ra_cycles": {
+            "4": 6290178,
+            "32": 42478396,
+            "256": 335389433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 80,
+          "full_cycles_sum": 66530082,
+          "ra_cycles": {
+            "4": 9332624,
+            "32": 66906031,
+            "256": 518727921
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 80,
+          "full_cycles_sum": 71598171,
+          "ra_cycles": {
+            "4": 9925327,
+            "32": 70211056,
+            "256": 585128882
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 80,
+          "full_cycles_sum": 13319223,
+          "ra_cycles": {
+            "4": 6328246,
+            "32": 39231323,
+            "256": 309130072
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 80,
+          "full_cycles_sum": 5146533,
+          "ra_cycles": {
+            "4": 4300515,
+            "32": 25198752,
+            "256": 191464186
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 80,
+          "full_cycles_sum": 274033116,
+          "ra_cycles": {
+            "4": 14857288,
+            "32": 117079668,
+            "256": 928004155
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 80,
+          "full_cycles_sum": 4426972902,
+          "ra_cycles": {
+            "4": 667429464,
+            "32": 5334448784,
+            "256": 43880144249
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 80,
+          "full_cycles_sum": 1178498397,
+          "ra_cycles": {
+            "4": 361012465,
+            "32": 3041190448,
+            "256": 24035748780
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 80,
+          "full_cycles_sum": 451018785,
+          "ra_cycles": {
+            "4": 29178766,
+            "32": 187087199,
+            "256": 1454942421
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 80,
+          "full_cycles_sum": 7638795,
+          "ra_cycles": {
+            "4": 6772790,
+            "32": 47019660,
+            "256": 382173171
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 80,
+          "full_cycles_sum": 124052616,
+          "ra_cycles": {
+            "4": 10298394,
+            "32": 67720660,
+            "256": 541512048
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 80,
+          "full_cycles_sum": 693000186,
+          "ra_cycles": {
+            "4": 15923244,
+            "32": 111849119,
+            "256": 898141102
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 80,
+          "full_cycles_sum": 66367770,
+          "ra_cycles": {
+            "4": 8945179,
+            "32": 56388430,
+            "256": 437113683
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 80,
+          "full_cycles_sum": 12455928,
+          "ra_cycles": {
+            "4": 5406353,
+            "32": 32579300,
+            "256": 262237204
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 80,
+          "full_cycles_sum": 1020976350,
+          "ra_cycles": {
+            "4": 21462698,
+            "32": 164125644,
+            "256": 1310710316
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 80,
+          "full_cycles_sum": 140940108,
+          "ra_cycles": {
+            "4": 13014550,
+            "32": 97163608,
+            "256": 767867249
+          }
+        }
+      },
+      "L5": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 80,
+          "full_cycles_sum": 402217827,
+          "ra_cycles": {
+            "4": 16489591,
+            "32": 117865092,
+            "256": 932309009
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 80,
+          "full_cycles_sum": 580323,
+          "ra_cycles": {
+            "4": 1483635,
+            "32": 4360908,
+            "256": 26750623
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 80,
+          "full_cycles_sum": 1518291,
+          "ra_cycles": {
+            "4": 2657922,
+            "32": 15262082,
+            "256": 136187713
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 80,
+          "full_cycles_sum": 193423923,
+          "ra_cycles": {
+            "4": 12285705,
+            "32": 89404880,
+            "256": 683378080
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 80,
+          "full_cycles_sum": 297516,
+          "ra_cycles": {
+            "4": 480463,
+            "32": 831579,
+            "256": 3588301
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 80,
+          "full_cycles_sum": 16422066,
+          "ra_cycles": {
+            "4": 6290178,
+            "32": 42478396,
+            "256": 335389433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 80,
+          "full_cycles_sum": 66530082,
+          "ra_cycles": {
+            "4": 9332624,
+            "32": 66906031,
+            "256": 518727921
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 80,
+          "full_cycles_sum": 71598171,
+          "ra_cycles": {
+            "4": 9925327,
+            "32": 70211056,
+            "256": 585128882
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 80,
+          "full_cycles_sum": 13319223,
+          "ra_cycles": {
+            "4": 6328246,
+            "32": 39231323,
+            "256": 309130072
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 80,
+          "full_cycles_sum": 5146533,
+          "ra_cycles": {
+            "4": 4300515,
+            "32": 25198752,
+            "256": 191464186
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 80,
+          "full_cycles_sum": 274033116,
+          "ra_cycles": {
+            "4": 14857288,
+            "32": 117079668,
+            "256": 928004155
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 80,
+          "full_cycles_sum": 4426972902,
+          "ra_cycles": {
+            "4": 667429464,
+            "32": 5334448784,
+            "256": 43880144249
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 80,
+          "full_cycles_sum": 1178498397,
+          "ra_cycles": {
+            "4": 361012465,
+            "32": 3041190448,
+            "256": 24035748780
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 80,
+          "full_cycles_sum": 451018785,
+          "ra_cycles": {
+            "4": 29178766,
+            "32": 187087199,
+            "256": 1454942421
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 80,
+          "full_cycles_sum": 7638795,
+          "ra_cycles": {
+            "4": 6772790,
+            "32": 47019660,
+            "256": 382173171
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 80,
+          "full_cycles_sum": 124052616,
+          "ra_cycles": {
+            "4": 10298394,
+            "32": 67720660,
+            "256": 541512048
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 80,
+          "full_cycles_sum": 693000186,
+          "ra_cycles": {
+            "4": 15923244,
+            "32": 111849119,
+            "256": 898141102
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 80,
+          "full_cycles_sum": 66367770,
+          "ra_cycles": {
+            "4": 8945179,
+            "32": 56388430,
+            "256": 437113683
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 80,
+          "full_cycles_sum": 12455928,
+          "ra_cycles": {
+            "4": 5406353,
+            "32": 32579300,
+            "256": 262237204
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 80,
+          "full_cycles_sum": 1020976350,
+          "ra_cycles": {
+            "4": 21462698,
+            "32": 164125644,
+            "256": 1310710316
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 80,
+          "full_cycles_sum": 140940108,
+          "ra_cycles": {
+            "4": 13014550,
+            "32": 97163608,
+            "256": 767867249
+          }
+        }
+      },
+      "L6": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 80,
+          "full_cycles_sum": 402217827,
+          "ra_cycles": {
+            "4": 16489591,
+            "32": 117865092,
+            "256": 932309009
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 80,
+          "full_cycles_sum": 580323,
+          "ra_cycles": {
+            "4": 1483635,
+            "32": 4360908,
+            "256": 26750623
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 80,
+          "full_cycles_sum": 1518291,
+          "ra_cycles": {
+            "4": 2657922,
+            "32": 15262082,
+            "256": 136187713
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 80,
+          "full_cycles_sum": 193423923,
+          "ra_cycles": {
+            "4": 12285705,
+            "32": 89404880,
+            "256": 683378080
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 80,
+          "full_cycles_sum": 297516,
+          "ra_cycles": {
+            "4": 480463,
+            "32": 831579,
+            "256": 3588301
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 80,
+          "full_cycles_sum": 16422066,
+          "ra_cycles": {
+            "4": 6290178,
+            "32": 42478396,
+            "256": 335389433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 80,
+          "full_cycles_sum": 66530082,
+          "ra_cycles": {
+            "4": 9332624,
+            "32": 66906031,
+            "256": 518727921
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 80,
+          "full_cycles_sum": 71598171,
+          "ra_cycles": {
+            "4": 9925327,
+            "32": 70211056,
+            "256": 585128882
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 80,
+          "full_cycles_sum": 13319223,
+          "ra_cycles": {
+            "4": 6328246,
+            "32": 39231323,
+            "256": 309130072
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 80,
+          "full_cycles_sum": 5146533,
+          "ra_cycles": {
+            "4": 4300515,
+            "32": 25198752,
+            "256": 191464186
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 80,
+          "full_cycles_sum": 274033116,
+          "ra_cycles": {
+            "4": 14857288,
+            "32": 117079668,
+            "256": 928004155
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 80,
+          "full_cycles_sum": 4426972902,
+          "ra_cycles": {
+            "4": 667429464,
+            "32": 5334448784,
+            "256": 43880144249
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 80,
+          "full_cycles_sum": 1178498397,
+          "ra_cycles": {
+            "4": 361012465,
+            "32": 3041190448,
+            "256": 24035748780
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 80,
+          "full_cycles_sum": 451018785,
+          "ra_cycles": {
+            "4": 29178766,
+            "32": 187087199,
+            "256": 1454942421
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 80,
+          "full_cycles_sum": 7638795,
+          "ra_cycles": {
+            "4": 6772790,
+            "32": 47019660,
+            "256": 382173171
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 80,
+          "full_cycles_sum": 124052616,
+          "ra_cycles": {
+            "4": 10298394,
+            "32": 67720660,
+            "256": 541512048
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 80,
+          "full_cycles_sum": 693000186,
+          "ra_cycles": {
+            "4": 15923244,
+            "32": 111849119,
+            "256": 898141102
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 80,
+          "full_cycles_sum": 66367770,
+          "ra_cycles": {
+            "4": 8945179,
+            "32": 56388430,
+            "256": 437113683
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 80,
+          "full_cycles_sum": 12455928,
+          "ra_cycles": {
+            "4": 5406353,
+            "32": 32579300,
+            "256": 262237204
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 80,
+          "full_cycles_sum": 1020976350,
+          "ra_cycles": {
+            "4": 21462698,
+            "32": 164125644,
+            "256": 1310710316
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 80,
+          "full_cycles_sum": 140940108,
+          "ra_cycles": {
+            "4": 13014550,
+            "32": 97163608,
+            "256": 767867249
+          }
+        }
+      },
+      "L7": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 80,
+          "full_cycles_sum": 402217827,
+          "ra_cycles": {
+            "4": 16489591,
+            "32": 117865092,
+            "256": 932309009
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 80,
+          "full_cycles_sum": 580323,
+          "ra_cycles": {
+            "4": 1483635,
+            "32": 4360908,
+            "256": 26750623
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 80,
+          "full_cycles_sum": 1518291,
+          "ra_cycles": {
+            "4": 2657922,
+            "32": 15262082,
+            "256": 136187713
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 80,
+          "full_cycles_sum": 193423923,
+          "ra_cycles": {
+            "4": 12285705,
+            "32": 89404880,
+            "256": 683378080
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 80,
+          "full_cycles_sum": 297516,
+          "ra_cycles": {
+            "4": 480463,
+            "32": 831579,
+            "256": 3588301
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 80,
+          "full_cycles_sum": 16422066,
+          "ra_cycles": {
+            "4": 6290178,
+            "32": 42478396,
+            "256": 335389433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 80,
+          "full_cycles_sum": 66530082,
+          "ra_cycles": {
+            "4": 9332624,
+            "32": 66906031,
+            "256": 518727921
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 80,
+          "full_cycles_sum": 71598171,
+          "ra_cycles": {
+            "4": 9925327,
+            "32": 70211056,
+            "256": 585128882
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 80,
+          "full_cycles_sum": 13319223,
+          "ra_cycles": {
+            "4": 6328246,
+            "32": 39231323,
+            "256": 309130072
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 80,
+          "full_cycles_sum": 5146533,
+          "ra_cycles": {
+            "4": 4300515,
+            "32": 25198752,
+            "256": 191464186
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 80,
+          "full_cycles_sum": 274033116,
+          "ra_cycles": {
+            "4": 14857288,
+            "32": 117079668,
+            "256": 928004155
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 80,
+          "full_cycles_sum": 4426972902,
+          "ra_cycles": {
+            "4": 667429464,
+            "32": 5334448784,
+            "256": 43880144249
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 80,
+          "full_cycles_sum": 1178498397,
+          "ra_cycles": {
+            "4": 361012465,
+            "32": 3041190448,
+            "256": 24035748780
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 80,
+          "full_cycles_sum": 451018785,
+          "ra_cycles": {
+            "4": 29178766,
+            "32": 187087199,
+            "256": 1454942421
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 80,
+          "full_cycles_sum": 7638795,
+          "ra_cycles": {
+            "4": 6772790,
+            "32": 47019660,
+            "256": 382173171
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 80,
+          "full_cycles_sum": 124052616,
+          "ra_cycles": {
+            "4": 10298394,
+            "32": 67720660,
+            "256": 541512048
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 80,
+          "full_cycles_sum": 693000186,
+          "ra_cycles": {
+            "4": 15923244,
+            "32": 111849119,
+            "256": 898141102
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 80,
+          "full_cycles_sum": 66367770,
+          "ra_cycles": {
+            "4": 8945179,
+            "32": 56388430,
+            "256": 437113683
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 80,
+          "full_cycles_sum": 12455928,
+          "ra_cycles": {
+            "4": 5406353,
+            "32": 32579300,
+            "256": 262237204
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 80,
+          "full_cycles_sum": 1020976350,
+          "ra_cycles": {
+            "4": 21462698,
+            "32": 164125644,
+            "256": 1310710316
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 80,
+          "full_cycles_sum": 140940108,
+          "ra_cycles": {
+            "4": 13014550,
+            "32": 97163608,
+            "256": 767867249
+          }
+        }
+      },
+      "L8": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 80,
+          "full_cycles_sum": 402217827,
+          "ra_cycles": {
+            "4": 16489591,
+            "32": 117865092,
+            "256": 932309009
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 80,
+          "full_cycles_sum": 580323,
+          "ra_cycles": {
+            "4": 1483635,
+            "32": 4360908,
+            "256": 26750623
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 80,
+          "full_cycles_sum": 1518291,
+          "ra_cycles": {
+            "4": 2657922,
+            "32": 15262082,
+            "256": 136187713
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 80,
+          "full_cycles_sum": 193423923,
+          "ra_cycles": {
+            "4": 12285705,
+            "32": 89404880,
+            "256": 683378080
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 80,
+          "full_cycles_sum": 297516,
+          "ra_cycles": {
+            "4": 480463,
+            "32": 831579,
+            "256": 3588301
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 80,
+          "full_cycles_sum": 16422066,
+          "ra_cycles": {
+            "4": 6290178,
+            "32": 42478396,
+            "256": 335389433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 80,
+          "full_cycles_sum": 66530082,
+          "ra_cycles": {
+            "4": 9332624,
+            "32": 66906031,
+            "256": 518727921
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 80,
+          "full_cycles_sum": 71598171,
+          "ra_cycles": {
+            "4": 9925327,
+            "32": 70211056,
+            "256": 585128882
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 80,
+          "full_cycles_sum": 13319223,
+          "ra_cycles": {
+            "4": 6328246,
+            "32": 39231323,
+            "256": 309130072
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 80,
+          "full_cycles_sum": 5146533,
+          "ra_cycles": {
+            "4": 4300515,
+            "32": 25198752,
+            "256": 191464186
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 80,
+          "full_cycles_sum": 274033116,
+          "ra_cycles": {
+            "4": 14857288,
+            "32": 117079668,
+            "256": 928004155
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 80,
+          "full_cycles_sum": 4426972902,
+          "ra_cycles": {
+            "4": 667429464,
+            "32": 5334448784,
+            "256": 43880144249
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 80,
+          "full_cycles_sum": 1178498397,
+          "ra_cycles": {
+            "4": 361012465,
+            "32": 3041190448,
+            "256": 24035748780
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 80,
+          "full_cycles_sum": 451018785,
+          "ra_cycles": {
+            "4": 29178766,
+            "32": 187087199,
+            "256": 1454942421
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 80,
+          "full_cycles_sum": 7638795,
+          "ra_cycles": {
+            "4": 6772790,
+            "32": 47019660,
+            "256": 382173171
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 80,
+          "full_cycles_sum": 124052616,
+          "ra_cycles": {
+            "4": 10298394,
+            "32": 67720660,
+            "256": 541512048
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 80,
+          "full_cycles_sum": 693000186,
+          "ra_cycles": {
+            "4": 15923244,
+            "32": 111849119,
+            "256": 898141102
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 80,
+          "full_cycles_sum": 66367770,
+          "ra_cycles": {
+            "4": 8945179,
+            "32": 56388430,
+            "256": 437113683
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 80,
+          "full_cycles_sum": 12455928,
+          "ra_cycles": {
+            "4": 5406353,
+            "32": 32579300,
+            "256": 262237204
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 80,
+          "full_cycles_sum": 1020976350,
+          "ra_cycles": {
+            "4": 21462698,
+            "32": 164125644,
+            "256": 1310710316
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 80,
+          "full_cycles_sum": 140940108,
+          "ra_cycles": {
+            "4": 13014550,
+            "32": 97163608,
+            "256": 767867249
+          }
+        }
+      },
+      "L9": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 80,
+          "full_cycles_sum": 402217827,
+          "ra_cycles": {
+            "4": 16489591,
+            "32": 117865092,
+            "256": 932309009
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 80,
+          "full_cycles_sum": 580323,
+          "ra_cycles": {
+            "4": 1483635,
+            "32": 4360908,
+            "256": 26750623
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 80,
+          "full_cycles_sum": 1518291,
+          "ra_cycles": {
+            "4": 2657922,
+            "32": 15262082,
+            "256": 136187713
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 80,
+          "full_cycles_sum": 193423923,
+          "ra_cycles": {
+            "4": 12285705,
+            "32": 89404880,
+            "256": 683378080
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 80,
+          "full_cycles_sum": 297516,
+          "ra_cycles": {
+            "4": 480463,
+            "32": 831579,
+            "256": 3588301
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 80,
+          "full_cycles_sum": 16422066,
+          "ra_cycles": {
+            "4": 6290178,
+            "32": 42478396,
+            "256": 335389433
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 80,
+          "full_cycles_sum": 66530082,
+          "ra_cycles": {
+            "4": 9332624,
+            "32": 66906031,
+            "256": 518727921
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 80,
+          "full_cycles_sum": 71598171,
+          "ra_cycles": {
+            "4": 9925327,
+            "32": 70211056,
+            "256": 585128882
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 80,
+          "full_cycles_sum": 13319223,
+          "ra_cycles": {
+            "4": 6328246,
+            "32": 39231323,
+            "256": 309130072
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 80,
+          "full_cycles_sum": 5146533,
+          "ra_cycles": {
+            "4": 4300515,
+            "32": 25198752,
+            "256": 191464186
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 80,
+          "full_cycles_sum": 274033116,
+          "ra_cycles": {
+            "4": 14857288,
+            "32": 117079668,
+            "256": 928004155
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 80,
+          "full_cycles_sum": 4426972902,
+          "ra_cycles": {
+            "4": 667429464,
+            "32": 5334448784,
+            "256": 43880144249
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 80,
+          "full_cycles_sum": 1178498397,
+          "ra_cycles": {
+            "4": 361012465,
+            "32": 3041190448,
+            "256": 24035748780
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 80,
+          "full_cycles_sum": 451018785,
+          "ra_cycles": {
+            "4": 29178766,
+            "32": 187087199,
+            "256": 1454942421
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 80,
+          "full_cycles_sum": 7638795,
+          "ra_cycles": {
+            "4": 6772790,
+            "32": 47019660,
+            "256": 382173171
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 80,
+          "full_cycles_sum": 124052616,
+          "ra_cycles": {
+            "4": 10298394,
+            "32": 67720660,
+            "256": 541512048
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 80,
+          "full_cycles_sum": 693000186,
+          "ra_cycles": {
+            "4": 15923244,
+            "32": 111849119,
+            "256": 898141102
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 80,
+          "full_cycles_sum": 66367770,
+          "ra_cycles": {
+            "4": 8945179,
+            "32": 56388430,
+            "256": 437113683
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 80,
+          "full_cycles_sum": 12455928,
+          "ra_cycles": {
+            "4": 5406353,
+            "32": 32579300,
+            "256": 262237204
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 80,
+          "full_cycles_sum": 1020976350,
+          "ra_cycles": {
+            "4": 21462698,
+            "32": 164125644,
+            "256": 1310710316
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 80,
+          "full_cycles_sum": 140940108,
+          "ra_cycles": {
+            "4": 13014550,
+            "32": 97163608,
+            "256": 767867249
+          }
+        }
+      }
+    },
+    "-O3": {
+      "L1": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 56,
+          "full_cycles_sum": 327203805,
+          "ra_cycles": {
+            "4": 13529593,
+            "32": 96001133,
+            "256": 758649443
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 56,
+          "full_cycles_sum": 455514,
+          "ra_cycles": {
+            "4": 1350986,
+            "32": 3606825,
+            "256": 21143059
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 56,
+          "full_cycles_sum": 1203114,
+          "ra_cycles": {
+            "4": 2206266,
+            "32": 12199958,
+            "256": 108183728
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 56,
+          "full_cycles_sum": 156757413,
+          "ra_cycles": {
+            "4": 10091449,
+            "32": 72585809,
+            "256": 553975252
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 56,
+          "full_cycles_sum": 261873,
+          "ra_cycles": {
+            "4": 438962,
+            "32": 748751,
+            "256": 3174998
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 56,
+          "full_cycles_sum": 13254672,
+          "ra_cycles": {
+            "4": 5165594,
+            "32": 34378230,
+            "256": 270747422
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 56,
+          "full_cycles_sum": 53980548,
+          "ra_cycles": {
+            "4": 7696054,
+            "32": 54416643,
+            "256": 421022504
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 56,
+          "full_cycles_sum": 57399741,
+          "ra_cycles": {
+            "4": 8077356,
+            "32": 56400303,
+            "256": 469394576
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 56,
+          "full_cycles_sum": 10748616,
+          "ra_cycles": {
+            "4": 5254025,
+            "32": 31797705,
+            "256": 249557485
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 56,
+          "full_cycles_sum": 4111602,
+          "ra_cycles": {
+            "4": 3565056,
+            "32": 20257476,
+            "256": 153031458
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 56,
+          "full_cycles_sum": 219552300,
+          "ra_cycles": {
+            "4": 12019151,
+            "32": 93933784,
+            "256": 743561153
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 56,
+          "full_cycles_sum": 3509768019,
+          "ra_cycles": {
+            "4": 529226366,
+            "32": 4229304641,
+            "256": 34788866824
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 56,
+          "full_cycles_sum": 934309923,
+          "ra_cycles": {
+            "4": 286280556,
+            "32": 2411132677,
+            "256": 19055538641
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 56,
+          "full_cycles_sum": 371012619,
+          "ra_cycles": {
+            "4": 24097148,
+            "32": 153974068,
+            "256": 1196813847
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 56,
+          "full_cycles_sum": 6052623,
+          "ra_cycles": {
+            "4": 5522103,
+            "32": 37422445,
+            "256": 303005422
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 56,
+          "full_cycles_sum": 100350825,
+          "ra_cycles": {
+            "4": 8445556,
+            "32": 54890977,
+            "256": 438097303
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 56,
+          "full_cycles_sum": 562667883,
+          "ra_cycles": {
+            "4": 13055210,
+            "32": 90949287,
+            "256": 729460002
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 56,
+          "full_cycles_sum": 53421279,
+          "ra_cycles": {
+            "4": 7349804,
+            "32": 45534558,
+            "256": 351942018
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 56,
+          "full_cycles_sum": 10020741,
+          "ra_cycles": {
+            "4": 4502778,
+            "32": 26364786,
+            "256": 211118759
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 56,
+          "full_cycles_sum": 825150354,
+          "ra_cycles": {
+            "4": 17452606,
+            "32": 132769617,
+            "256": 1059435464
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 56,
+          "full_cycles_sum": 112769664,
+          "ra_cycles": {
+            "4": 10540794,
+            "32": 77873875,
+            "256": 614518226
+          }
+        }
+      },
+      "L2": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 56,
+          "full_cycles_sum": 327203805,
+          "ra_cycles": {
+            "4": 13529593,
+            "32": 96001133,
+            "256": 758649443
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 56,
+          "full_cycles_sum": 455514,
+          "ra_cycles": {
+            "4": 1350986,
+            "32": 3606825,
+            "256": 21143059
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 56,
+          "full_cycles_sum": 1203114,
+          "ra_cycles": {
+            "4": 2206266,
+            "32": 12199958,
+            "256": 108183728
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 56,
+          "full_cycles_sum": 156757413,
+          "ra_cycles": {
+            "4": 10091449,
+            "32": 72585809,
+            "256": 553975252
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 56,
+          "full_cycles_sum": 261873,
+          "ra_cycles": {
+            "4": 438962,
+            "32": 748751,
+            "256": 3174998
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 56,
+          "full_cycles_sum": 13254672,
+          "ra_cycles": {
+            "4": 5165594,
+            "32": 34378230,
+            "256": 270747422
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 56,
+          "full_cycles_sum": 53980548,
+          "ra_cycles": {
+            "4": 7696054,
+            "32": 54416643,
+            "256": 421022504
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 56,
+          "full_cycles_sum": 57399741,
+          "ra_cycles": {
+            "4": 8077356,
+            "32": 56400303,
+            "256": 469394576
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 56,
+          "full_cycles_sum": 10748616,
+          "ra_cycles": {
+            "4": 5254025,
+            "32": 31797705,
+            "256": 249557485
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 56,
+          "full_cycles_sum": 4111602,
+          "ra_cycles": {
+            "4": 3565056,
+            "32": 20257476,
+            "256": 153031458
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 56,
+          "full_cycles_sum": 219552300,
+          "ra_cycles": {
+            "4": 12019151,
+            "32": 93933784,
+            "256": 743561153
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 56,
+          "full_cycles_sum": 3509768019,
+          "ra_cycles": {
+            "4": 529226366,
+            "32": 4229304641,
+            "256": 34788866824
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 56,
+          "full_cycles_sum": 934309923,
+          "ra_cycles": {
+            "4": 286280556,
+            "32": 2411132677,
+            "256": 19055538641
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 56,
+          "full_cycles_sum": 371012619,
+          "ra_cycles": {
+            "4": 24097148,
+            "32": 153974068,
+            "256": 1196813847
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 56,
+          "full_cycles_sum": 6052623,
+          "ra_cycles": {
+            "4": 5522103,
+            "32": 37422445,
+            "256": 303005422
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 56,
+          "full_cycles_sum": 100350825,
+          "ra_cycles": {
+            "4": 8445556,
+            "32": 54890977,
+            "256": 438097303
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 56,
+          "full_cycles_sum": 562667883,
+          "ra_cycles": {
+            "4": 13055210,
+            "32": 90949287,
+            "256": 729460002
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 56,
+          "full_cycles_sum": 53421279,
+          "ra_cycles": {
+            "4": 7349804,
+            "32": 45534558,
+            "256": 351942018
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 56,
+          "full_cycles_sum": 10020741,
+          "ra_cycles": {
+            "4": 4502778,
+            "32": 26364786,
+            "256": 211118759
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 56,
+          "full_cycles_sum": 825150354,
+          "ra_cycles": {
+            "4": 17452606,
+            "32": 132769617,
+            "256": 1059435464
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 56,
+          "full_cycles_sum": 112769664,
+          "ra_cycles": {
+            "4": 10540794,
+            "32": 77873875,
+            "256": 614518226
+          }
+        }
+      },
+      "L3": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 56,
+          "full_cycles_sum": 327203805,
+          "ra_cycles": {
+            "4": 13529593,
+            "32": 96001133,
+            "256": 758649443
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 56,
+          "full_cycles_sum": 455514,
+          "ra_cycles": {
+            "4": 1350986,
+            "32": 3606825,
+            "256": 21143059
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 56,
+          "full_cycles_sum": 1203114,
+          "ra_cycles": {
+            "4": 2206266,
+            "32": 12199958,
+            "256": 108183728
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 56,
+          "full_cycles_sum": 156757413,
+          "ra_cycles": {
+            "4": 10091449,
+            "32": 72585809,
+            "256": 553975252
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 56,
+          "full_cycles_sum": 261873,
+          "ra_cycles": {
+            "4": 438962,
+            "32": 748751,
+            "256": 3174998
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 56,
+          "full_cycles_sum": 13254672,
+          "ra_cycles": {
+            "4": 5165594,
+            "32": 34378230,
+            "256": 270747422
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 56,
+          "full_cycles_sum": 53980548,
+          "ra_cycles": {
+            "4": 7696054,
+            "32": 54416643,
+            "256": 421022504
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 56,
+          "full_cycles_sum": 57399741,
+          "ra_cycles": {
+            "4": 8077356,
+            "32": 56400303,
+            "256": 469394576
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 56,
+          "full_cycles_sum": 10748616,
+          "ra_cycles": {
+            "4": 5254025,
+            "32": 31797705,
+            "256": 249557485
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 56,
+          "full_cycles_sum": 4111602,
+          "ra_cycles": {
+            "4": 3565056,
+            "32": 20257476,
+            "256": 153031458
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 56,
+          "full_cycles_sum": 219552300,
+          "ra_cycles": {
+            "4": 12019151,
+            "32": 93933784,
+            "256": 743561153
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 56,
+          "full_cycles_sum": 3509768019,
+          "ra_cycles": {
+            "4": 529226366,
+            "32": 4229304641,
+            "256": 34788866824
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 56,
+          "full_cycles_sum": 934309923,
+          "ra_cycles": {
+            "4": 286280556,
+            "32": 2411132677,
+            "256": 19055538641
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 56,
+          "full_cycles_sum": 371012619,
+          "ra_cycles": {
+            "4": 24097148,
+            "32": 153974068,
+            "256": 1196813847
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 56,
+          "full_cycles_sum": 6052623,
+          "ra_cycles": {
+            "4": 5522103,
+            "32": 37422445,
+            "256": 303005422
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 56,
+          "full_cycles_sum": 100350825,
+          "ra_cycles": {
+            "4": 8445556,
+            "32": 54890977,
+            "256": 438097303
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 56,
+          "full_cycles_sum": 562667883,
+          "ra_cycles": {
+            "4": 13055210,
+            "32": 90949287,
+            "256": 729460002
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 56,
+          "full_cycles_sum": 53421279,
+          "ra_cycles": {
+            "4": 7349804,
+            "32": 45534558,
+            "256": 351942018
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 56,
+          "full_cycles_sum": 10020741,
+          "ra_cycles": {
+            "4": 4502778,
+            "32": 26364786,
+            "256": 211118759
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 56,
+          "full_cycles_sum": 825150354,
+          "ra_cycles": {
+            "4": 17452606,
+            "32": 132769617,
+            "256": 1059435464
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 56,
+          "full_cycles_sum": 112769664,
+          "ra_cycles": {
+            "4": 10540794,
+            "32": 77873875,
+            "256": 614518226
+          }
+        }
+      },
+      "L4": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 56,
+          "full_cycles_sum": 327203805,
+          "ra_cycles": {
+            "4": 13529593,
+            "32": 96001133,
+            "256": 758649443
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 56,
+          "full_cycles_sum": 455514,
+          "ra_cycles": {
+            "4": 1350986,
+            "32": 3606825,
+            "256": 21143059
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 56,
+          "full_cycles_sum": 1203114,
+          "ra_cycles": {
+            "4": 2206266,
+            "32": 12199958,
+            "256": 108183728
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 56,
+          "full_cycles_sum": 156757413,
+          "ra_cycles": {
+            "4": 10091449,
+            "32": 72585809,
+            "256": 553975252
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 56,
+          "full_cycles_sum": 261873,
+          "ra_cycles": {
+            "4": 438962,
+            "32": 748751,
+            "256": 3174998
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 56,
+          "full_cycles_sum": 13254672,
+          "ra_cycles": {
+            "4": 5165594,
+            "32": 34378230,
+            "256": 270747422
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 56,
+          "full_cycles_sum": 53980548,
+          "ra_cycles": {
+            "4": 7696054,
+            "32": 54416643,
+            "256": 421022504
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 56,
+          "full_cycles_sum": 57399741,
+          "ra_cycles": {
+            "4": 8077356,
+            "32": 56400303,
+            "256": 469394576
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 56,
+          "full_cycles_sum": 10748616,
+          "ra_cycles": {
+            "4": 5254025,
+            "32": 31797705,
+            "256": 249557485
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 56,
+          "full_cycles_sum": 4111602,
+          "ra_cycles": {
+            "4": 3565056,
+            "32": 20257476,
+            "256": 153031458
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 56,
+          "full_cycles_sum": 219552300,
+          "ra_cycles": {
+            "4": 12019151,
+            "32": 93933784,
+            "256": 743561153
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 56,
+          "full_cycles_sum": 3509768019,
+          "ra_cycles": {
+            "4": 529226366,
+            "32": 4229304641,
+            "256": 34788866824
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 56,
+          "full_cycles_sum": 934309923,
+          "ra_cycles": {
+            "4": 286280556,
+            "32": 2411132677,
+            "256": 19055538641
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 56,
+          "full_cycles_sum": 371012619,
+          "ra_cycles": {
+            "4": 24097148,
+            "32": 153974068,
+            "256": 1196813847
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 56,
+          "full_cycles_sum": 6052623,
+          "ra_cycles": {
+            "4": 5522103,
+            "32": 37422445,
+            "256": 303005422
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 56,
+          "full_cycles_sum": 100350825,
+          "ra_cycles": {
+            "4": 8445556,
+            "32": 54890977,
+            "256": 438097303
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 56,
+          "full_cycles_sum": 562667883,
+          "ra_cycles": {
+            "4": 13055210,
+            "32": 90949287,
+            "256": 729460002
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 56,
+          "full_cycles_sum": 53421279,
+          "ra_cycles": {
+            "4": 7349804,
+            "32": 45534558,
+            "256": 351942018
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 56,
+          "full_cycles_sum": 10020741,
+          "ra_cycles": {
+            "4": 4502778,
+            "32": 26364786,
+            "256": 211118759
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 56,
+          "full_cycles_sum": 825150354,
+          "ra_cycles": {
+            "4": 17452606,
+            "32": 132769617,
+            "256": 1059435464
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 56,
+          "full_cycles_sum": 112769664,
+          "ra_cycles": {
+            "4": 10540794,
+            "32": 77873875,
+            "256": 614518226
+          }
+        }
+      },
+      "L5": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 56,
+          "full_cycles_sum": 327203805,
+          "ra_cycles": {
+            "4": 13529593,
+            "32": 96001133,
+            "256": 758649443
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 56,
+          "full_cycles_sum": 455514,
+          "ra_cycles": {
+            "4": 1350986,
+            "32": 3606825,
+            "256": 21143059
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 56,
+          "full_cycles_sum": 1203114,
+          "ra_cycles": {
+            "4": 2206266,
+            "32": 12199958,
+            "256": 108183728
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 56,
+          "full_cycles_sum": 156757413,
+          "ra_cycles": {
+            "4": 10091449,
+            "32": 72585809,
+            "256": 553975252
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 56,
+          "full_cycles_sum": 261873,
+          "ra_cycles": {
+            "4": 438962,
+            "32": 748751,
+            "256": 3174998
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 56,
+          "full_cycles_sum": 13254672,
+          "ra_cycles": {
+            "4": 5165594,
+            "32": 34378230,
+            "256": 270747422
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 56,
+          "full_cycles_sum": 53980548,
+          "ra_cycles": {
+            "4": 7696054,
+            "32": 54416643,
+            "256": 421022504
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 56,
+          "full_cycles_sum": 57399741,
+          "ra_cycles": {
+            "4": 8077356,
+            "32": 56400303,
+            "256": 469394576
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 56,
+          "full_cycles_sum": 10748616,
+          "ra_cycles": {
+            "4": 5254025,
+            "32": 31797705,
+            "256": 249557485
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 56,
+          "full_cycles_sum": 4111602,
+          "ra_cycles": {
+            "4": 3565056,
+            "32": 20257476,
+            "256": 153031458
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 56,
+          "full_cycles_sum": 219552300,
+          "ra_cycles": {
+            "4": 12019151,
+            "32": 93933784,
+            "256": 743561153
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 56,
+          "full_cycles_sum": 3509768019,
+          "ra_cycles": {
+            "4": 529226366,
+            "32": 4229304641,
+            "256": 34788866824
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 56,
+          "full_cycles_sum": 934309923,
+          "ra_cycles": {
+            "4": 286280556,
+            "32": 2411132677,
+            "256": 19055538641
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 56,
+          "full_cycles_sum": 371012619,
+          "ra_cycles": {
+            "4": 24097148,
+            "32": 153974068,
+            "256": 1196813847
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 56,
+          "full_cycles_sum": 6052623,
+          "ra_cycles": {
+            "4": 5522103,
+            "32": 37422445,
+            "256": 303005422
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 56,
+          "full_cycles_sum": 100350825,
+          "ra_cycles": {
+            "4": 8445556,
+            "32": 54890977,
+            "256": 438097303
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 56,
+          "full_cycles_sum": 562667883,
+          "ra_cycles": {
+            "4": 13055210,
+            "32": 90949287,
+            "256": 729460002
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 56,
+          "full_cycles_sum": 53421279,
+          "ra_cycles": {
+            "4": 7349804,
+            "32": 45534558,
+            "256": 351942018
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 56,
+          "full_cycles_sum": 10020741,
+          "ra_cycles": {
+            "4": 4502778,
+            "32": 26364786,
+            "256": 211118759
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 56,
+          "full_cycles_sum": 825150354,
+          "ra_cycles": {
+            "4": 17452606,
+            "32": 132769617,
+            "256": 1059435464
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 56,
+          "full_cycles_sum": 112769664,
+          "ra_cycles": {
+            "4": 10540794,
+            "32": 77873875,
+            "256": 614518226
+          }
+        }
+      },
+      "L6": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 56,
+          "full_cycles_sum": 327203805,
+          "ra_cycles": {
+            "4": 13529593,
+            "32": 96001133,
+            "256": 758649443
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 56,
+          "full_cycles_sum": 455514,
+          "ra_cycles": {
+            "4": 1350986,
+            "32": 3606825,
+            "256": 21143059
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 56,
+          "full_cycles_sum": 1203114,
+          "ra_cycles": {
+            "4": 2206266,
+            "32": 12199958,
+            "256": 108183728
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 56,
+          "full_cycles_sum": 156757413,
+          "ra_cycles": {
+            "4": 10091449,
+            "32": 72585809,
+            "256": 553975252
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 56,
+          "full_cycles_sum": 261873,
+          "ra_cycles": {
+            "4": 438962,
+            "32": 748751,
+            "256": 3174998
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 56,
+          "full_cycles_sum": 13254672,
+          "ra_cycles": {
+            "4": 5165594,
+            "32": 34378230,
+            "256": 270747422
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 56,
+          "full_cycles_sum": 53980548,
+          "ra_cycles": {
+            "4": 7696054,
+            "32": 54416643,
+            "256": 421022504
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 56,
+          "full_cycles_sum": 57399741,
+          "ra_cycles": {
+            "4": 8077356,
+            "32": 56400303,
+            "256": 469394576
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 56,
+          "full_cycles_sum": 10748616,
+          "ra_cycles": {
+            "4": 5254025,
+            "32": 31797705,
+            "256": 249557485
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 56,
+          "full_cycles_sum": 4111602,
+          "ra_cycles": {
+            "4": 3565056,
+            "32": 20257476,
+            "256": 153031458
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 56,
+          "full_cycles_sum": 219552300,
+          "ra_cycles": {
+            "4": 12019151,
+            "32": 93933784,
+            "256": 743561153
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 56,
+          "full_cycles_sum": 3509768019,
+          "ra_cycles": {
+            "4": 529226366,
+            "32": 4229304641,
+            "256": 34788866824
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 56,
+          "full_cycles_sum": 934309923,
+          "ra_cycles": {
+            "4": 286280556,
+            "32": 2411132677,
+            "256": 19055538641
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 56,
+          "full_cycles_sum": 371012619,
+          "ra_cycles": {
+            "4": 24097148,
+            "32": 153974068,
+            "256": 1196813847
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 56,
+          "full_cycles_sum": 6052623,
+          "ra_cycles": {
+            "4": 5522103,
+            "32": 37422445,
+            "256": 303005422
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 56,
+          "full_cycles_sum": 100350825,
+          "ra_cycles": {
+            "4": 8445556,
+            "32": 54890977,
+            "256": 438097303
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 56,
+          "full_cycles_sum": 562667883,
+          "ra_cycles": {
+            "4": 13055210,
+            "32": 90949287,
+            "256": 729460002
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 56,
+          "full_cycles_sum": 53421279,
+          "ra_cycles": {
+            "4": 7349804,
+            "32": 45534558,
+            "256": 351942018
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 56,
+          "full_cycles_sum": 10020741,
+          "ra_cycles": {
+            "4": 4502778,
+            "32": 26364786,
+            "256": 211118759
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 56,
+          "full_cycles_sum": 825150354,
+          "ra_cycles": {
+            "4": 17452606,
+            "32": 132769617,
+            "256": 1059435464
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 56,
+          "full_cycles_sum": 112769664,
+          "ra_cycles": {
+            "4": 10540794,
+            "32": 77873875,
+            "256": 614518226
+          }
+        }
+      },
+      "L7": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 56,
+          "full_cycles_sum": 327203805,
+          "ra_cycles": {
+            "4": 13529593,
+            "32": 96001133,
+            "256": 758649443
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 56,
+          "full_cycles_sum": 455514,
+          "ra_cycles": {
+            "4": 1350986,
+            "32": 3606825,
+            "256": 21143059
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 56,
+          "full_cycles_sum": 1203114,
+          "ra_cycles": {
+            "4": 2206266,
+            "32": 12199958,
+            "256": 108183728
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 56,
+          "full_cycles_sum": 156757413,
+          "ra_cycles": {
+            "4": 10091449,
+            "32": 72585809,
+            "256": 553975252
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 56,
+          "full_cycles_sum": 261873,
+          "ra_cycles": {
+            "4": 438962,
+            "32": 748751,
+            "256": 3174998
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 56,
+          "full_cycles_sum": 13254672,
+          "ra_cycles": {
+            "4": 5165594,
+            "32": 34378230,
+            "256": 270747422
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 56,
+          "full_cycles_sum": 53980548,
+          "ra_cycles": {
+            "4": 7696054,
+            "32": 54416643,
+            "256": 421022504
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 56,
+          "full_cycles_sum": 57399741,
+          "ra_cycles": {
+            "4": 8077356,
+            "32": 56400303,
+            "256": 469394576
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 56,
+          "full_cycles_sum": 10748616,
+          "ra_cycles": {
+            "4": 5254025,
+            "32": 31797705,
+            "256": 249557485
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 56,
+          "full_cycles_sum": 4111602,
+          "ra_cycles": {
+            "4": 3565056,
+            "32": 20257476,
+            "256": 153031458
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 56,
+          "full_cycles_sum": 219552300,
+          "ra_cycles": {
+            "4": 12019151,
+            "32": 93933784,
+            "256": 743561153
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 56,
+          "full_cycles_sum": 3509768019,
+          "ra_cycles": {
+            "4": 529226366,
+            "32": 4229304641,
+            "256": 34788866824
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 56,
+          "full_cycles_sum": 934309923,
+          "ra_cycles": {
+            "4": 286280556,
+            "32": 2411132677,
+            "256": 19055538641
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 56,
+          "full_cycles_sum": 371012619,
+          "ra_cycles": {
+            "4": 24097148,
+            "32": 153974068,
+            "256": 1196813847
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 56,
+          "full_cycles_sum": 6052623,
+          "ra_cycles": {
+            "4": 5522103,
+            "32": 37422445,
+            "256": 303005422
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 56,
+          "full_cycles_sum": 100350825,
+          "ra_cycles": {
+            "4": 8445556,
+            "32": 54890977,
+            "256": 438097303
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 56,
+          "full_cycles_sum": 562667883,
+          "ra_cycles": {
+            "4": 13055210,
+            "32": 90949287,
+            "256": 729460002
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 56,
+          "full_cycles_sum": 53421279,
+          "ra_cycles": {
+            "4": 7349804,
+            "32": 45534558,
+            "256": 351942018
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 56,
+          "full_cycles_sum": 10020741,
+          "ra_cycles": {
+            "4": 4502778,
+            "32": 26364786,
+            "256": 211118759
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 56,
+          "full_cycles_sum": 825150354,
+          "ra_cycles": {
+            "4": 17452606,
+            "32": 132769617,
+            "256": 1059435464
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 56,
+          "full_cycles_sum": 112769664,
+          "ra_cycles": {
+            "4": 10540794,
+            "32": 77873875,
+            "256": 614518226
+          }
+        }
+      },
+      "L8": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 56,
+          "full_cycles_sum": 327203805,
+          "ra_cycles": {
+            "4": 13529593,
+            "32": 96001133,
+            "256": 758649443
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 56,
+          "full_cycles_sum": 455514,
+          "ra_cycles": {
+            "4": 1350986,
+            "32": 3606825,
+            "256": 21143059
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 56,
+          "full_cycles_sum": 1203114,
+          "ra_cycles": {
+            "4": 2206266,
+            "32": 12199958,
+            "256": 108183728
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 56,
+          "full_cycles_sum": 156757413,
+          "ra_cycles": {
+            "4": 10091449,
+            "32": 72585809,
+            "256": 553975252
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 56,
+          "full_cycles_sum": 261873,
+          "ra_cycles": {
+            "4": 438962,
+            "32": 748751,
+            "256": 3174998
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 56,
+          "full_cycles_sum": 13254672,
+          "ra_cycles": {
+            "4": 5165594,
+            "32": 34378230,
+            "256": 270747422
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 56,
+          "full_cycles_sum": 53980548,
+          "ra_cycles": {
+            "4": 7696054,
+            "32": 54416643,
+            "256": 421022504
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 56,
+          "full_cycles_sum": 57399741,
+          "ra_cycles": {
+            "4": 8077356,
+            "32": 56400303,
+            "256": 469394576
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 56,
+          "full_cycles_sum": 10748616,
+          "ra_cycles": {
+            "4": 5254025,
+            "32": 31797705,
+            "256": 249557485
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 56,
+          "full_cycles_sum": 4111602,
+          "ra_cycles": {
+            "4": 3565056,
+            "32": 20257476,
+            "256": 153031458
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 56,
+          "full_cycles_sum": 219552300,
+          "ra_cycles": {
+            "4": 12019151,
+            "32": 93933784,
+            "256": 743561153
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 56,
+          "full_cycles_sum": 3509768019,
+          "ra_cycles": {
+            "4": 529226366,
+            "32": 4229304641,
+            "256": 34788866824
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 56,
+          "full_cycles_sum": 934309923,
+          "ra_cycles": {
+            "4": 286280556,
+            "32": 2411132677,
+            "256": 19055538641
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 56,
+          "full_cycles_sum": 371012619,
+          "ra_cycles": {
+            "4": 24097148,
+            "32": 153974068,
+            "256": 1196813847
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 56,
+          "full_cycles_sum": 6052623,
+          "ra_cycles": {
+            "4": 5522103,
+            "32": 37422445,
+            "256": 303005422
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 56,
+          "full_cycles_sum": 100350825,
+          "ra_cycles": {
+            "4": 8445556,
+            "32": 54890977,
+            "256": 438097303
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 56,
+          "full_cycles_sum": 562667883,
+          "ra_cycles": {
+            "4": 13055210,
+            "32": 90949287,
+            "256": 729460002
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 56,
+          "full_cycles_sum": 53421279,
+          "ra_cycles": {
+            "4": 7349804,
+            "32": 45534558,
+            "256": 351942018
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 56,
+          "full_cycles_sum": 10020741,
+          "ra_cycles": {
+            "4": 4502778,
+            "32": 26364786,
+            "256": 211118759
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 56,
+          "full_cycles_sum": 825150354,
+          "ra_cycles": {
+            "4": 17452606,
+            "32": 132769617,
+            "256": 1059435464
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 56,
+          "full_cycles_sum": 112769664,
+          "ra_cycles": {
+            "4": 10540794,
+            "32": 77873875,
+            "256": 614518226
+          }
+        }
+      },
+      "L9": {
+        "FreeRTOSConfig.h": {
+          "raw_bytes": 36522,
+          "comp_bytes": 12797,
+          "peak_stack": 56,
+          "full_cycles_sum": 327203805,
+          "ra_cycles": {
+            "4": 13529593,
+            "32": 96001133,
+            "256": 758649443
+          }
+        },
+        "ch32v003_bootloader.bin": {
+          "raw_bytes": 1920,
+          "comp_bytes": 1798,
+          "peak_stack": 56,
+          "full_cycles_sum": 455514,
+          "ra_cycles": {
+            "4": 1350986,
+            "32": 3606825,
+            "256": 21143059
+          }
+        },
+        "ch32v30x_blink.bin": {
+          "raw_bytes": 1064,
+          "comp_bytes": 711,
+          "peak_stack": 56,
+          "full_cycles_sum": 1203114,
+          "ra_cycles": {
+            "4": 2206266,
+            "32": 12199958,
+            "256": 108183728
+          }
+        },
+        "cp.html": {
+          "raw_bytes": 24603,
+          "comp_bytes": 10587,
+          "peak_stack": 56,
+          "full_cycles_sum": 156757413,
+          "ra_cycles": {
+            "4": 10091449,
+            "32": 72585809,
+            "256": 553975252
+          }
+        },
+        "cp.html.gz": {
+          "raw_bytes": 7960,
+          "comp_bytes": 8543,
+          "peak_stack": 56,
+          "full_cycles_sum": 261873,
+          "ra_cycles": {
+            "4": 438962,
+            "32": 748751,
+            "256": 3174998
+          }
+        },
+        "data-package.json": {
+          "raw_bytes": 4320,
+          "comp_bytes": 1208,
+          "peak_stack": 56,
+          "full_cycles_sum": 13254672,
+          "ra_cycles": {
+            "4": 5165594,
+            "32": 34378230,
+            "256": 270747422
+          }
+        },
+        "fields.c": {
+          "raw_bytes": 11150,
+          "comp_bytes": 4037,
+          "peak_stack": 56,
+          "full_cycles_sum": 53980548,
+          "ra_cycles": {
+            "4": 7696054,
+            "32": 54416643,
+            "256": 421022504
+          }
+        },
+        "fvp_base_gicv3.dtb": {
+          "raw_bytes": 10908,
+          "comp_bytes": 3599,
+          "peak_stack": 56,
+          "full_cycles_sum": 57399741,
+          "ra_cycles": {
+            "4": 8077356,
+            "32": 56400303,
+            "256": 469394576
+          }
+        },
+        "grammar.lsp": {
+          "raw_bytes": 3721,
+          "comp_bytes": 1596,
+          "peak_stack": 56,
+          "full_cycles_sum": 10748616,
+          "ra_cycles": {
+            "4": 5254025,
+            "32": 31797705,
+            "256": 249557485
+          }
+        },
+        "hifive-unleashed.dts": {
+          "raw_bytes": 2290,
+          "comp_bytes": 1152,
+          "peak_stack": 56,
+          "full_cycles_sum": 4111602,
+          "ra_cycles": {
+            "4": 3565056,
+            "32": 20257476,
+            "256": 153031458
+          }
+        },
+        "hifive_setup.bin": {
+          "raw_bytes": 25296,
+          "comp_bytes": 11259,
+          "peak_stack": 56,
+          "full_cycles_sum": 219552300,
+          "ra_cycles": {
+            "4": 12019151,
+            "32": 93933784,
+            "256": 743561153
+          }
+        },
+        "rv32i_add.bin": {
+          "raw_bytes": 8708,
+          "comp_bytes": 1436,
+          "peak_stack": 56,
+          "full_cycles_sum": 3509768019,
+          "ra_cycles": {
+            "4": 529226366,
+            "32": 4229304641,
+            "256": 34788866824
+          }
+        },
+        "rv32i_fence_i.bin": {
+          "raw_bytes": 4232,
+          "comp_bytes": 491,
+          "peak_stack": 56,
+          "full_cycles_sum": 934309923,
+          "ra_cycles": {
+            "4": 286280556,
+            "32": 2411132677,
+            "256": 19055538641
+          }
+        },
+        "speed_7578.csv": {
+          "raw_bytes": 25928,
+          "comp_bytes": 5793,
+          "peak_stack": 56,
+          "full_cycles_sum": 371012619,
+          "ra_cycles": {
+            "4": 24097148,
+            "32": 153974068,
+            "256": 1196813847
+          }
+        },
+        "test.dtb": {
+          "raw_bytes": 1805,
+          "comp_bytes": 643,
+          "peak_stack": 56,
+          "full_cycles_sum": 6052623,
+          "ra_cycles": {
+            "4": 5522103,
+            "32": 37422445,
+            "256": 303005422
+          }
+        },
+        "wled_index.htm": {
+          "raw_bytes": 19395,
+          "comp_bytes": 6933,
+          "peak_stack": 56,
+          "full_cycles_sum": 100350825,
+          "ra_cycles": {
+            "4": 8445556,
+            "32": 54890977,
+            "256": 438097303
+          }
+        },
+        "wled_settings_leds.htm": {
+          "raw_bytes": 67173,
+          "comp_bytes": 24871,
+          "peak_stack": 56,
+          "full_cycles_sum": 562667883,
+          "ra_cycles": {
+            "4": 13055210,
+            "32": 90949287,
+            "256": 729460002
+          }
+        },
+        "wled_settings_wifi.htm": {
+          "raw_bytes": 13011,
+          "comp_bytes": 5779,
+          "peak_stack": 56,
+          "full_cycles_sum": 53421279,
+          "ra_cycles": {
+            "4": 7349804,
+            "32": 45534558,
+            "256": 351942018
+          }
+        },
+        "xargs.1": {
+          "raw_bytes": 4227,
+          "comp_bytes": 2275,
+          "peak_stack": 56,
+          "full_cycles_sum": 10020741,
+          "ra_cycles": {
+            "4": 4502778,
+            "32": 26364786,
+            "256": 211118759
+          }
+        },
+        "zcu102_arm.dtb": {
+          "raw_bytes": 66838,
+          "comp_bytes": 17194,
+          "peak_stack": 56,
+          "full_cycles_sum": 825150354,
+          "ra_cycles": {
+            "4": 17452606,
+            "32": 132769617,
+            "256": 1059435464
+          }
+        },
+        "zynq7000s.dtb": {
+          "raw_bytes": 15583,
+          "comp_bytes": 5293,
+          "peak_stack": 56,
+          "full_cycles_sum": 112769664,
+          "ra_cycles": {
+            "4": 10540794,
+            "32": 77873875,
+            "256": 614518226
+          }
+        }
+      }
+    }
+  }
+}

@@ -74,6 +74,21 @@ static size_t checkpoint_penalty(size_t pos, size_t distance, size_t length) {
 #endif
 }
 
+static void flush_literals(uint8_t* controls, size_t* next_control,
+                           size_t* pending_literals) {
+    size_t rem = *pending_literals;
+    while (rem > 0) {
+        for (int idx = 15; idx >= 0; idx--) {
+            if (TOKEN_LENGTHS[idx] <= rem) {
+                controls[(*next_control)++] = (uint8_t)idx;
+                rem -= TOKEN_LENGTHS[idx];
+                break;
+            }
+        }
+    }
+    *pending_literals = 0;
+}
+
 int blaris_compress(const uint8_t* data, size_t length, uint8_t* buffer,
                     size_t* buffer_length) {
     if (*buffer_length < blaris_compress_bound(length)) {
@@ -116,6 +131,7 @@ int blaris_compress(const uint8_t* data, size_t length, uint8_t* buffer,
     size_t next_control = 0;
     size_t next_literal = 0;
     size_t next_distance = 0;
+    size_t pending_literals = 0;
     memset(hops, 0, (length + 1) * sizeof(size_t));
 
     for (size_t i = 0; i < length;) {
@@ -159,7 +175,11 @@ int blaris_compress(const uint8_t* data, size_t length, uint8_t* buffer,
                 price += (hops[pos + j] + 1) * BLARIS_HOP_PENALTY;
             }
 
-            price += BLARIS_MATCH_LENGTH_PENALTY * (MAX_LENGTH - match_len);
+            while (match_len >= MIN_LENGTH && INVERTED_TOKEN_LENGTHS[match_len] == 255) {
+                match_len--;
+            }
+
+            price += BLARIS_MATCH_LENGTH_PENALTY * (match_len < 16 ? (16 - match_len) : 0);
 
             if (match_len < MIN_LENGTH ||
                 price >= COST_OF_LITERALS(match_len) * PRICE_MUL) {
@@ -186,6 +206,7 @@ int blaris_compress(const uint8_t* data, size_t length, uint8_t* buffer,
         }
 
         if (best_price != MAX_PRICE) {
+            flush_literals(controls, &next_control, &pending_literals);
             controls[next_control++] =
                 (uint8_t)MATCH_TO_CONTROL(best_len, i - best_pos);
             distances[next_distance++] = (uint32_t)(i - best_pos);
@@ -194,19 +215,13 @@ int blaris_compress(const uint8_t* data, size_t length, uint8_t* buffer,
             }
             i += best_len;
         } else {
-            uint8_t prev_literals =
-                next_control > 0 ? CONTROL_IS_LITERALS(controls[next_control - 1])
-                                 : 0;
-            if (prev_literals > 0 && prev_literals < MAX_LITERALS) {
-                controls[next_control - 1] =
-                    (uint8_t)LITERALS_TO_CONTROL(prev_literals + 1);
-            } else {
-                controls[next_control++] = (uint8_t)LITERALS_TO_CONTROL(1);
-            }
+            pending_literals++;
             literals[next_literal++] = data[i];
             i++;
         }
     }
+
+    flush_literals(controls, &next_control, &pending_literals);
 
     pack_tokens(length, buffer, buffer_length, controls, next_control, literals,
                 next_literal, distances, next_distance);
