@@ -46,13 +46,14 @@ def generate_dataset_plot(results_path: Path, dataset: str, out_path: Path):
         all_recs = load_records(results_path, dataset, slice_idx)
         hs_frontier = compute_pareto([r for r in all_recs if r["decompressor"] == "heatshrink"])
         tamp_frontier = compute_pareto([r for r in all_recs if r["decompressor"] == "tamp"])
+        lz0_frontier = compute_pareto([r for r in all_recs if r["decompressor"] == "lz0"])
         blaris_levels = [r for r in all_recs if r["config_name"] in BLARIS_LEVEL_BY_CFG]
         blaris_levels.sort(key=lambda r: int(BLARIS_LEVEL_BY_CFG[r["config_name"]][1:]))
 
-        for r in (*hs_frontier, *tamp_frontier, *blaris_levels):
+        for r in (*hs_frontier, *tamp_frontier, *lz0_frontier, *blaris_levels):
             plotted_xs.append(r["ratio_pct"])
 
-        panel_data.append((slice_idx, panel_label, hs_frontier, tamp_frontier, blaris_levels))
+        panel_data.append((slice_idx, panel_label, hs_frontier, tamp_frontier, lz0_frontier, blaris_levels))
 
     min_ratio = min(plotted_xs)
     max_ratio = max(plotted_xs)
@@ -60,7 +61,7 @@ def generate_dataset_plot(results_path: Path, dataset: str, out_path: Path):
     x_max = max(103, int(max_ratio // 5) * 5 + 6)
     uncomp_size = panel_data[0][2][0]["uncompressed_size"] if panel_data[0][2] else 0
 
-    for col_idx, (slice_idx, panel_label, hs_pf, tamp_pf, blaris_lvls) in enumerate(panel_data):
+    for col_idx, (slice_idx, panel_label, hs_pf, tamp_pf, lz0_pf, blaris_lvls) in enumerate(panel_data):
         ax = fig.add_subplot(gs[0, col_idx])
         ax.set_facecolor("white")
 
@@ -110,7 +111,30 @@ def generate_dataset_plot(results_path: Path, dataset: str, out_path: Path):
                 zorder=4,
             )
 
-        # 3. Blaris levels L1..L9 (stars with level digit 1..9 centered inside)
+        # 3. lz0 own frontier (diamonds + dash-dot curve)
+        if lz0_pf:
+            ax.plot(
+                [r["ratio_pct"] for r in lz0_pf],
+                [r["throughput"] for r in lz0_pf],
+                color="#0f766e",
+                linestyle=(0, (3, 1, 1, 1)),
+                linewidth=1.1,
+                alpha=0.85,
+                zorder=3,
+            )
+            ax.scatter(
+                [r["ratio_pct"] for r in lz0_pf],
+                [r["throughput"] for r in lz0_pf],
+                c=[r["ram_color"] for r in lz0_pf],
+                marker=CODEC_MARKERS["lz0"],
+                s=36,
+                alpha=0.92,
+                edgecolors="#0f172a",
+                linewidths=0.45,
+                zorder=4,
+            )
+
+        # 4. Blaris levels L1..L9 (stars with level digit 1..9 centered inside)
         if blaris_lvls:
             bx = [r["ratio_pct"] for r in blaris_lvls]
             by = [r["throughput"] for r in blaris_lvls]
@@ -179,7 +203,7 @@ def generate_dataset_plot(results_path: Path, dataset: str, out_path: Path):
 
     # Shared figure header + legend + RAM tier colorbar
     fig.suptitle(
-        f"{dataset} ({uncomp_size:,} B) — blaris Levels 1–9 vs. heatshrink & tamp Frontiers",
+        f"{dataset} ({uncomp_size:,} B) — blaris Levels 1–9 vs. heatshrink, tamp & lz0 Frontiers",
         x=0.055,
         y=0.975,
         ha="left",
@@ -208,6 +232,12 @@ def generate_dataset_plot(results_path: Path, dataset: str, out_path: Path):
             label="tamp frontier",
         ),
         Line2D(
+            [0], [0], color="#0f766e", linestyle=(0, (3, 1, 1, 1)), linewidth=1.1,
+            marker=CODEC_MARKERS["lz0"], markerfacecolor="#0f766e",
+            markeredgecolor="#0f172a", markeredgewidth=0.45, markersize=5.4,
+            label="lz0 frontier",
+        ),
+        Line2D(
             [0], [0], color="#9ca3af", linestyle="-.", linewidth=0.9,
             label="Uncompressed (100%)",
         ),
@@ -216,7 +246,7 @@ def generate_dataset_plot(results_path: Path, dataset: str, out_path: Path):
         handles=legend_handles,
         loc="upper left",
         bbox_to_anchor=(0.052, 0.92),
-        ncol=2,
+        ncol=3,
         frameon=True,
         framealpha=0.95,
         facecolor="white",

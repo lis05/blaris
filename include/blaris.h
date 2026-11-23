@@ -7,7 +7,7 @@
 #include <stdint.h>
 #include "config.h"
 
-#define BLARIS_VERSION "v2.0.0"
+#define BLARIS_VERSION "v2.1.0"
 
 /* ============================ Configuration ============================ */
 /*

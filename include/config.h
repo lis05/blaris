@@ -13,6 +13,9 @@
 #    elif BLARIS_LEVEL == 0
 /* User-defined custom config: leave all flags to caller or defaults. */
 #    elif BLARIS_LEVEL == 1
+#        ifndef BLARIS_DISTANCE_ALIGN_LOG
+#            define BLARIS_DISTANCE_ALIGN_LOG 2
+#        endif
 #        ifndef BLARIS_CHECKPOINTS_SPREAD_LOG
 #            define BLARIS_CHECKPOINTS_SPREAD_LOG 6
 #        endif
@@ -29,8 +32,11 @@
 #            define BLARIS_MATCH_LENGTH_PENALTY 64
 #        endif
 #    elif BLARIS_LEVEL == 2
+#        ifndef BLARIS_DISTANCE_ALIGN_LOG
+#            define BLARIS_DISTANCE_ALIGN_LOG 2
+#        endif
 #        ifndef BLARIS_CHECKPOINTS_SPREAD_LOG
-#            define BLARIS_CHECKPOINTS_SPREAD_LOG 6
+#            define BLARIS_CHECKPOINTS_SPREAD_LOG 8
 #        endif
 #        ifndef BLARIS_HOP_PENALTY
 #            define BLARIS_HOP_PENALTY 16
@@ -39,7 +45,7 @@
 #            define BLARIS_MAX_HOPS 8
 #        endif
 #        ifndef BLARIS_CHECKPOINT_MAX_PENALTY
-#            define BLARIS_CHECKPOINT_MAX_PENALTY 128
+#            define BLARIS_CHECKPOINT_MAX_PENALTY 384
 #        endif
 #        ifndef BLARIS_MATCH_LENGTH_PENALTY
 #            define BLARIS_MATCH_LENGTH_PENALTY 64
@@ -71,7 +77,7 @@
 #            define BLARIS_MAX_HOPS 8
 #        endif
 #        ifndef BLARIS_CHECKPOINT_MAX_PENALTY
-#            define BLARIS_CHECKPOINT_MAX_PENALTY 128
+#            define BLARIS_CHECKPOINT_MAX_PENALTY 384
 #        endif
 #        ifndef BLARIS_MATCH_LENGTH_PENALTY
 #            define BLARIS_MATCH_LENGTH_PENALTY 16
@@ -81,7 +87,7 @@
 #            define BLARIS_CHECKPOINTS_SPREAD_LOG 8
 #        endif
 #        ifndef BLARIS_HOP_PENALTY
-#            define BLARIS_HOP_PENALTY 4
+#            define BLARIS_HOP_PENALTY 16
 #        endif
 #        ifndef BLARIS_MAX_HOPS
 #            define BLARIS_MAX_HOPS 8
@@ -97,10 +103,10 @@
 #            define BLARIS_CHECKPOINTS_SPREAD_LOG 8
 #        endif
 #        ifndef BLARIS_HOP_PENALTY
-#            define BLARIS_HOP_PENALTY 1
+#            define BLARIS_HOP_PENALTY 4
 #        endif
 #        ifndef BLARIS_MAX_HOPS
-#            define BLARIS_MAX_HOPS 32
+#            define BLARIS_MAX_HOPS 8
 #        endif
 #        ifndef BLARIS_CHECKPOINT_MAX_PENALTY
 #            define BLARIS_CHECKPOINT_MAX_PENALTY 0

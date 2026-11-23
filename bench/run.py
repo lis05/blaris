@@ -19,6 +19,7 @@ import blaris_optimal
 import blaris_greedymaxhops
 import heatshrink
 import tamp
+import lz0
 import harness
 import harness_esp32c3fn4
 
@@ -219,6 +220,7 @@ def run(max_workers=None, dataset_limit=None, device="rv32emu", module_filter=No
 
     results.extend(run_module(tamp, "tamp"))
     results.extend(run_module(heatshrink, "heatshrink"))
+    results.extend(run_module(lz0, "lz0"))
     results.extend(run_module(blaris_optimal, "blaris_optimal"))
     results.extend(run_module(blaris_greedymaxhops, "blaris_greedymaxhops"))
 

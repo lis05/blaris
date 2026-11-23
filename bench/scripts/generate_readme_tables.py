@@ -24,17 +24,17 @@ SLICE_INDICES = [
 NUM_READS = 1000  # 1,000 pseudorandom offsets per slice size
 
 
-# Ordered from tightest/slowest (L9) to fastest (L1), matching BLARIS_LEVEL=1..9 with o=2, a=0, r=1
+# Ordered from tightest/slowest (L9) to fastest (L1), matching BLARIS_LEVEL=1..9 with o=2, r=1
 BLARIS_LEVEL_CONFIGS = [
     ("L9", "blaris_optimal_o2_a0_s0_f0_r1"),
     ("L8", "blaris_optimal_o2_a0_s10_f0_r1"),
     ("L7", "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1"),
-    ("L6", "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1"),
-    ("L5", "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1"),
-    ("L4", "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1"),
+    ("L6", "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1"),
+    ("L5", "blaris_greedymaxhops_o2_a0_s8_p16_h8_c0_l16_r1"),
+    ("L4", "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l16_r1"),
     ("L3", "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1"),
-    ("L2", "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1"),
-    ("L1", "blaris_greedymaxhops_o2_a0_s6_p16_h8_c384_l64_r1"),
+    ("L2", "blaris_greedymaxhops_o2_a2_s8_p16_h8_c384_l64_r1"),
+    ("L1", "blaris_greedymaxhops_o2_a2_s6_p16_h8_c384_l64_r1"),
 ]
 BLARIS_LEVEL_BY_CFG = {cfg: lvl for lvl, cfg in BLARIS_LEVEL_CONFIGS}
 BLARIS_ORDER = {cfg: idx for idx, (_, cfg) in enumerate(BLARIS_LEVEL_CONFIGS)}
@@ -77,6 +77,8 @@ def is_candidate_config(entry: dict) -> bool:
     elif dec == "heatshrink":
         return "_i16_" in cfg
     elif dec == "tamp":
+        return True
+    elif dec == "lz0":
         return True
     return False
 
@@ -149,6 +151,7 @@ def collect_table_data(results_path: str) -> list[dict]:
         blaris_list = ordered_blaris_levels(by_dataset[ds]["blaris"])
         hs_list = by_dataset[ds]["heatshrink"]
         tamp_list = by_dataset[ds]["tamp"]
+        lz0_list = by_dataset[ds]["lz0"]
 
         slices_out = []
         for slice_idx, slice_bytes in SLICE_INDICES:
@@ -161,7 +164,7 @@ def collect_table_data(results_path: str) -> list[dict]:
                 b_ram = total_ram(b_entry)
 
                 baselines = []
-                for codec_entries in (hs_list, tamp_list):
+                for codec_entries in (hs_list, tamp_list, lz0_list):
                     if not codec_entries:
                         continue
                     m_entry, is_fallback = find_matching_baseline(
@@ -208,7 +211,7 @@ def generate_markdown(results_path: str) -> str:
         "## Benchmarking",
         "",
         f"Detailed per-file comparisons across all {num_datasets} corpus datasets at slice sizes of **4 B**, **32 B**, and **256 B**.",
-        "For each slice size, all 9 `blaris` preset levels (`L9` tightest to `L1` fastest) are grouped with the most lightweight (lowest RAM usage) `heatshrink` and `tamp` configuration that achieves the same or better compression ratio (`ratio <= blaris_ratio`, tie-breaking by lowest decompression cycles; if none reaches that ratio, the best-ratio configuration for that codec is shown as a fallback and marked with `*`).",
+        "For each slice size, all 9 `blaris` preset levels (`L9` tightest to `L1` fastest) are grouped with the most lightweight (lowest RAM usage) `heatshrink`, `tamp`, and `lz0` configuration that achieves the same or better compression ratio (`ratio <= blaris_ratio`, tie-breaking by lowest decompression cycles; if none reaches that ratio, the best-ratio configuration for that codec is shown as a fallback and marked with `*`).",
     ]
 
     for ds_item in datasets_data:
@@ -218,7 +221,7 @@ def generate_markdown(results_path: str) -> str:
         lines.append("<details>")
         lines.append(f"<summary><strong><code>{ds}</code></strong> ({uncomp_size:,} B)</summary>")
         lines.append("")
-        lines.append(f"![{ds} — blaris Levels 1–9 vs. heatshrink & tamp Frontiers](bench/plots/readme_{ds}.png)")
+        lines.append(f"![{ds} — blaris Levels 1–9 vs. heatshrink, tamp & lz0 Frontiers](bench/plots/readme_{ds}.png)")
 
         for sl_item in ds_item["slices"]:
             slice_bytes = sl_item["slice_bytes"]

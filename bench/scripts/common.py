@@ -29,6 +29,7 @@ CODEC_MARKERS = {
     "blaris": "o",
     "heatshrink": "^",
     "tamp": "s",
+    "lz0": "o",
 }
 FALLBACK_MARKERS = ["s", "D", "v", "P", "X", "p"]
 

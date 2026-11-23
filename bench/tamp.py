@@ -181,8 +181,8 @@ def compress(subtest_dir, config=None, compressor_exe=None):
 
 
 def build_all(max_workers=None):
-    block_sizes = [4, 6, 8, 10, 12, 14]
-    window_options = [8, 10, 12, 14]
+    block_sizes = list(range(4, 15))
+    window_options = list(range(8, 15))
     extended_options = [0, 1]
 
     combinations = []

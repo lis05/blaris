@@ -37,11 +37,11 @@ HIGHLIGHT_LEVELS = {
     "blaris_optimal_o2_a0_s0_f0_r1": "L9",
     "blaris_optimal_o2_a0_s10_f0_r1": "L8",
     "blaris_greedymaxhops_o2_a0_s10_p1_h32_c0_l8_r1": "L7",
-    "blaris_greedymaxhops_o2_a0_s8_p1_h32_c0_l16_r1": "L6",
-    "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1": "L5",
-    "blaris_greedymaxhops_o2_a0_s8_p16_h8_c128_l16_r1": "L4",
+    "blaris_greedymaxhops_o2_a0_s8_p4_h8_c0_l16_r1": "L6",
+    "blaris_greedymaxhops_o2_a0_s8_p16_h8_c0_l16_r1": "L5",
+    "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l16_r1": "L4",
     "blaris_greedymaxhops_o2_a0_s8_p16_h8_c384_l64_r1": "L3",
-    "blaris_greedymaxhops_o2_a0_s6_p16_h8_c128_l64_r1": "L2",
+    "blaris_greedymaxhops_o2_a2_s8_p16_h8_c384_l64_r1": "L2",
     "blaris_greedymaxhops_o2_a2_s6_p16_h8_c384_l64_r1": "L1",
 }
 

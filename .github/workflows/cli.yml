@@ -1,0 +1,19 @@
+name: CLI Tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        cc: [gcc, clang]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run CLI test suite (${{ matrix.cc }})
+        run: CC=${{ matrix.cc }} ./cli/test.sh
